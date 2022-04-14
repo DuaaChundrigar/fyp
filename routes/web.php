@@ -30,7 +30,7 @@ Route::get('/login', [LoginController::class, 'loginbtn']);
 
 
 Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/registerr', [RegisterController::class, 'register']);
+Route::post('/register', [RegisterController::class, 'register']);
 
 
 Route::get('/logout', [LoginController::class, 'logout']);

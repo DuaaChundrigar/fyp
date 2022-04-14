@@ -17,7 +17,6 @@ class RegisterController extends Controller
     }
     public function register(Request $request)
     {
-        return json_encode($request->all());
 
         $student = new Student();
         $student->regno = $request->formData['regno'];
@@ -38,9 +37,6 @@ class RegisterController extends Controller
         $user->save();
 
         session(['user' => $user]);
-
-
-        // return Inertia::render('User/Dashboard');
 
         return redirect('/user/dashboard');
     }
