@@ -41,7 +41,7 @@
         </button>
         <button
             type="button"
-            class="px-3 py-2 text-sm font-medium text-white bg-gray-900"
+            class="px-3 py-2 ml-2 text-sm font-medium text-white bg-gray-900"
             id="lor"
         >
             <Link href="#" class=""> List of Request </Link>
@@ -97,7 +97,7 @@
                                     scope="col"
                                     class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                 >
-                                    S.No
+                                    Book.No
                                 </th>
                                 <th
                                     scope="col"
@@ -138,38 +138,38 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr
+                            <tr 
                                 class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                             >
                                 <td
                                     class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                 >
-                                    1
+                                {{ books.book_no }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    English Grammar
+                                    {{books.name}}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    English
+                                    {{books.subject}}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    Mr.Alex
+                                    {{books.author}}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    Oxford
+                                    {{books.publisher}}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    3
+                                    {{books.copies}}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
