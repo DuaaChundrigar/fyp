@@ -1,6 +1,5 @@
 <template>
     <nav class="bg-gray-800">
-        
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
@@ -138,38 +137,40 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr 
+                            <tr
+                                v-for="book in books"
+                                :key="book.id"
                                 class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                             >
                                 <td
                                     class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                 >
-                                {{ books.book_no }}
+                                    {{ book.book_no }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.name}}
+                                    {{ book.book_name }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.subject}}
+                                    {{ book.subject }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.author}}
+                                    {{ book.author }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.publisher}}
+                                    {{ book.publisher }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.copies}}
+                                    {{ book.copies }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
