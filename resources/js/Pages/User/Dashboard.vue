@@ -178,7 +178,7 @@
                                     <button
                                         type="button"
                                         class="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
-                                        id="login"
+                                        @click="request(book.id)"
                                     >
                                         Request Submit
                                     </button>
@@ -194,6 +194,7 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import axios from "axios";
 export default {
     components: {
         Link,
@@ -210,5 +211,20 @@ export default {
         },
     },
     mounted() {},
+
+    methods: {
+        request(book_id) {
+            axios
+                .post("/book/request", {
+                    book_id: book_id,
+                })
+                .then((response) => {
+                    alert(response.data);
+                })
+                .catch((error) => {
+                    alert(error.response.data);
+                });
+        },
+    },
 };
 </script>

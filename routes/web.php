@@ -35,15 +35,13 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/logout', [LoginController::class, 'logout']);
 
-Route::middleware('hasRole:Admin') -> group( function() {
+Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
 });
 
-Route::middleware('hasRole:User') -> group( function() {
+Route::middleware('hasRole:User')->group(function () {
     Route::get('/user/dashboard', [UserController::class, 'index']);
 });
 
-// Route::get('/', function()
-// {
-//     return ;
-// });
+
+Route::post('//book/request', [UserController::class, 'bookRequest']);

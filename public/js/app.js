@@ -19551,6 +19551,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -19566,7 +19569,18 @@ __webpack_require__.r(__webpack_exports__);
       "default": []
     }
   },
-  mounted: function mounted() {}
+  mounted: function mounted() {},
+  methods: {
+    request: function request(book_id) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/book/request", {
+        book_id: book_id
+      }).then(function (response) {
+        alert(response.data);
+      })["catch"](function (error) {
+        alert(error.response.data);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -20113,17 +20127,10 @@ var _hoisted_24 = {
 var _hoisted_25 = {
   "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
 };
-
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
+var _hoisted_26 = {
   "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "button",
-  "class": "px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md",
-  id: "login"
-}, " Request Submit ")], -1
-/* HOISTED */
-);
-
+};
+var _hoisted_27 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
@@ -20173,7 +20180,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(book.copies), 1
     /* TEXT */
-    ), _hoisted_26]);
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      type: "button",
+      "class": "px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md",
+      onClick: function onClick($event) {
+        return $options.request(book.id);
+      }
+    }, " Request Submit ", 8
+    /* PROPS */
+    , _hoisted_27)])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])])])])], 64
@@ -44793,6 +44808,18 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","/var/www/html/fyp"]],"_d
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

@@ -19,7 +19,7 @@ class CreateBookingsTable extends Migration
             $table->foreignId('book_id')->references('id')->on('books');
             $table->string('checkin_datetime')->nullable();
             $table->string('checkout_datetime')->nullable();
-            $table->string('duration')->nullable();
+            $table->string('duration')->default('7');
             $table->string('status')->comment('pending, approved, checkin, checkout , rejected');
             $table->timestamps();
         });
