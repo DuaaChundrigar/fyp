@@ -16,4 +16,15 @@ class Booking extends Model
         'duration',
         'status'
     ];
+
+
+    function book()
+    {
+        return $this->belongsTo(Books::class, 'book_id');
+    }
+
+    function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

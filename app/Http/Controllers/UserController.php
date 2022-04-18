@@ -30,7 +30,7 @@ class UserController extends Controller
 
         if ($booking) {
             return response("You have already requested this book", 400);
-        } else if ($booking2->count() > 2   ) {
+        } else if ($booking2->count() > 2) {
             return response("You have already requested maximun number of books", 400);
         } else {
 
@@ -44,5 +44,20 @@ class UserController extends Controller
 
             return response("Successfully Requested", 200);
         }
+    }
+
+    function bookRequests(Request $request)
+    {
+
+        $user = session('user');
+
+        $bookings  = Booking::where('user_id', $user->id)->get();
+
+        foreach ($bookings as $key => $booking) {
+            $booking->book;
+            $booking->user;
+        }
+
+        return Inertia::render('User/BookRequests', ['bookings' => $bookings]);
     }
 }

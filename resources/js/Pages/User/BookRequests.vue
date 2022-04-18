@@ -1,37 +1,38 @@
 <template>
-
-<nav class="bg-gray-800">
-        
+    <nav class="bg-gray-400">
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
                     class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
                 >
                     <div class="flex items-center flex-shrink-0">
-                        <img
+                        <!-- <img
                             class="hidden w-auto h-8 lg:block"
                             src="1.png"
                             alt="Logo"
-                        />
+                        /> -->
                     </div>
 
-                    <div class="m-10 font-serif text-4xl font-bold text-gray-700 underline">
+                    <div
+                        class="ml-4 font-serif text-4xl font-bold text-gray-700 underline"
+                    >
                         <button
                             type="button"
                             class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded"
                             id="rfb"
                         >
-                            <Link href="/Dashboard" class=""> Request for Book </Link>
+                            <Link href="/" class=""> Request for Book </Link>
                         </button>
                         <button
                             type="button"
                             class="px-3 py-2 ml-2 text-sm font-medium text-white bg-gray-900 rounded"
                             id="lor"
                         >
-                            <Link href="/Request.vue" class=""> List of Request </Link>
+                            <Link href="/books/requests" class="">
+                                List of Request
+                            </Link>
                         </button>
                     </div>
-                    
                 </div>
                 <div
                     class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
@@ -45,16 +46,10 @@
                             <Link href="/logout" class="">Logout</Link>
                         </button>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </nav>
-
-
-
-
-
     <!-- Table  -->
 
     <div class="flex flex-col m-10">
@@ -98,7 +93,7 @@
                                     scope="col"
                                     class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                 >
-                                    No. of Copies
+                                    Request Date
                                 </th>
                                 <th
                                     scope="col"
@@ -109,41 +104,40 @@
                             </tr>
                         </thead>
                         <tbody>
-
                             <tr
-                                v-for="book in books"
-                                :key="book.id"
+                                v-for="booking in bookings"
+                                :key="booking.id"
                                 class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                             >
                                 <td
                                     class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                 >
-                                {{ books.book_no }}
+                                    {{ booking.book["book_no"] }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.name}}
+                                    {{ booking.book["book_name"] }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.subject}}
+                                    {{ booking.book["subject"] }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.author}}
+                                    {{ booking.book["author"] }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.publisher}}
+                                    {{ booking.book["publisher"] }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{books.copies}}
+                                    {{ booking.created_at }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
@@ -153,7 +147,7 @@
                                         class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
                                         id="login"
                                     >
-                                        Pending
+                                        {{ booking.status }}
                                     </button>
                                 </td>
                             </tr>
@@ -163,8 +157,20 @@
             </div>
         </div>
     </div>
-
-
-
 </template>
+<script>
+import { Link } from "@inertiajs/inertia-vue3";
 
+export default {
+    components: {
+        Link,
+    },
+
+    props: {
+        bookings: {
+            type: Array,
+            default: [],
+        },
+    },
+};
+</script>

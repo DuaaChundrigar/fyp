@@ -44,4 +44,6 @@ Route::middleware('hasRole:User')->group(function () {
 });
 
 
-Route::post('//book/request', [UserController::class, 'bookRequest']);
+Route::post('/book/request', [UserController::class, 'bookRequest']);
+
+Route::get('/books/requests', [UserController::class, 'bookRequests']);
