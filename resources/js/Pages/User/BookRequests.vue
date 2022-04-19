@@ -137,17 +137,29 @@
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
-                                    {{ booking.created_at }}
+                                    {{ getDate(booking.created_at) }}
                                 </td>
                                 <td
                                     class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                 >
                                     <button
                                         type="button"
-                                        class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                        class="px-3 py-2 text-sm font-medium text-white rounded-md"
                                         id="login"
+                                        :class="{
+                                            'bg-green-500':
+                                                booking.status == 'approved',
+                                            'bg-red-500':
+                                                booking.status == 'rejected',
+                                            'bg-gray-500':
+                                                booking.status == 'pending',
+                                            'bg-yellow-500':
+                                                booking.status == 'checkin',
+                                            'bg-blue-500':
+                                                booking.status == 'checkout',
+                                        }"
                                     >
-                                        {{ booking.status }}
+                                        {{ capitalize(booking.status) }}
                                     </button>
                                 </td>
                             </tr>
@@ -170,6 +182,33 @@ export default {
         bookings: {
             type: Array,
             default: [],
+        },
+    },
+
+    methods: {
+        capitalize(text) {
+            return text.charAt(0).toUpperCase() + text.slice(1);
+        },
+
+        getDate(date) {
+            console.log(date);
+            var datee = date.split("T")[0];
+            var time = date.split("T")[1].split(".")[0];
+            var hour = parseInt(time.split(":")[0]) + 5;
+            var minutes = parseInt(time.split(":")[1]);
+            var seconds = parseInt(time.split(":")[2]);
+
+            var ampm = hour >= 12 ? "PM" : "AM";
+            hour = hour % 12;
+            hour = hour ? hour : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            hour = hour < 10 ? "0" + hour : hour;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var strTime = hour + ":" + minutes + ":" + seconds + " " + ampm;
+
+            // console.log();
+            return datee + " - " + strTime;
         },
     },
 };

@@ -19561,6 +19561,29 @@ __webpack_require__.r(__webpack_exports__);
       type: Array,
       "default": []
     }
+  },
+  methods: {
+    capitalize: function capitalize(text) {
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    },
+    getDate: function getDate(date) {
+      console.log(date);
+      var datee = date.split("T")[0];
+      var time = date.split("T")[1].split(".")[0];
+      var hour = parseInt(time.split(":")[0]) + 5;
+      var minutes = parseInt(time.split(":")[1]);
+      var seconds = parseInt(time.split(":")[2]);
+      var ampm = hour >= 12 ? "PM" : "AM";
+      hour = hour % 12;
+      hour = hour ? hour : 12; // the hour '0' should be '12'
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      hour = hour < 10 ? "0" + hour : hour;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      var strTime = hour + ":" + minutes + ":" + seconds + " " + ampm; // console.log();
+
+      return datee + " - " + strTime;
+    }
   }
 });
 
@@ -20123,11 +20146,6 @@ var _hoisted_25 = {
 var _hoisted_26 = {
   "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
 };
-var _hoisted_27 = {
-  type: "button",
-  "class": "px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md",
-  id: "login"
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
@@ -20175,10 +20193,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(booking.book["publisher"]), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(booking.created_at), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getDate(booking.created_at)), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(booking.status), 1
-    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+      type: "button",
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["px-3 py-2 text-sm font-medium text-white rounded-md", {
+        'bg-green-500': booking.status == 'approved',
+        'bg-red-500': booking.status == 'rejected',
+        'bg-gray-500': booking.status == 'pending',
+        'bg-yellow-500': booking.status == 'checkin',
+        'bg-blue-500': booking.status == 'checkout'
+      }]),
+      id: "login"
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.capitalize(booking.status)), 3
+    /* TEXT, CLASS */
     )])]);
   }), 128
   /* KEYED_FRAGMENT */
