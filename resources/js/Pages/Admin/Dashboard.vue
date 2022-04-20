@@ -44,7 +44,7 @@
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
                 id="login"
                 >
-                <Link href="#" class="">Dashboard</Link>
+                <Link href="/" class="">Dashboard</Link>
             </button>
         </div>
         <div>
@@ -53,7 +53,7 @@
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
                 id="login"
             >
-                <Link href="#" class="">Books</Link>
+                <Link href="/dasboard/books" class="">Books</Link>
             </button>
         </div>
         <div>
