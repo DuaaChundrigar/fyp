@@ -40,4 +40,13 @@ class AdminController extends Controller
 
         return response(json_encode($books), 200);
     }
+
+    function editBook($book_id)
+    {
+        $book = Books::find($book_id);
+
+        // $book->update();
+
+        return Inertia::render('Admin/EditBook' , ['books' => $book]);
+    }
 }
