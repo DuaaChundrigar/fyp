@@ -191,7 +191,6 @@ export default {
         },
 
         getDate(date) {
-            console.log(date);
             var datee = date.split("T")[0];
             var time = date.split("T")[1].split(".")[0];
             var hour = parseInt(time.split(":")[0]) + 5;
@@ -200,14 +199,12 @@ export default {
 
             var ampm = hour >= 12 ? "PM" : "AM";
             hour = hour % 12;
-            hour = hour ? hour : 12; // the hour '0' should be '12'
+            hour = hour ? hour : 12;
             minutes = minutes < 10 ? "0" + minutes : minutes;
             hour = hour < 10 ? "0" + hour : hour;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-
             var strTime = hour + ":" + minutes + ":" + seconds + " " + ampm;
-
-            // console.log();
+            
             return datee + " - " + strTime;
         },
     },

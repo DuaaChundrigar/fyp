@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Books extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable  =  [
         'book_no',
@@ -19,4 +20,9 @@ class Books extends Model
         'edition',
         'copies'
     ];
+
+
+    //enable soft delete
+
+
 }

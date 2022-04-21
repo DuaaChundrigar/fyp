@@ -20,6 +20,24 @@ class AdminController extends Controller
 
     function AdminBooks(Request $request)
     {
-        return Inertia::render('Admin/AdminBooks');
+
+        $books = Books::all();
+
+        return Inertia::render('Admin/AdminBooks', ['books' => $books]);
+    }
+
+
+    function  deleteBook($book_id)
+    {
+
+        $book = Books::find($book_id);
+
+        $book->delete();
+
+
+        $books = Books::all();
+
+
+        return response(json_encode($books), 200);
     }
 }

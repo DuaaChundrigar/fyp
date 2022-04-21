@@ -37,6 +37,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
+
+    Route::post('/admin/books/delete/{book_id}', [AdminController::class, 'deleteBook']);
 });
 
 Route::middleware('hasRole:User')->group(function () {
@@ -48,6 +50,6 @@ Route::post('/book/request', [UserController::class, 'bookRequest']);
 
 Route::get('/books/requests', [UserController::class, 'bookRequests']);
 
-Route::post('/dasboard/book',[AdminController::class, 'AdminBook']);
+Route::post('/dasboard/book', [AdminController::class, 'AdminBook']);
 
-Route::get('/dasboard/books',[AdminController::class, 'AdminBooks']);
+Route::get('/dasboard/books', [AdminController::class, 'AdminBooks']);

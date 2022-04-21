@@ -23,6 +23,7 @@ class CreateBooksTable extends Migration
             $table->string('publisher');
             $table->string('edition');
             $table->string('copies');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
