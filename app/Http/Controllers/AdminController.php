@@ -17,10 +17,9 @@ class AdminController extends Controller
 
         return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user]);
     }
-    
-    function adminBooks(Request $request)
+
+    function AdminBooks(Request $request)
     {
-        return Inertia::render('Admin/adminBooks');
+        return Inertia::render('Admin/AdminBooks');
     }
-    
 }

@@ -48,6 +48,6 @@ Route::post('/book/request', [UserController::class, 'bookRequest']);
 
 Route::get('/books/requests', [UserController::class, 'bookRequests']);
 
-Route::post('/dasboard/book',[AdminController::class, 'adminBook']);
+Route::post('/dasboard/book',[AdminController::class, 'AdminBook']);
 
-Route::get('/dasboard/books',[AdminController::class, 'adminBooks']);
+Route::get('/dasboard/books',[AdminController::class, 'AdminBooks']);
