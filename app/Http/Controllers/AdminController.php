@@ -45,8 +45,30 @@ class AdminController extends Controller
     {
         $book = Books::find($book_id);
 
-        // $book->update();
 
-        return Inertia::render('Admin/EditBook' , ['books' => $book]);
+        return Inertia::render('Admin/EditBook', ['book' => $book]);
+    }
+
+    function updateBook(Request $request, $book_id)
+    {
+        $book = Books::find($book_id);
+
+        $book->book_no  = $request->formData['book_no'];
+        $book->isbn = $request->formData['isbn'];
+        $book->subject  = $request->formData['subject'];
+        $book->book_name  = $request->formData['book_name'];
+        $book->author  = $request->formData['author'];
+        $book->publisher  = $request->formData['publisher'];
+        $book->edition  = $request->formData['edition'];
+        $book->copies = $request->formData['copies'];
+
+        $book->save();
+
+
+        echo json_encode($book);
+        exit;
+
+        // echo json_encode($request->all());
+        // exit;
     }
 }

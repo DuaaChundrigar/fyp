@@ -1,7 +1,5 @@
 <template>
-
     <nav class="bg-gray-400">
-        
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
@@ -32,91 +30,87 @@
         </div>
     </nav>
 
+    {{ book }}
+
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
-        
-<!--Side bar-->
+        <!--Side bar-->
 
-        <div class="...  ">
+        <div class="...">
             <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
                 >
-                <Link href="/" class="">Dashboard</Link>
-            </button>
+                    <Link href="/" class="">Dashboard</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dasboard/books" class="">Books</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="Categories">Categories</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="" class="">Borrow Details</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Students</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Report</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Settings</Link>
+                </button>
+            </div>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dasboard/books" class="">Books</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="Categories">Categories</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="" class="">Borrow Details</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Students</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Report</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Settings</Link>
-            </button>
-        </div>
-        
-    </div>
 
-    <!--Right Side-->
-        <div class="col-span-5 ... m-2" >
+        <!--Book Insertion Form-->
 
-
-<!--Book Insertion Form-->
-
-            <div
-            class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
+        <div
+            class="flex flex-col w-full px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
         >
             <div
                 class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
             >
-            Update Book
+                Update Book
             </div>
 
             <div class="mt-5">
@@ -229,33 +223,52 @@
                 </form>
             </div>
         </div>
-        </div>
-
+    </div>
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3";
+import axios from "axios";
 export default {
-    
+    components: {
+        Link,
+    },
+    props: {
+        book: {
+            type: Object,
+            default: {},
+        },
+    },
+
     data() {
         return {
             formData: {
-                book_no: "",
-                isbn: "",
-                subject: "",
-                book_name: "",
-                author: "",
-                publisher: "",
-                edition: "",
-                copies: "",
+                book_no: this.book.book_no,
+                isbn: this.book.isbn,
+                subject: this.book.subject,
+                book_name: this.book.book_name,
+                author: this.book.author,
+                publisher: this.book.publisher,
+                edition: this.book.edition,
+                copies: this.book.copies,
             },
         };
     },
 
     methods: {
         submitForm() {
-            this.$inertia.post("/dasboard/books", { formData: this.formData });
+            // this.$inertia.post("/admin/book/update/" + this.book.id, {
+            //     formData: this.formData,
+            // });
+
+            axios
+                .post("/admin/book/update/" + this.book.id, {
+                    formData: this.formData,
+                })
+                .then((response) => {
+                    console.log(response);
+                });
         },
     },
-    
-}
+};
 </script>

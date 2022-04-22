@@ -40,8 +40,9 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::post('/admin/books/delete/{book_id}', [AdminController::class, 'deleteBook']);
 
-    Route::get('/dashboard/edit/{book_id}', [AdminController::class, 'editBook']);
+    Route::get('/admin/book/edit/{book_id}', [AdminController::class, 'editBook']);
 
+    Route::post('/admin/book/update/{book_id}', [AdminController::class, 'updateBook']);
 });
 
 Route::middleware('hasRole:User')->group(function () {
