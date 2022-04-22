@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="bg-gray-800">
+        <nav class="bg-gray-400">
             <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
                     <div
@@ -248,7 +248,7 @@
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
                                                 <Link
-                                                    
+                                                    href="/admin/edit/book_id"  
                                                     class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
                                                     id="login"
                                                 >

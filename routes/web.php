@@ -39,6 +39,9 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index']);
 
     Route::post('/admin/books/delete/{book_id}', [AdminController::class, 'deleteBook']);
+
+    Route::get('/dashboard/edit/{book_id}', [AdminController::class, 'editBook']);
+
 });
 
 Route::middleware('hasRole:User')->group(function () {
