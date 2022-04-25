@@ -76,3 +76,8 @@ Route::post('/dashboard/category', [AdminController::class, 'Category']);
 Route::post('/dashboard/insertBook', [AdminController::class, 'InsertBook']);
 
 Route::get('/dashboard/insertBook', [AdminController::class, 'InsertBooks']);
+
+Route::get('/dashboard/insertCategory', [AdminController::class, 'InsertCategory']);
+
+Route::post('/dashboard/insertCategory', [AdminController::class, 'InsertCategories']);
+

@@ -114,9 +114,12 @@
                 <div class="col-span-1"></div>
                 <div class="col-span-1"></div>
                 <div class="col-span-1"> 
-                    <button class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl">
-                        Add Category
-                    </button> 
+                    <Link
+                    href="/dashboard/insertCategory"
+                    class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
+                    >
+                    Add New Category
+                    </Link> 
                 </div>
             </div>
 

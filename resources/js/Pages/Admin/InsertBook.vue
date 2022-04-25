@@ -8,11 +8,11 @@
                     class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
                 >
                     <div class="flex items-center flex-shrink-0">
-                        <img
+                        <!-- <img
                             class="hidden w-auto h-8 lg:block"
                             src="1.png"
                             alt="Logo"
-                        />
+                        /> -->
                     </div>
                 </div>
                 <div
@@ -231,7 +231,7 @@
                                         type="submit"
                                         class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
                                     >
-                                        Update
+                                        Insert
                                     </button>
                                 </div>
                         </form>

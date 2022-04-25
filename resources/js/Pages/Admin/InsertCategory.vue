@@ -114,7 +114,7 @@
                     <div
                         class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
                     >
-                    Update Category
+                    Insert Category
                     </div>
 
                 <div class="">
@@ -149,42 +149,22 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import axios from "axios";
-import { scripts } from 'laravel-mix';
+
 export default {
     components: {
         Link,
-    },
-    props: {
-    
-        categories: {
-            type: Array,
-            default: [],
-        },
     },
 
     data() {
         return {
             formData: {
-                categories: this.categories.subject,
+                categories: "",
             }
         };
     },
     methods: {
-        submitForm() {
-            // this.$inertia.post("/admin/book/update/" + this.book.id, {
-            //     formData: this.formData,
-            // });
-
-            axios
-                .post("/admin/category/update/" + this.categories.subject, {
-                    formData: this.formData,
-                })
-                .then((response) => {
-                    // console.log(response);
-                    // this.$router.back(-1);
-                    // this.$router.push('Admin/AdminBooks');
-                });
+    submitForm() {
+            this.$inertia.post("/dasboard/categories", { formData: this.formData });
         },
     },
     
