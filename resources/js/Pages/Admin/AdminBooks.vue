@@ -60,7 +60,7 @@
                         class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
                         id="login"
                     >
-                        <Link href="#" class="Categories">Categories</Link>
+                        <Link href="/dashboard/categories" class="Categories">Categories</Link>
                     </button>
                 </div>
                 <div>
@@ -108,11 +108,12 @@
                     <div class="col-span-1"></div>
                     <div class="col-span-1"></div>
                     <div class="col-span-1">
-                        <button
-                            class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
-                        >
-                            Add new book
-                        </button>
+                    <Link
+                    href="/dashboard/insertBook"
+                    class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
+                    >
+                    Add New Book
+                    </Link>
                     </div>
                 </div>
 
@@ -250,7 +251,6 @@
                                                 <Link
                                                     :href="`/admin/book/edit/`+book.id"  
                                                     class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
-                                                    id="login"
                                                 >
                                                     Edit
                                                 </Link>
@@ -262,7 +262,6 @@
                                                     type="button"
                                                     @click="deleteBook(book.id)"
                                                     class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
-                                                    id="login"
                                                 >
                                                     Delete
                                                 </button>

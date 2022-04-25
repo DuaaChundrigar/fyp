@@ -116,7 +116,7 @@
                     <div
                         class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
                     >
-                    Update Book Now
+                    Insert Book Now
                     </div>
 
                 <div class="">
@@ -248,49 +248,34 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import axios from "axios";
+
 export default {
     components: {
         Link,
     },
-    props: {
-        book: {
-            type: Object,
-            default: {},
-        },
-    },
+
 
     data() {
         return {
             formData: {
-                book_no: this.book.book_no,
-                isbn: this.book.isbn,
-                subject: this.book.subject,
-                book_name: this.book.book_name,
-                author: this.book.author,
-                publisher: this.book.publisher,
-                edition: this.book.edition,
-                copies: this.book.copies,
+                book_no: "",
+                isbn: "",
+                subject: "",
+                book_name: "",
+                author: "",
+                publisher: "",
+                edition: "",
+                copies: "",
             },
         };
     },
 
-    methods: {
-        submitForm() {
-            // this.$inertia.post("/admin/book/update/" + this.book.id, {
-            //     formData: this.formData,
-            // });
-
-            axios
-                .post("/admin/book/update/" + this.book.id, {
-                    formData: this.formData,
-                })
-                .then((response) => {
-                    // console.log(response);
-                    // this.$router.back(-1);
-                    // this.$router.push('Admin/AdminBooks');
-                });
+    
+methods: {
+    submitForm() {
+            this.$inertia.post("/dasboard/books", { formData: this.formData });
         },
     },
+
 };
 </script>
