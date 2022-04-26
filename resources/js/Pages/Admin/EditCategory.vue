@@ -183,7 +183,7 @@ export default {
                 .then((response) => {
                     // console.log(response);
                     // this.$router.back(-1);
-                    // this.$router.push('Admin/AdminBooks');
+                    // this.$router.push('Admin/Categories');
                 });
         },
     },

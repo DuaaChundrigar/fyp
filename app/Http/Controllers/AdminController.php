@@ -121,7 +121,7 @@ class AdminController extends Controller
 
     function InsertBooks( Request $request ){
 
-        $book = Books::all();
+        $book = new Books();
 
         $book->book_no  = $request->formData['book_no'];
         $book->isbn = $request->formData['isbn'];
@@ -134,14 +134,22 @@ class AdminController extends Controller
 
         $book->save();
 
-
         echo json_encode($book);
         exit;
 
-        return Inertia::render('Admin/InsertBook' );
+        return Inertia::render('Admin/AdminBooks', ['book' => $book] );
     }
 
-    function InsertCategory(){
+    function InsertCategory(Request $request){
+
+            $categories = new Categories();
+
+            $categories->subject  = $request->formData['subject'];
+    
+            $categories->save();
+    
+            echo json_encode($categories);
+            exit;
 
         return Inertia::render('Admin/InsertCategory');
     }
