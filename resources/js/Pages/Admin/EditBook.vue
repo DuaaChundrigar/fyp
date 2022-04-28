@@ -266,7 +266,7 @@ export default {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    console.log(response);
+                    window.location.href = "/dasboard/books";
                 });
         },
     },

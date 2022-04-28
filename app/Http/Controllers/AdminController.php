@@ -73,11 +73,12 @@ class AdminController extends Controller
         // exit;
     }
 
-    function Categories(){
+    function Categories()
+    {
 
         $categories = Categories::all();
 
-        return Inertia::render('Admin/Categories' , ['categories' => $categories]);
+        return Inertia::render('Admin/Categories', ['categories' => $categories]);
     }
 
     function  deleteCategory($category_id)
@@ -94,20 +95,21 @@ class AdminController extends Controller
         return response(json_encode($categories), 200);
     }
 
-    function editCategory(){
+    function editCategory()
+    {
 
         $categories = Categories::all();
 
-        return Inertia::render('Admin/EditCategory' , ['categories' => $categories]);
+        return Inertia::render('Admin/EditCategory', ['categories' => $categories]);
     }
 
     function updateCategory(Request $request, $category_id)
     {
         $categories = Categories::find($category_id);
 
-    
+
         $categories->subject  = $request->formData['subject'];
-    
+
 
         $categories->save();
 
@@ -119,7 +121,31 @@ class AdminController extends Controller
         // exit;
     }
 
-    function InsertBooks( Request $request ){
+    function InsertBooks(Request $request)
+    {
+        // echo json_encode('test');
+        // exit;
+        // $book = new Books();
+
+        // $book->book_no  = $request->formData['book_no'];
+        // $book->isbn = $request->formData['isbn'];
+        // $book->subject  = $request->formData['subject'];
+        // $book->book_name  = $request->formData['book_name'];
+        // $book->author  = $request->formData['author'];
+        // $book->publisher  = $request->formData['publisher'];
+        // $book->edition  = $request->formData['edition'];
+        // $book->copies = $request->formData['copies'];
+
+        // $book->save();
+
+        // echo json_encode($book);
+        // exit;
+
+        return Inertia::render('Admin/InsertBook');
+    }
+
+    function InsertBook(Request $request)
+    {
 
         $book = new Books();
 
@@ -134,24 +160,21 @@ class AdminController extends Controller
 
         $book->save();
 
-        echo json_encode($book);
-        exit;
-
-        return Inertia::render('Admin/AdminBooks', ['book' => $book] );
+        return redirect('/dasboard/books');
     }
 
-    function InsertCategory(Request $request){
+    function InsertCategory(Request $request)
+    {
 
-            $categories = new Categories();
+        $categories = new Categories();
 
-            $categories->subject  = $request->formData['subject'];
-    
-            $categories->save();
-    
-            echo json_encode($categories);
-            exit;
+        $categories->subject  = $request->formData['subject'];
+
+        $categories->save();
+
+        echo json_encode($categories);
+        exit;
 
         return Inertia::render('Admin/InsertCategory');
     }
-
 }
