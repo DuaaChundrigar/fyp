@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Models\Categories;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -43,6 +44,16 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/book/edit/{book_id}', [AdminController::class, 'editBook']);
 
     Route::post('/admin/book/update/{book_id}', [AdminController::class, 'updateBook']);
+
+    Route::post('/admin/categories/delete/{category_id}', [AdminController::class, 'deleteCategory']);
+
+    Route::get('/admin/category/edit/{category_id}', [AdminController::class, 'editCategory']);
+
+    Route::post('/admin/category/update/{category_id}', [AdminController::class, 'updateCategory']);
+
+
+
+
 });
 
 Route::middleware('hasRole:User')->group(function () {
@@ -57,3 +68,16 @@ Route::get('/books/requests', [UserController::class, 'bookRequests']);
 Route::post('/dasboard/book', [AdminController::class, 'AdminBook']);
 
 Route::get('/dasboard/books', [AdminController::class, 'AdminBooks']);
+
+Route::get('/dashboard/categories', [AdminController::class, 'Categories']);
+
+Route::post('/dashboard/category', [AdminController::class, 'Category']);
+
+Route::post('/dashboard/insertBook', [AdminController::class, 'InsertBook']);
+
+Route::get('/dashboard/insertBook', [AdminController::class, 'InsertBooks']);
+
+Route::get('/dashboard/insertCategory', [AdminController::class, 'InsertCategory']);
+
+Route::post('/dashboard/insertCategory', [AdminController::class, 'InsertCategories']);
+
