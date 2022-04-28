@@ -1,8 +1,5 @@
 <template>
-    
-        
     <nav class="bg-gray-400">
-        
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
@@ -35,128 +32,127 @@
 
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
-        
-<!--Side bar-->
+        <!--Side bar-->
 
-        <div class="...  ">
+        <div class="...">
             <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
                 >
-                <Link href="/" class="">Dashboard</Link>
-            </button>
+                    <Link href="/" class="">Dashboard</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dasboard/books" class="">Books</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dashboard/categories" class="Categories"
+                        >Categories</Link
+                    >
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="" class="">Borrow Details</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Students</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Report</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Settings</Link>
+                </button>
+            </div>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dasboard/books" class="">Books</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dashboard/categories" class="Categories">Categories</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="" class="">Borrow Details</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Students</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Report</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Settings</Link>
-            </button>
-        </div>
-        
-    </div>
 
-    <!--Right Side-->
-        <div class="col-span-5 ... m-2" >
-    
-        <div
+        <!--Right Side-->
+        <div class="col-span-5 ... m-2">
+            <div
                 class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
             >
-                    <div
-                        class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
-                    >
+                <div
+                    class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
+                >
                     Update Category
-                    </div>
+                </div>
 
                 <div class="">
-                        <form @submit.prevent="submitForm">
-                                <div class="flex flex-col mb-2">
-                                    <div class="relative">
-                                        <label for="category" class="text-white"> Category Name </label>
-                                        <input
-                                            type="text"
-                                            v-model="formData.categories.subject"
-                                            name="subject"
-                                            class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                            placeholder="Enter Category"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center justify-center">
-                                    <button
-                                        type="submit"
-                                        class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
-                                    >
-                                        Save
-                                    </button>
-                                </div>
-                        </form>
+                    <form @submit.prevent="submitForm">
+                        <div class="flex flex-col mb-2">
+                            <div class="relative">
+                                <label for="category" class="text-white">
+                                    Category Name
+                                </label>
+                                <input
+                                    type="text"
+                                    v-model="formData.categories.subject"
+                                    name="subject"
+                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    placeholder="Enter Category"
+                                />
+                            </div>
+                        </div>
 
+                        <div class="flex items-center justify-center">
+                            <button
+                                type="submit"
+                                class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
+                            >
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import axios from "axios";
-import { scripts } from 'laravel-mix';
 export default {
     components: {
         Link,
     },
     props: {
-    
         categories: {
             type: Array,
             default: [],
@@ -167,7 +163,7 @@ export default {
         return {
             formData: {
                 categories: this.categories.subject,
-            }
+            },
         };
     },
     methods: {
@@ -187,6 +183,5 @@ export default {
                 });
         },
     },
-    
 };
 </script>
