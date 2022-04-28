@@ -1,8 +1,5 @@
 <template>
-    
-        
     <nav class="bg-gray-400">
-        
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
@@ -35,181 +32,182 @@
 
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
-        
-<!--Side bar-->
+        <!--Side bar-->
 
-        <div class="...  ">
+        <div class="...">
             <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
                 >
-                <Link href="/" class="">Dashboard</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dasboard/books" class="">Books</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dashboard/categories" class="Categories">Categories</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="" class="">Borrow Details</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Students</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Report</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Settings</Link>
-            </button>
-        </div>
-        
-    </div>
-
-    <!--Right Side-->
-        <div class="col-span-5 ... m-2" >
-
-            <div class="grid grid-cols-4 ">
-                
-                <div class="col-span-1"></div>
-                <div class="col-span-1"></div>
-                <div class="col-span-1"></div>
-                <div class="col-span-1"> 
-                    <Link
-                    href="/dashboard/insertCategory"
-                    class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
+                    <Link href="/" class="">Dashboard</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dasboard/books" class="">Books</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dashboard/categories" class="Categories"
+                        >Categories</Link
                     >
-                    Add New Category
-                    </Link> 
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="" class="">Borrow Details</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Students</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Report</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Settings</Link>
+                </button>
+            </div>
+        </div>
+
+        <!--Right Side-->
+        <div class="col-span-5 ... m-2">
+            <div class="grid grid-cols-4">
+                <div class="col-span-1"></div>
+                <div class="col-span-1"></div>
+                <div class="col-span-1"></div>
+                <div class="col-span-1">
+                    <Link
+                        href="/dashboard/insertCategory"
+                        class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
+                    >
+                        Add New Category
+                    </Link>
                 </div>
             </div>
 
             <!-- Table  -->
 
-    <div class="flex flex-col m-10">
-        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="inline-block py-2 sm:px-6 lg:px-8">
-                <div class="overflow-hidden">
-                    <table class="ml-32 border ">
-                        <thead class="bg-white border-b">
-                            <tr>
-                                <th
-                                    scope="col"
-                                    class="px-6 py-4 text-sm font-medium text-left text-gray-900"
-                                >
-                                    S.no
-                                </th>
-                                
-                                <th
-                                    scope="col"
-                                    class="px-6 py-4 text-sm font-medium text-left text-gray-900"
-                                >
-                                    Category Name
-                                </th>
-                            
-                                <th
-                                    scope="col"
-                                    class="px-6 py-4 text-sm font-medium text-left text-gray-900"
-                                >
-                                    Edit
-                                </th>
-                                <th
-                                    scope="col"
-                                    class="px-6 py-4 text-sm font-medium text-left text-gray-900"
-                                >
-                                    Delete
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="category in categories"
-                                :key="category.id"
-                                class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
-                            >
-                                <td
-                                    class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
-                                >
-                                {{ category.id }}
-                                </td>
-                            
-                                <td
-                                    class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
-                                >
-                                    {{category.subject}}
-                                </td>
-                        
-                            
-                                <td
-                                    class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
-                                >
-                                    <Link
-                                        :href="`/admin/category/edit/`+category.id"  
-                                        class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+            <div class="flex flex-col m-10">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block py-2 sm:px-6 lg:px-8">
+                        <div class="overflow-hidden">
+                            <table class="ml-32 border">
+                                <thead class="bg-white border-b">
+                                    <tr>
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                        >
+                                            S.no
+                                        </th>
+
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                        >
+                                            Category Name
+                                        </th>
+
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                        >
+                                            Edit
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                        >
+                                            Delete
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        v-for="category in categories"
+                                        :key="category.id"
+                                        class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                                     >
-                                    Edit
-                                    </Link>
-                                </td>
-                                <td
-                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
-                            >
-                                <button
-                                    type="button"
-                                    @click="deleteCategory(category.id)"
-                                    class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
-                                >
-                                    Delete
-                                </button>
-                            </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                        <td
+                                            class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                        >
+                                            {{ category.id }}
+                                        </td>
+
+                                        <td
+                                            class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                        >
+                                            {{ category.subject }}
+                                        </td>
+
+                                        <td
+                                            class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                        >
+                                            <Link
+                                                :href="
+                                                    `/admin/category/edit/` +
+                                                    category.id
+                                                "
+                                                class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                            >
+                                                Edit
+                                            </Link>
+                                        </td>
+                                        <td
+                                            class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                        >
+                                            <button
+                                                type="button"
+                                                @click="
+                                                    deleteCategory(category.id)
+                                                "
+                                                class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-        </div>
-    </div>
-
 </template>
 
 <script>
@@ -220,7 +218,6 @@ export default {
         Link,
     },
     props: {
-    
         categories: {
             type: Array,
             default: [],
@@ -232,14 +229,15 @@ export default {
             categories: this.categories,
         };
     },
-    
+
     methods: {
         deleteCategory(category_id) {
-            axios.post("/admin/categories/delete/" + category_id).then((response) => {
-                this.categories = response.data;
-            });
+            axios
+                .post("/admin/categories/delete/" + category_id)
+                .then((response) => {
+                    this.categories = response.data;
+                });
         },
     },
 };
-
 </script>
