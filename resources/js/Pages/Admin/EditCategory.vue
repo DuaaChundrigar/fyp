@@ -141,7 +141,8 @@
                                     </button>
                                 </div>
                         </form>
-
+                </div>
+            </div>
         </div>
     </div>
 
@@ -150,7 +151,6 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import axios from "axios";
-import { scripts } from 'laravel-mix';
 export default {
     components: {
         Link,
