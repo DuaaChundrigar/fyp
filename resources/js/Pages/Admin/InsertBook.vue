@@ -278,7 +278,7 @@ export default {
 
     methods: {
         submitForm() {
-            this.$inertia.post("/dashboard/insertBook", {
+            this.$inertia.post("/admin/book", {
                 formData: this.formData,
             });
         },

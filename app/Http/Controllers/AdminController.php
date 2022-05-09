@@ -19,7 +19,7 @@ class AdminController extends Controller
         return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user]);
     }
 
-    function AdminBooks(Request $request)
+    function books(Request $request)
     {
 
         $books = Books::all();
@@ -73,7 +73,7 @@ class AdminController extends Controller
         // exit;
     }
 
-    function Categories()
+    function categories()
     {
 
         $categories = Categories::all();
@@ -121,13 +121,13 @@ class AdminController extends Controller
         // exit;
     }
 
-    function InsertBooks(Request $request)
+    function addBookk(Request $request)
     {
 
         return Inertia::render('Admin/InsertBook');
     }
 
-    function InsertBook(Request $request)
+    function addBook(Request $request)
     {
 
         $book = new Books();
@@ -143,15 +143,14 @@ class AdminController extends Controller
 
         $book->save();
 
-        return redirect('/dasboard/books');
+        return redirect('/admin/books');
     }
 
     function InsertCategories(Request $request)
     {
         return Inertia::render('Admin/InsertCategory');
-        
     }
-    
+
     function InsertCategory(Request $request)
     {
         $categories = new Categories();

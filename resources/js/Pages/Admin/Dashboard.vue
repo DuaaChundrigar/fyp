@@ -1,7 +1,5 @@
 <template>
-
-<nav class="bg-gray-400">
-        
+    <nav class="bg-gray-400">
         <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative flex items-center justify-between h-16">
                 <div
@@ -34,89 +32,97 @@
 
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
-        
-<!--Side bar-->
+        <!--Side bar-->
 
-        <div class="...  ">
+        <div class="...">
             <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                id="login"
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
+                    id="login"
                 >
-                <Link href="/" class="">Dashboard</Link>
-            </button>
+                    <Link href="/" class="">Dashboard</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/admin/books" class="">Books</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="/dashboard/categories" class="Categories"
+                        >Categories</Link
+                    >
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="" class="">Borrow Details</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Students</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Report</Link>
+                </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+                    id="login"
+                >
+                    <Link href="#" class="">Settings</Link>
+                </button>
+            </div>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dasboard/books" class="">Books</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="/dashboard/categories" class="Categories">Categories</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="" class="">Borrow Details</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Students</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Report</Link>
-            </button>
-        </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
-            >
-                <Link href="#" class="">Settings</Link>
-            </button>
-        </div>
-        
-    </div>
 
-    <!--Right Side-->
-        <div class="col-span-5 ... m-2" >
+        <!--Right Side-->
+        <div class="col-span-5 ... m-2">
+            <div
+                class="grid h-24 grid-cols-3 gap-4 text-2xl font-bold text-center text-white"
+            >
+                <div class="col-span-1 ... rounded-md p-6 bg-red-600">
+                    Check-in Books
+                </div>
 
-            <div class="grid h-24 grid-cols-3 gap-4 text-2xl font-bold text-center text-white">
-                
-                <div class="col-span-1 ... rounded-md p-6 bg-red-600">Check-in Books </div>
-            
-                <div class="col-span-1 ... rounded-md p-6 bg-blue-600">Check-out Books</div>
-                
-                <div class="col-span-1 ... rounded-md p-6 bg-green-700">Booking Books</div>
+                <div class="col-span-1 ... rounded-md p-6 bg-blue-600">
+                    Check-out Books
+                </div>
+
+                <div class="col-span-1 ... rounded-md p-6 bg-green-700">
+                    Booking Books
+                </div>
             </div>
 
-            <div class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-60 input-group">
+            <div
+                class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-60 input-group"
+            >
                 <input
                     type="search"
                     class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:bg-white focus:border-blue-600"
@@ -145,19 +151,15 @@
                     </svg>
                 </button>
             </div>
-
         </div>
     </div>
-
-
-    
 </template>
 
 <script>
-import {Link} from "@inertiajs/inertia-vue3";
+import { Link } from "@inertiajs/inertia-vue3";
 export default {
-        components: {
-            Link,
-        },
+    components: {
+        Link,
+    },
 };
 </script>
