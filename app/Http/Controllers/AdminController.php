@@ -123,23 +123,6 @@ class AdminController extends Controller
 
     function InsertBooks(Request $request)
     {
-        // echo json_encode('test');
-        // exit;
-        // $book = new Books();
-
-        // $book->book_no  = $request->formData['book_no'];
-        // $book->isbn = $request->formData['isbn'];
-        // $book->subject  = $request->formData['subject'];
-        // $book->book_name  = $request->formData['book_name'];
-        // $book->author  = $request->formData['author'];
-        // $book->publisher  = $request->formData['publisher'];
-        // $book->edition  = $request->formData['edition'];
-        // $book->copies = $request->formData['copies'];
-
-        // $book->save();
-
-        // echo json_encode($book);
-        // exit;
 
         return Inertia::render('Admin/InsertBook');
     }
@@ -163,9 +146,14 @@ class AdminController extends Controller
         return redirect('/dasboard/books');
     }
 
+    function InsertCategories(Request $request)
+    {
+        return Inertia::render('Admin/InsertCategory');
+        
+    }
+    
     function InsertCategory(Request $request)
     {
-
         $categories = new Categories();
 
         $categories->subject  = $request->formData['subject'];
@@ -175,6 +163,6 @@ class AdminController extends Controller
         echo json_encode($categories);
         exit;
 
-        return Inertia::render('Admin/InsertCategory');
+        return redirect('dashboard/categories');
     }
 }

@@ -163,7 +163,7 @@ export default {
     },
     methods: {
         submitForm() {
-            this.$inertia.post("/dasboard/categories", {
+            this.$inertia.post("/dashboard/insertCategory", {
                 formData: this.formData,
             });
         },

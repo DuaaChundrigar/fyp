@@ -47,9 +47,9 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::post('/admin/categories/delete/{category_id}', [AdminController::class, 'deleteCategory']);
 
-    Route::get('/admin/category/edit/{category_id}', [AdminController::class, 'editCategory']);
+    Route::get('/admin/categories/edit/{category_id}', [AdminController::class, 'editCategory']);
 
-    Route::post('/admin/category/update/{category_id}', [AdminController::class, 'updateCategory']);
+    Route::post('/admin/categories/update/{category_id}', [AdminController::class, 'updateCategory']);
 
 
 
@@ -75,9 +75,9 @@ Route::post('/dashboard/category', [AdminController::class, 'Category']);
 
 Route::post('/dashboard/insertBook', [AdminController::class, 'InsertBook']);
 
-Route::get('/dashboard/insertBook', [AdminController::class, 'InsertBooks']);
+Route::get('/dashboard/insertBooks', [AdminController::class, 'InsertBooks']);
 
-Route::get('/dashboard/insertCategory', [AdminController::class, 'InsertCategory']);
+Route::post('/dashboard/insertCategory', [AdminController::class, 'InsertCategory']);
 
-Route::post('/dashboard/insertCategory', [AdminController::class, 'InsertCategories']);
+Route::get('/dashboard/insertCategorys', [AdminController::class, 'InsertCategories']);
 

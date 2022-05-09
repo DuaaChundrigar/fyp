@@ -30,7 +30,6 @@
         </div>
     </nav>
 
-    {{ book }}
 
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
@@ -101,19 +100,20 @@
                 </button>
             </div>
         </div>
+<!--Right Side-->
+        <div class="col-span-5 ... m-2">
+            <!--Book Insertion Form-->
 
-        <!--Book Insertion Form-->
-
-        <div
-            class="flex flex-col w-full px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
-        >
             <div
-                class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
+                class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
             >
-                Update Book
-            </div>
+                <div
+                    class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
+                >
+                    Update Book
+                </div>
 
-            <div class="mt-5">
+                <div class="">
                 <form @submit.prevent="submitForm">
                     <div class="flex flex-col mb-2">
                         <div class="relative">
@@ -223,6 +223,9 @@
                 </form>
             </div>
         </div>
+        <div>
+            </div>
+    </div>
     </div>
 </template>
 
