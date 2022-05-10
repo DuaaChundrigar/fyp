@@ -73,7 +73,7 @@ class AdminController extends Controller
         // exit;
     }
 
-    function categories()
+    function categories(Request $request)
     {
 
         $categories = Categories::all();
@@ -95,10 +95,9 @@ class AdminController extends Controller
         return response(json_encode($categories), 200);
     }
 
-    function editCategory()
+    function editCategory($category_id)
     {
-
-        $categories = Categories::all();
+        $categories = Categories::find($category_id);
 
         return Inertia::render('Admin/EditCategory', ['categories' => $categories]);
     }
@@ -124,7 +123,7 @@ class AdminController extends Controller
     function addBookk(Request $request)
     {
 
-        return Inertia::render('Admin/InsertBook');
+        return Inertia::render('Admin/addBook');
     }
 
     function addBook(Request $request)
@@ -146,12 +145,12 @@ class AdminController extends Controller
         return redirect('/admin/books');
     }
 
-    function InsertCategories(Request $request)
+    function addCategories(Request $request)
     {
         return Inertia::render('Admin/InsertCategory');
     }
 
-    function InsertCategory(Request $request)
+    function addCategory(Request $request)
     {
         $categories = new Categories();
 
@@ -162,6 +161,6 @@ class AdminController extends Controller
         echo json_encode($categories);
         exit;
 
-        return redirect('dashboard/categories');
+        return redirect('/admin/categories');
     }
 }

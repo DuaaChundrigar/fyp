@@ -154,10 +154,11 @@ export default {
     components: {
         Link,
     },
+
     props: {
         categories: {
-            type: Array,
-            default: [],
+            type: Object,
+            default: {},
         },
     },
 
@@ -175,7 +176,7 @@ export default {
             // });
 
             axios
-                .post("/admin/category/update/" + this.categories.subject, {
+                .post("/admin/categories/update/" + this.categories.subject, {
                     formData: this.formData,
                 })
                 .then((response) => {

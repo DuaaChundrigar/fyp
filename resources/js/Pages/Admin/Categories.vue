@@ -50,7 +50,7 @@
                     class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
                     id="login"
                 >
-                    <Link href="/dasboard/books" class="">Books</Link>
+                    <Link href="/admin/books" class="">Books</Link>
                 </button>
             </div>
             <div>
@@ -59,7 +59,7 @@
                     class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
                     id="login"
                 >
-                    <Link href="/dashboard/categories" class="Categories"
+                    <Link href="/admin/categories" class="Categories"
                         >Categories</Link
                     >
                 </button>
@@ -110,7 +110,7 @@
                 <div class="col-span-1"></div>
                 <div class="col-span-1">
                     <Link
-                        href="/dashboard/insertCategorys"
+                        href="/admin/categoriess"
                         class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
                     >
                         Add New Category
@@ -178,7 +178,7 @@
                                         >
                                             <Link
                                                 :href="
-                                                    `/admin/category/edit/` +
+                                                    `/admin/categories/edit` +
                                                     category.id
                                                 "
                                                 class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"

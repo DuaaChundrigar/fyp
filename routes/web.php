@@ -43,11 +43,11 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/book/edit/{book_id}', [AdminController::class, 'editBook']);
     Route::post('/admin/book/update/{book_id}', [AdminController::class, 'updateBook']);
 
-    // Route::post('/admin/categories/delete/{category_id}', [AdminController::class, 'deleteCategory']);
+    Route::post('/admin/categories/delete/{category_id}', [AdminController::class, 'deleteCategory']);
 
-    // Route::get('/admin/categories/edit/{category_id}', [AdminController::class, 'editCategory']);
+    Route::get('/admin/categories/edit/{category_id}', [AdminController::class, 'editCategory']);
 
-    // Route::post('/admin/categories/update/{category_id}', [AdminController::class, 'updateCategory']);
+    Route::post('/admin/categories/update/{category_id}', [AdminController::class, 'updateCategory']);
 
 
     Route::get('/admin/books', [AdminController::class, 'books']);
@@ -55,8 +55,13 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::post('/admin/book', [AdminController::class, 'addBook']);
 
     Route::get('/admin/categories', [AdminController::class, 'categories']);
+    
+    Route::get('/admin/categoriess', [AdminController::class, 'addCategories']);
 
-    // Route::post('/dashboard/category', [AdminController::class, 'Category']);
+    Route::post('/admin/categoriess', [AdminController::class, 'addCategory']);
+
+
+    //Route::post('/dashboard/category', [AdminController::class, 'Category']);
 
     // Route::post('/dashboard/insertBook', [AdminController::class, 'InsertBook']);
 

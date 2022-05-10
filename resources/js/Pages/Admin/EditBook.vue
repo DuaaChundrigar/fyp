@@ -30,6 +30,7 @@
         </div>
     </nav>
 
+
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
         <!--Side bar-->
@@ -99,7 +100,7 @@
                 </button>
             </div>
         </div>
-        <!--Right Side-->
+<!--Right Side-->
         <div class="col-span-5 ... m-2">
             <!--Book Insertion Form-->
 
@@ -113,117 +114,118 @@
                 </div>
 
                 <div class="">
-                    <form @submit.prevent="submitForm">
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="book_no"
-                                    type="text"
-                                    v-model="formData.book_no"
-                                    name="book_no"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter book number"
-                                />
-                            </div>
+                <form @submit.prevent="submitForm">
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="book_no"
+                                type="text"
+                                v-model="formData.book_no"
+                                name="book_no"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter book number"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="isbn"
-                                    type="text"
-                                    v-model="formData.isbn"
-                                    name="isbn"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter book ISBN Number"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="isbn"
+                                type="text"
+                                v-model="formData.isbn"
+                                name="isbn"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter book ISBN Number"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="subject"
-                                    type="subject"
-                                    v-model="formData.subject"
-                                    name="subject"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Subject Name"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="subject"
+                                type="subject"
+                                v-model="formData.subject"
+                                name="subject"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Subject Name"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="book_name"
-                                    type="text"
-                                    v-model="formData.book_name"
-                                    name="book_name"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Book Name"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="book_name"
+                                type="text"
+                                v-model="formData.book_name"
+                                name="book_name"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Book Name"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="author"
-                                    type="text"
-                                    v-model="formData.author"
-                                    name="author"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Author Name"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="author"
+                                type="text"
+                                v-model="formData.author"
+                                name="author"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Author Name"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="publisher"
-                                    type="publisher"
-                                    v-model="formData.publisher"
-                                    name="publisher"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Publisher Name"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="publisher"
+                                type="publisher"
+                                v-model="formData.publisher"
+                                name="publisher"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Publisher Name"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="edition"
-                                    type="edition"
-                                    v-model="formData.edition"
-                                    name="edition"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Edition"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="edition"
+                                type="edition"
+                                v-model="formData.edition"
+                                name="edition"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Edition"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    id="copies"
-                                    type="copies"
-                                    v-model="formData.copies"
-                                    name="copies"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter Copies"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <input
+                                id="copies"
+                                type="copies"
+                                v-model="formData.copies"
+                                name="copies"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter Copies"
+                            />
                         </div>
+                    </div>
 
-                        <div class="flex items-center justify-center">
-                            <button
-                                type="submit"
-                                class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
-                            >
-                                Update
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="flex items-center justify-center">
+                        <button
+                            type="submit"
+                            class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
+                        >
+                            Update
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div></div>
         </div>
+        <div>
+            </div>
+    </div>
     </div>
 </template>
 
@@ -267,7 +269,7 @@ export default {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    window.location.href = "/admin/books";
+                    window.location.href = "/dasboard/books";
                 });
         },
     },
