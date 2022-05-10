@@ -114,7 +114,6 @@
                 </div>
 
                 <div class="">
-
                     <form @submit.prevent="submitForm">
                         <div class="flex flex-col mb-2">
                             <div class="relative">
@@ -123,7 +122,7 @@
                                 </label>
                                 <input
                                     type="text"
-                                    v-model="formData.categories.subject"
+                                    v-model="formData.subject"
                                     name="subject"
                                     class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter Category"
@@ -136,11 +135,10 @@
                                 type="submit"
                                 class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
                             >
-                                Save
+                                Update
                             </button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -165,7 +163,7 @@ export default {
     data() {
         return {
             formData: {
-                categories: this.categories.subject,
+                subject: this.categories.subject,
             },
         };
     },
@@ -176,11 +174,11 @@ export default {
             // });
 
             axios
-                .post("/admin/categories/update/" + this.categories.subject, {
+                .post("/admin/categories/update/" + this.categories.id, {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    window.location.href = "/dashboard/categories";
+                    window.location.href = "/admin/categories";
                 });
         },
     },

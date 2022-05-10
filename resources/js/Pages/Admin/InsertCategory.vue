@@ -122,7 +122,7 @@
                                 </label>
                                 <input
                                     type="text"
-                                    v-model="formData.categories.subject"
+                                    v-model="formData.subject"
                                     name="subject"
                                     class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter Category"
@@ -143,7 +143,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -163,7 +162,7 @@ export default {
     },
     methods: {
         submitForm() {
-            this.$inertia.post("/dashboard/insertCategory", {
+            this.$inertia.post("/admin/categoriess", {
                 formData: this.formData,
             });
         },

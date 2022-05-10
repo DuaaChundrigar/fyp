@@ -112,9 +112,8 @@ class AdminController extends Controller
 
         $categories->save();
 
-
-        echo json_encode($categories);
-        exit;
+        return redirect('/admin/categories');
+        
 
         // echo json_encode($request->all());
         // exit;
@@ -158,8 +157,6 @@ class AdminController extends Controller
 
         $categories->save();
 
-        echo json_encode($categories);
-        exit;
 
         return redirect('/admin/categories');
     }

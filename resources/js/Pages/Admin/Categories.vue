@@ -178,7 +178,7 @@
                                         >
                                             <Link
                                                 :href="
-                                                    `/admin/categories/edit` +
+                                                    `/admin/categories/edit/` +
                                                     category.id
                                                 "
                                                 class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
