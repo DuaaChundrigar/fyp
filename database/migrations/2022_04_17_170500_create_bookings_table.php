@@ -17,6 +17,7 @@ class CreateBookingsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->foreignId('book_id')->references('id')->on('books');
+            // $table->foreingId('book_name')->refrences('id')->on('books');
             $table->string('checkin_datetime')->nullable();
             $table->string('checkout_datetime')->nullable();
             $table->string('duration')->default('7');

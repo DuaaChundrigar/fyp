@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Books;
 use App\Models\Categories;
+use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Inertia\Inertia;
@@ -160,4 +162,13 @@ class AdminController extends Controller
 
         return redirect('/admin/categories');
     }
+
+    function borrowDetails(Request $request)
+    {
+
+        $bookings = Booking::all();
+
+        return Inertia::render('Admin/BorrowDetails', ['bookings' => $bookings]);
+    }
+
 }

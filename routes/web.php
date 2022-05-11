@@ -55,10 +55,10 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::post('/admin/book', [AdminController::class, 'addBook']);
 
     Route::get('/admin/categories', [AdminController::class, 'categories']);
-    
     Route::get('/admin/categoriess', [AdminController::class, 'addCategories']);
-
     Route::post('/admin/categoriess', [AdminController::class, 'addCategory']);
+
+    Route::get('/admin/borrowDetails', [AdminController::class, 'borrowDetails']);
 
 
     //Route::post('/dashboard/category', [AdminController::class, 'Category']);
