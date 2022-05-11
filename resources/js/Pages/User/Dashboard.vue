@@ -223,7 +223,7 @@ export default {
                     book_id: book_id,
                 })
                 .then((response) => {
-                    alert(response.data);
+                    console.log(response.data);
                 })
                 .catch((error) => {
                     alert(error.response.data);

@@ -24,9 +24,11 @@ class UserController extends Controller
 
         $user = session('user');
 
-        $booking = Booking::where('user_id', $user->id)->where('book_id', $request->book_id)->where('status', 'pending')->first();
 
-        $booking2 = Booking::where('user_id', $user->id)->where('status', 'pending');
+
+        $booking = Booking::where('student_id', $user->user_id)->where('book_id', $request->book_id)->where('status', 'pending')->first();
+
+        $booking2 = Booking::where('student_id', $user->user_id)->where('status', 'pending');
 
         if ($booking) {
             return response("You have already requested this book", 400);
@@ -35,9 +37,8 @@ class UserController extends Controller
         } else {
 
 
-
             Booking::create([
-                'user_id' => $user->id,
+                'student_id' => $user->user_id,
                 'book_id' => $request->book_id,
                 'status' => 'pending'
             ]);
@@ -51,11 +52,11 @@ class UserController extends Controller
 
         $user = session('user');
 
-        $bookings  = Booking::where('user_id', $user->id)->get();
+        $bookings  = Booking::where('student_id', $user->user_id)->get();
 
         foreach ($bookings as $key => $booking) {
             $booking->book;
-            $booking->user;
+            $booking->student;
         }
 
         return Inertia::render('User/BookRequests', ['bookings' => $bookings]);

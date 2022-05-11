@@ -115,7 +115,7 @@ class AdminController extends Controller
         $categories->save();
 
         return redirect('/admin/categories');
-        
+
 
         // echo json_encode($request->all());
         // exit;
@@ -166,9 +166,12 @@ class AdminController extends Controller
     function borrowDetails(Request $request)
     {
 
-        $bookings = Booking::all();
+        $bookings = Booking::with('book', 'user')->get();
+
+
+        echo json_encode($bookings);
+        exit;
 
         return Inertia::render('Admin/BorrowDetails', ['bookings' => $bookings]);
     }
-
 }

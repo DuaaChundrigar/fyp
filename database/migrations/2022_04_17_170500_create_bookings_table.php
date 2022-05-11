@@ -15,7 +15,7 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('student_id')->references('id')->on('students');
             $table->foreignId('book_id')->references('id')->on('books');
             // $table->foreingId('book_name')->refrences('id')->on('books');
             $table->string('checkin_datetime')->nullable();

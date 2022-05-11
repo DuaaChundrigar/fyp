@@ -11,7 +11,7 @@ class Booking extends Model
 
 
     protected $fillable  =  [
-        'user_id',
+        'student_id',
         'book_id',
         // 'book_name',
         'duration',
@@ -24,9 +24,9 @@ class Booking extends Model
         return $this->belongsTo(Books::class, 'book_id');
     }
 
-    function user()
+    function student()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Student::class, 'student_id');
     }
 
     function bookName()

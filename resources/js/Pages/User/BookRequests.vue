@@ -204,7 +204,7 @@ export default {
             hour = hour < 10 ? "0" + hour : hour;
             seconds = seconds < 10 ? "0" + seconds : seconds;
             var strTime = hour + ":" + minutes + ":" + seconds + " " + ampm;
-            
+
             return datee + " - " + strTime;
         },
     },
