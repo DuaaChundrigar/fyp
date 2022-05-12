@@ -5,75 +5,7 @@
         <div class="grid grid-cols-6 gap-4 m-2">
             <!--Side bar-->
 
-            <div class="...">
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="/" class="">Dashboard</Link>
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="/dasboard/books" class="">Books</Link>
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="/admin/categories" class="Categories"
-                            >Categories</Link
-                        >
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="/admin/borrowDetails" class=""
-                            >Borrow Details</Link
-                        >
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="#" class="">Students</Link>
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="#" class="">Report</Link>
-                    </button>
-                </div>
-                <div>
-                    <button
-                        type="button"
-                        class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                        id="login"
-                    >
-                        <Link href="#" class="">Settings</Link>
-                    </button>
-                </div>
-            </div>
+        <SideMenu/>
 
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
@@ -192,7 +124,7 @@
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
                                                 <div
-                                                    class="grid grid-cols-3 gap-2"
+                                                    class="grid grid-cols-2 gap-2"
                                                 >
                                                     <Link
                                                         type="button"
@@ -201,16 +133,21 @@
                                                             booking.id +
                                                             `/approved`
                                                         "
-                                                        class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                        class="px-2 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
                                                     >
                                                         Approved
                                                     </Link>
-                                                    <button
+                                                    <Link
                                                         type="button"
-                                                        class="px-5 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                                        :href="
+                                                            `/admin/borrowDetails/booking/status/` +
+                                                            booking.id +
+                                                            `/rejected`
+                                                        "
+                                                        class="px-2 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
                                                     >
                                                         Rejected
-                                                    </button>
+                                                    </Link>
                                                     <Link
                                                         type="button"
                                                         :href="
@@ -218,16 +155,21 @@
                                                             booking.id +
                                                             `/checkin`
                                                         "
-                                                        class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                        class="px-2 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
                                                     >
                                                         Check-in
                                                     </Link>
-                                                    <button
+                                                    <Link
                                                         type="button"
-                                                        class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
+                                                        :href="
+                                                            '/admin/borrowDetails/booking/status/' +
+                                                            booking.id +
+                                                            '/checkout'
+                                                        "
+                                                        class="px-2 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
                                                     >
                                                         Cehck-out
-                                                    </button>
+                                                    </Link>
                                                 </div>
                                             </td>
                                         </tr>
@@ -245,11 +187,14 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar.vue";
+import SideMenu from "../../Components/Admin/SideMenu.vue";
+
 //import axios from "axios";
 export default {
     components: {
         Link,
         Navbar,
+        SideMenu,
     },
     props: {
         user: {

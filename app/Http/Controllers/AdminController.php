@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Books;
 use App\Models\Categories;
+use App\Models\Student;
 use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -196,4 +197,50 @@ class AdminController extends Controller
 
         return redirect('/admin/borrowDetails');
     }
+
+    function updateBookingsStatusCheckout(Request $request, $booking_id)
+    {
+        $booking = Booking::find($booking_id);
+
+        $booking->status = "checkout";
+        $booking->checkout_datetime = date('Y-m-d H:i:s');
+        $booking->save();
+
+        return redirect('/admin/borrowDetails');
+    }
+
+    function updateBookingStatusRejected(Request $request, $booking_id)
+    {
+
+        $booking = Booking::find($booking_id);
+
+        $booking->status = "rejected";
+
+        $booking->save();
+
+        return redirect('/admin/borrowDetails');
+    }
+
+    function students(Request $request)
+    {
+
+        $students = Student::all();
+
+        return Inertia::render('Admin/Students', ['students' => $students]);
+    }
+
+    function  deleteStudent($student_id)
+    {
+
+        $students = Student::find($student_id);
+
+        $students->delete();
+
+
+        $students = Student::all();
+
+
+        return response(json_encode($students), 200);
+    }
+
 }
