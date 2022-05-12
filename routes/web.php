@@ -60,6 +60,9 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::get('/admin/borrowDetails', [AdminController::class, 'borrowDetails']);
 
+    Route::get('/admin/borrowDetails/booking/status/{booking_id}/approved', [AdminController::class, 'updateBookingStatusApproved']);
+    Route::get('/admin/borrowDetails/booking/status/{booking_id}/checkin', [AdminController::class, 'updateBookingStatusCheckin']);
+
 
     //Route::post('/dashboard/category', [AdminController::class, 'Category']);
 

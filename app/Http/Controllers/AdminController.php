@@ -166,12 +166,34 @@ class AdminController extends Controller
     function borrowDetails(Request $request)
     {
 
-        $bookings = Booking::with('book', 'user')->get();
+        $bookings = Booking::with('book', 'student')->get();
 
 
-        echo json_encode($bookings);
-        exit;
 
         return Inertia::render('Admin/BorrowDetails', ['bookings' => $bookings]);
+    }
+
+    function updateBookingStatusApproved(Request $request, $booking_id)
+    {
+
+        $booking = Booking::find($booking_id);
+
+        $booking->status = "approved";
+
+        $booking->save();
+
+        return redirect('/admin/borrowDetails');
+    }
+
+    function updateBookingStatusCheckin(Request $request, $booking_id)
+    {
+
+        $booking = Booking::find($booking_id);
+
+        $booking->status = "checkin";
+        $booking->checkin_datetime = date('Y-m-d H:i:s');
+        $booking->save();
+
+        return redirect('/admin/borrowDetails');
     }
 }

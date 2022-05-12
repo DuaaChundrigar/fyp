@@ -96,7 +96,7 @@
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                             >
-                                                Book List
+                                                Book Name
                                             </th>
                                             <th
                                                 scope="col"
@@ -122,9 +122,16 @@
                                             >
                                                 Check-out Date
                                             </th>
+
                                             <th
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            >
+                                                Status
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-center text-gray-900"
                                             >
                                                 Action
                                             </th>
@@ -132,80 +139,96 @@
                                     </thead>
                                     <tbody>
                                         <tr
-                                            v-for="booking in bookings"
+                                            v-for="(booking, index) in bookings"
                                             :key="booking.id"
                                             class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                                         >
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.id }}
+                                                {{ index + 1 }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.book_id }}
+                                                {{ booking.book.book_name }}
                                             </td>
 
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.regno }}
+                                                {{ booking.student.regno }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.name }}
+                                                {{ booking.student.name }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.checkin_datetime }}
+                                                {{
+                                                    booking.checkin_datetime ??
+                                                    "-"
+                                                }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ booking.checkout_datetime }}
+                                                {{
+                                                    booking.checkout_datetime ??
+                                                    "-"
+                                                }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
-                                                <button
-                                                    type="button"
-                                                    class="px-5 py-2 text-sm font-medium text-white bg-gray-600 rounded-md"
+                                                {{
+                                                    booking.status.toUpperCase() ??
+                                                    "Pending"
+                                                }}
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                            >
+                                                <div
+                                                    class="grid grid-cols-3 gap-2"
                                                 >
-                                                    Pending
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
-                                                >
-                                                    Approved
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="px-5 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
-                                                >
-                                                    Rejected
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="px-5 py-2 text-sm font-medium text-white bg-yellow-600 rounded-md"
-                                                >
-                                                    Check-in
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
-                                                >
-                                                    Cehck-out
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    class="px-5 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
-                                                >
-                                                    Return
-                                                </button>
+                                                    <Link
+                                                        type="button"
+                                                        :href="
+                                                            `/admin/borrowDetails/booking/status/` +
+                                                            booking.id +
+                                                            `/approved`
+                                                        "
+                                                        class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                    >
+                                                        Approved
+                                                    </Link>
+                                                    <button
+                                                        type="button"
+                                                        class="px-5 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                                    >
+                                                        Rejected
+                                                    </button>
+                                                    <Link
+                                                        type="button"
+                                                        :href="
+                                                            `/admin/borrowDetails/booking/status/` +
+                                                            booking.id +
+                                                            `/checkin`
+                                                        "
+                                                        class="px-6 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                    >
+                                                        Check-in
+                                                    </Link>
+                                                    <button
+                                                        type="button"
+                                                        class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
+                                                    >
+                                                        Cehck-out
+                                                    </button>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
