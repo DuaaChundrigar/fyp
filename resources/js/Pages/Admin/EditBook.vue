@@ -1,105 +1,12 @@
 <template>
-    <nav class="bg-gray-400">
-        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div
-                    class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-                >
-                    <div class="flex items-center flex-shrink-0">
-                        <img
-                            class="hidden w-auto h-8 lg:block"
-                            src="1.png"
-                            alt="Logo"
-                        />
-                    </div>
-                </div>
-                <div
-                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                >
-                    <div>
-                        <button
-                            type="button"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md hover:bg-gray-500"
-                            id="login"
-                        >
-                            <Link href="/logout" class="">Logout</Link>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+    <Navbar/>
 
     <!--Body-->
     <div class="grid grid-cols-6 gap-4 m-2">
         <!--Side bar-->
 
-        <div class="...">
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="/" class="">Dashboard</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="/dasboard/books" class="">Books</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="#" class="Categories">Categories</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="" class="">Borrow Details</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="#" class="">Students</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="#" class="">Report</Link>
-                </button>
-            </div>
-            <div>
-                <button
-                    type="button"
-                    class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                    id="login"
-                >
-                    <Link href="#" class="">Settings</Link>
-                </button>
-            </div>
-        </div>
+        <SideMenu/>
+        
 <!--Right Side-->
         <div class="col-span-5 ... m-2">
             <!--Book Insertion Form-->
@@ -231,10 +138,15 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import Navbar from "../../Components/Admin/Navbar";
+import SideMenu from "../../Components/Admin/SideMenu"
+
 import axios from "axios";
 export default {
     components: {
         Link,
+        Navbar,
+        SideMenu,
     },
     props: {
         book: {
@@ -269,7 +181,7 @@ export default {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    window.location.href = "/dasboard/books";
+                    window.location.href = "/admin/books";
                 });
         },
     },

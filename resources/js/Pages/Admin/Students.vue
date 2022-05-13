@@ -149,9 +149,10 @@ export default {
 
     methods: {
         deleteStudent(student_id) {
-            axios.post("/admin/students/delete/" + student_id)
-            .then((response) => {
-                this.students = response.data;
+            axios
+                .post("/admin/students/delete/" + student_id)
+                .then((response) => {
+                    this.students = response.data;
             });
         },
     },

@@ -232,9 +232,9 @@ class AdminController extends Controller
     function  deleteStudent($student_id)
     {
 
-        $students = Student::find($student_id);
+        $student = Student::find($student_id);
 
-        $students->delete();
+        $student->delete();
 
 
         $students = Student::all();

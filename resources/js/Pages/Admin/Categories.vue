@@ -14,7 +14,7 @@
                 <div class="col-span-1"></div>
                 <div class="col-span-1"></div>
                 <div class="col-span-1"></div>
-                <div class="col-span-1">
+                <div class="col-span-1 m-2">
                     <Link
                         href="/admin/categoriess"
                         class="px-6 py-4 font-medium text-center text-white bg-blue-700 rounded-md text-1xl"
@@ -122,7 +122,7 @@ import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu.vue";
 
-// import axios from "axios";
+import axios from "axios";
 export default {
     components: {
         Link,

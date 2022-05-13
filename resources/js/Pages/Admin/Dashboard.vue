@@ -67,7 +67,7 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu.vue";
+import SideMenu from "../../Components/Admin/SideMenu";
 export default {
     components: {
         Link,
