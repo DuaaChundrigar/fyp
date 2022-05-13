@@ -20110,11 +20110,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center flex-shrink-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  "class": "hidden w-auto h-8 lg:block",
-  src: "1.png",
-  alt: "Logo"
-})])], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <img\r\n                            class=\"hidden w-auto h-8 lg:block\"\r\n                            src=\"1.png\"\r\n                            alt=\"Logo\"\r\n                        /> ")])], -1
 /* HOISTED */
 );
 
@@ -21047,7 +21043,7 @@ var _hoisted_10 = {
   "class": "overflow-x-auto sm:-mx-6 lg:-mx-8"
 };
 var _hoisted_11 = {
-  "class": "inline-block py-2 sm:px-6 lg:px-8"
+  "class": "inline-block py-2 sm:px-6 lg:px-8 ml-60"
 };
 var _hoisted_12 = {
   "class": "overflow-hidden"
@@ -21508,7 +21504,7 @@ var _hoisted_2 = {
   "class": "col-span-5 ... m-2"
 };
 var _hoisted_3 = {
-  "class": "flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
+  "class": "flex flex-col w-5/12 px-4 py-8 m-32 bg-gray-800 shadow-md ml-60 rounded-2xl"
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -21623,7 +21619,7 @@ var _hoisted_5 = {
   "class": "overflow-x-auto sm:-mx-6 lg:-mx-8"
 };
 var _hoisted_6 = {
-  "class": "inline-block py-2 sm:px-6 lg:px-8"
+  "class": "inline-block py-2 ml-60 sm:px-6 lg:px-8"
 };
 var _hoisted_7 = {
   "class": "overflow-hidden"

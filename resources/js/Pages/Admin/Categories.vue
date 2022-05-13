@@ -28,7 +28,7 @@
 
             <div class="flex flex-col m-10">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block py-2 sm:px-6 lg:px-8">
+                    <div class="inline-block py-2 sm:px-6 lg:px-8 ml-60">
                         <div class="overflow-hidden">
                             <table class="ml-32 border">
                                 <thead class="bg-white border-b">

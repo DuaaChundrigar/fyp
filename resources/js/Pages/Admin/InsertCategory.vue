@@ -13,7 +13,7 @@
         <!--Right Side-->
         <div class="col-span-5 ... m-2">
             <div
-                class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
+                class="flex flex-col w-5/12 px-4 py-8 m-32 bg-gray-800 shadow-md ml-60 rounded-2xl"
             >
                 <div
                     class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
