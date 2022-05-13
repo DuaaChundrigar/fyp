@@ -53,7 +53,7 @@
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
                 id="login"
             >
-                <Link href="#" class="">Report</Link>
+                <Link href="/admin/report" class="">Report</Link>
             </button>
         </div>
         <div>
@@ -62,7 +62,7 @@
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
                 id="login"
             >
-                <Link href="#" class="">Settings</Link>
+                <Link href="/admin/settings" class="">Settings</Link>
             </button>
         </div>
     </div>

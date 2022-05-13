@@ -23,16 +23,12 @@ use Inertia\Inertia;
 |
 */
 
-
-
 Route::get('/', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', [LoginController::class, 'loginbtn']);
 
-
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'register']);
-
 
 Route::get('/logout', [LoginController::class, 'logout']);
 
@@ -44,9 +40,7 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::post('/admin/book/update/{book_id}', [AdminController::class, 'updateBook']);
 
     Route::post('/admin/categories/delete/{category_id}', [AdminController::class, 'deleteCategory']);
-
     Route::get('/admin/categories/edit/{category_id}', [AdminController::class, 'editCategory']);
-
     Route::post('/admin/categories/update/{category_id}', [AdminController::class, 'updateCategory']);
 
 
@@ -68,23 +62,15 @@ Route::middleware('hasRole:Admin')->group(function () {
     Route::get('/admin/students', [AdminController::class, 'students']);
     Route::post('/admin/students/delete/{student_id}', [AdminController::class, 'deleteStudent']);
 
+    Route::get('/admin/report', [AdminController::class, 'report']);
 
-    //Route::post('/dashboard/category', [AdminController::class, 'Category']);
+    Route::get('/admin/settings' , [AdminController::class, 'settings']);
 
-    // Route::post('/dashboard/insertBook', [AdminController::class, 'InsertBook']);
-
-    // Route::get('/dashboard/insertBooks', [AdminController::class, 'InsertBooks']);
-
-    // Route::post('/dashboard/insertCategory', [AdminController::class, 'InsertCategory']);
-
-    // Route::get('/dashboard/insertCategorys', [AdminController::class, 'InsertCategories']);
 });
 
-Route::middleware('hasRole:User')->group(function () {
+    Route::middleware('hasRole:User')->group(function () {
     Route::get('/user/dashboard', [UserController::class, 'index']);
 });
 
-
-Route::post('/book/request', [UserController::class, 'bookRequest']);
-
-Route::get('/books/requests', [UserController::class, 'bookRequests']);
+    Route::post('/book/request', [UserController::class, 'bookRequest']);
+    Route::get('/books/requests', [UserController::class, 'bookRequests']);

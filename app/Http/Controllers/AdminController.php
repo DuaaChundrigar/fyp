@@ -243,4 +243,14 @@ class AdminController extends Controller
         return response(json_encode($students), 200);
     }
 
+    function report(Request $request)
+    {
+        return Inertia::render('Admin/Report');
+    }
+
+    function settings(Request $request)
+    {
+        return Inertia::render('Admin/Settings');
+    }
+
 }
