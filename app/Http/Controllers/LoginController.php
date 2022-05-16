@@ -14,15 +14,14 @@ class LoginController extends Controller
 
         $user = session('user');
 
-        if($user){
+        if ($user) {
 
             if ($user->role == 'Admin') {
                 return redirect('/admin/dashboard');
             } else {
                 return redirect('/user/dashboard');
             }
-
-        }else{
+        } else {
             return Inertia::render('Login');
         }
     }
@@ -37,14 +36,13 @@ class LoginController extends Controller
                 session(['user' => $user]);
 
                 if ($user->role == 'Admin') {
-                        return redirect('/admin/dashboard');
-                    
+                    return redirect('/admin/dashboard');
                 } else {
-                        return redirect('/user/dashboard');
-                        // return Inertia::render('User/Dashboard');
-        
+                    return redirect('/user/dashboard');
+                    // return Inertia::render('User/Dashboard');
 
-                    }
+
+                }
             } else {
                 return redirect()->back()->withErrors('Incorrect Password!');
             }
@@ -52,11 +50,13 @@ class LoginController extends Controller
             return redirect()->back()->withErrors('No User Found!');
         }
     }
-    public function loginbtn(){
+    public function loginbtn()
+    {
         return Inertia::render('Login');
     }
 
-    function logout(){
+    function logout()
+    {
         session(['user' => null]);
         return redirect('/');
     }

@@ -6,6 +6,7 @@ use App\Models\Student;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class RegisterController extends Controller
@@ -18,12 +19,21 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
+        $profile_image = $request->file('profile_image');
+
+        $file_name = uniqid() . '-' . time() . '.' . $profile_image->getClientOriginalExtension();
+
+
+        //save file in storage using store as 
+
+        $path = $profile_image->storeAs('public/profile_images', $file_name);
+
         $student = new Student();
         $student->regno = $request->formData['regno'];
         $student->name = $request->formData['name'];;
         $student->email = $request->formData['email'];;
         $student->batch = $request->formData['batch'];;
-        $student->program = $request->formData['program'];;
+        $student->program = $request->formData['program'];
 
         $student->save();
 

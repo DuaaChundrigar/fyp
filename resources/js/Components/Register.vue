@@ -97,6 +97,21 @@
                         </div>
                     </div>
 
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label for="" class="text-white pl-1"
+                                >Select Your Profile Picture</label
+                            >
+                            <input
+                                id="profile_image"
+                                type="file"
+                                @change="onFileChange($event)"
+                                name="profile_image"
+                                class="w-full py-2 pl-5 pr-4 text-sm bg-white placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                            />
+                        </div>
+                    </div>
+
                     <div class="flex items-center justify-center">
                         <button
                             type="submit"
@@ -143,13 +158,23 @@ export default {
                 batch: "",
                 program: "",
                 password: "",
+                profile_image: "",
             },
         };
     },
 
     methods: {
         submitForm() {
-            this.$inertia.post("/register", { formData: this.formData });
+            this.$inertia.post("/register", {
+                formData: this.formData,
+                profile_image: this.formData.profile_image,
+            });
+        },
+
+        onFileChange(e) {
+            const file = e.target.files[0];
+
+            this.formData.profile_image = file;
         },
     },
 };

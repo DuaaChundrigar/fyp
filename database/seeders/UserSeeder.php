@@ -23,13 +23,13 @@ class UserSeeder extends Seeder
                 'user_id' => '0',
                 'role' => 'Admin',
             ],
-            [
-                'name' => 'Dua',
-                'email' => 'dua@gmail.com',
-                'password' => Hash::make('12345678'),
-                'user_id' => '1',
-                'role' => 'User',
-            ],
+            // [
+            //     'name' => 'Dua',
+            //     'email' => 'dua@gmail.com',
+            //     'password' => Hash::make('12345678'),
+            //     'user_id' => '1',
+            //     'role' => 'User',
+            // ],
 
         ]);
     }
