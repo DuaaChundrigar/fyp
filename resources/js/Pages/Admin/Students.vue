@@ -98,7 +98,7 @@
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                             >
                                                 <!-- {{ student.profile_image }} -->
-                                                <img src="{{student.profile_image}}" />
+                                                <img src="{/storage/profile_images{student->profile_image}}" >
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
