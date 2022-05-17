@@ -20,7 +20,7 @@ class CreateStudentsTable extends Migration
             $table->string('email');
             $table->string('batch');
             $table->string('program');
-            
+            $table->string('profile_image');
             $table->timestamps();
         });
     }

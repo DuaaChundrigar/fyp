@@ -30,10 +30,11 @@ class RegisterController extends Controller
 
         $student = new Student();
         $student->regno = $request->formData['regno'];
-        $student->name = $request->formData['name'];;
-        $student->email = $request->formData['email'];;
-        $student->batch = $request->formData['batch'];;
+        $student->name = $request->formData['name'];
+        $student->email = $request->formData['email'];
+        $student->batch = $request->formData['batch'];
         $student->program = $request->formData['program'];
+        $student->profile_image =$file_name;
 
         $student->save();
 

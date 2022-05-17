@@ -60,6 +60,12 @@
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                             >
+                                                Student Picture
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            >
                                                 Student Reg No.
                                             </th>
                                             <th
@@ -87,6 +93,12 @@
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                             >
                                                 {{ index + 1 }}
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                            >
+                                                <!-- {{ student.profile_image }} -->
+                                                <img src="{{student.profile_image}}" />
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"

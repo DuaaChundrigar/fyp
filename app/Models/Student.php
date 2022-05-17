@@ -14,7 +14,8 @@ class Student extends Model
         'name',
         'email',
         'batch',
-        'program'
+        'program',
+        'profile_image'
     ];
 
 }
