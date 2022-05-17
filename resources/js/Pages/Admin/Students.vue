@@ -8,7 +8,6 @@
             <SideMenu />
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
-
                 <div
                     class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-60 input-group"
                 >
@@ -85,7 +84,7 @@
 
                                     <tbody>
                                         <tr
-                                            v-for="(student , index) in students"
+                                            v-for="(student, index) in students"
                                             :key="student.id"
                                             class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                                         >
@@ -98,7 +97,21 @@
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                             >
                                                 <!-- {{ student.profile_image }} -->
-                                                <img src="{/storage/profile_images{student->profile_image}}" >
+                                                <a
+                                                    target="_blank"
+                                                    :href="
+                                                        '/storage/profile_images/' +
+                                                        student.profile_image
+                                                    "
+                                                >
+                                                    <img
+                                                        class="rounded-full w-16 h-16 border-2 shadow-lg"
+                                                        :src="
+                                                            '/storage/profile_images/' +
+                                                            student.profile_image
+                                                        "
+                                                    />
+                                                </a>
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
@@ -110,13 +123,17 @@
                                             >
                                                 {{ student.name }}
                                             </td>
-                                            
+
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
                                                 <button
                                                     type="button"
-                                                    @click="deleteStudent(student.id)"
+                                                    @click="
+                                                        deleteStudent(
+                                                            student.id
+                                                        )
+                                                    "
                                                     class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
                                                 >
                                                     Delete
@@ -165,7 +182,7 @@ export default {
                 .post("/admin/students/delete/" + student_id)
                 .then((response) => {
                     this.students = response.data;
-            });
+                });
         },
     },
 };
