@@ -211,10 +211,12 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import Swal from "sweetalert2"
 import axios from "axios";
 export default {
     components: {
         Link,
+        Swal,
     },
 
     props: {
@@ -253,9 +255,8 @@ export default {
                     alert(error.response.data);
                 });
         },
-    },
 
-    search() {
+        search() {
             if (this.searchTerm == "") {
                 this.filteredBooks = this.books;
             } else {
@@ -280,5 +281,8 @@ export default {
                 });
             }
         },
+    },
+
+    
 };
 </script>

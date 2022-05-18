@@ -22,6 +22,7 @@
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div>
                 <Link 
+                    href="/login"
                     type="button" 
                     class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md " 
                 >
@@ -111,7 +112,7 @@
                 <div class="mb-10 text-6xl font-bold text-gray-800">
                     Contact Us
                 </div>
-                <form action="/register" method="POST">
+                <form>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input id="regno" type="text" name="regno" class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400" placeholder="Enter your register number" />

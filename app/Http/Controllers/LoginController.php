@@ -22,7 +22,7 @@ class LoginController extends Controller
                 return redirect('/user/dashboard');
             }
         } else {
-            return Inertia::render('Login');
+            return Inertia::render('Home');
         }
     }
 
