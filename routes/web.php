@@ -74,3 +74,5 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::post('/book/request', [UserController::class, 'bookRequest']);
     Route::get('/books/requests', [UserController::class, 'bookRequests']);
+
+    

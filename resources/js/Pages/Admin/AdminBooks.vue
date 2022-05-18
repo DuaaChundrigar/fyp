@@ -98,6 +98,12 @@
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                             >
+                                                Published year
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            >
                                                 No. of Copies
                                             </th>
                                             <th
@@ -145,6 +151,11 @@
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
                                                 {{ book.publisher }}
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                            >
+                                                {{ book.edition }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
@@ -242,7 +253,10 @@ export default {
                             .includes(this.searchTerm.toLowerCase()) ||
                         book.publisher
                             .toLowerCase()
-                            .includes(this.searchTerm.toLowerCase())
+                            .includes(this.searchTerm.toLowerCase()) ||
+                        book.edition
+                        .toLowerCase()
+                        .includes(this.searchTerm.toLowerCase())
                     );
                 });
             }
