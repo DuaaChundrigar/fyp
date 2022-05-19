@@ -228,16 +228,14 @@ export default {
         },
     },
 
-    data(){
-    
-    return {
+    data() {
+        return {
             books: this.books,
             filteredBooks: this.books,
             searchTerm: "",
         };
-    
     },
-    
+
     mounted() {},
 
     methods: {
@@ -253,9 +251,8 @@ export default {
                     alert(error.response.data);
                 });
         },
-    },
 
-    search() {
+        search() {
             if (this.searchTerm == "") {
                 this.filteredBooks = this.books;
             } else {
@@ -274,11 +271,12 @@ export default {
                             .toLowerCase()
                             .includes(this.searchTerm.toLowerCase()) ||
                         book.edition
-                        .toLowerCase()
-                        .includes(this.searchTerm.toLowerCase())
+                            .toLowerCase()
+                            .includes(this.searchTerm.toLowerCase())
                     );
                 });
             }
         },
+    },
 };
 </script>
