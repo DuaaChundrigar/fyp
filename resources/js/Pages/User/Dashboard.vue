@@ -211,10 +211,12 @@
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import Swal from "sweetalert2";
 import axios from "axios";
 export default {
     components: {
         Link,
+        Swal,
     },
 
     props: {
@@ -240,15 +242,16 @@ export default {
 
     methods: {
         request(book_id) {
+            var vm = this;
             axios
                 .post("/book/request", {
                     book_id: book_id,
                 })
                 .then((response) => {
-                    console.log(response.data);
+                    vm.showNotification("Request Submitted", "success");
                 })
                 .catch((error) => {
-                    alert(error.response.data);
+                    vm.showNotification("Already Submitted", "error");
                 });
         },
 
@@ -276,6 +279,14 @@ export default {
                     );
                 });
             }
+        },
+
+        showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: false,
+            });
         },
     },
 };
