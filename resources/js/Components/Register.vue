@@ -61,7 +61,7 @@
                             />
                         </div>
                     </div>
-                    <div class="flex flex-col mb-2">
+                    <!-- <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
                                 id="program"
@@ -71,6 +71,20 @@
                                 class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Enter your program"
                             />
+                        </div> -->
+                        <div class="flex flex-col mb-2">
+                        <div class="relative">
+                        <label for="pet-select" class="m-2 text-gray-100">Program</label>
+
+                            <select class="w-full rounded-full" v-model="formData.program">
+                                <option value="">Select an option</option>
+                                <option value="BSIT 18">BSIT 18</option>
+                                <option value="BSIT 19">BSIT 19</option>
+                                <option value="BSCS">BSCS</option>
+                                <option value="BBA 24">BBA 24</option>
+                                <option value="BBA 21">BBA 21</option>
+                                <option value="MBA">MBA</option>
+                            </select>
                         </div>
                     </div>
                     <div class="flex flex-col mb-2">
@@ -99,7 +113,7 @@
 
                     <div class="flex flex-col mb-2">
                         <div class="relative">
-                            <label for="" class="text-white pl-1"
+                            <label for="" class="pl-1 text-white"
                                 >Select Your Profile Picture</label
                             >
                             <input
@@ -107,7 +121,7 @@
                                 type="file"
                                 @change="onFileChange($event)"
                                 name="profile_image"
-                                class="w-full py-2 pl-5 pr-4 text-sm bg-white placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 bg-white border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                             />
                         </div>
                     </div>

@@ -4,7 +4,6 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
             >
                 <Link href="/" class="">Dashboard</Link>
             </button>
@@ -13,7 +12,6 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
             >
                 <Link href="/admin/books" class="">Books</Link>
             </button>
@@ -22,7 +20,6 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
             >
                 <Link href="/admin/categories" class="Categories"
                     >Categories</Link
@@ -33,7 +30,6 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
             >
                 <Link href="/admin/borrowDetails" class="">Borrow Details</Link>
             </button>
@@ -42,7 +38,6 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
             >
                 <Link href="/admin/students" class="">Students</Link>
             </button>
@@ -51,7 +46,14 @@
             <button
                 type="button"
                 class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
+            >
+                <Link href="/admin/contact" class="">Contact</Link>
+            </button>
+        </div>
+        <div>
+            <button
+                type="button"
+                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
             >
                 <Link href="/admin/report" class="">Report</Link>
             </button>
