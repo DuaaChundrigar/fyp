@@ -2,38 +2,38 @@
     <div>
         <nav class="bg-gray-800">
             <div class="max-w-7xl sm:px-6 lg:px-8">
-                <div class="flex mx-auto items-center justify-between h-16">
+                <div class="flex items-center justify-between h-16 mx-auto">
                     <div
                         class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
                     >
                         <div class="flex items-center flex-shrink-0">
                             <img
-                                class="hidden w-auto h-10 lg:block shadow-md"
+                                class="hidden w-auto h-10 shadow-md lg:block"
                                 src="/storage/logo/logo.png"
                                 alt="Logo"
                             />
                         </div>
                         <div class="hidden sm:block sm:ml-6">
                             <div
-                                class="flex space-x-4 text-gray-300 font-bold text-1xl hover:text-white"
+                                class="flex space-x-4 font-bold text-gray-300 text-1xl hover:text-white"
                             >
                                 <a
-                                    href="#"
+                                    href="#home"
                                     class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Home</a
                                 >
                                 <a
                                     href="#aboutus"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-700 "
                                     >About</a
                                 >
                                 <a
-                                    href="#"
+                                    href="#tandc"
                                     class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Terms and Conditions</a
                                 >
                                 <a
-                                    href="#"
+                                    href="#contact"
                                     class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Contact Us</a
                                 >
@@ -48,7 +48,7 @@
                             <Link
                                 href="/login"
                                 type="button"
-                                class="px-3 py-2 text-1xl font-bold text-white hover:bg-gray-700 bg-gray-900 rounded-md"
+                                class="px-3 py-2 font-bold text-white bg-gray-900 rounded-md text-1xl hover:bg-gray-700"
                             >
                                 Login
                             </Link>
@@ -62,7 +62,7 @@
 
         <div class="m-10">
             <div
-                class="text-6xl font-bold text-center text-gray-800 font-serif"
+                class="font-serif text-6xl font-bold text-center text-gray-800"
             >
                 Hiast Library Management System
             </div>
@@ -163,7 +163,9 @@
                 <div
                     class="grid grid-cols-1 gap-4 mt-5 mb-10 text-gray-800 text-1xl m-14"
                 >
-                    <div class="text-6xl font-bold text-gray-800">
+                    <div class="text-6xl font-bold text-gray-800"
+                    id="tandc"
+                    >
                         Terms & Conditions
                     </div>
                     <ol>
@@ -195,7 +197,9 @@
 
                 <div class="grid justify-center grid-cols-2 gap-4 mt-10 m-14">
                     <div class="">
-                        <div class="mb-10 text-6xl font-bold text-gray-800">
+                        <div class="mb-10 text-6xl font-bold text-gray-800"
+                        id="contact"
+                        >
                             Contact Us
                         </div>
                         <form @submit.prevent="submitForm">

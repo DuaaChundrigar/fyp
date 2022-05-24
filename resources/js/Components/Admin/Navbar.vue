@@ -6,11 +6,11 @@
                     class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
                 >
                     <div class="flex items-center flex-shrink-0">
-                        <!-- <img
-                            class="hidden w-auto h-8 lg:block"
-                            src="1.png"
-                            alt="Logo"
-                        /> -->
+                        <img
+                                class="hidden w-auto h-10 lg:block"
+                                src="/storage/logo/logo.png"
+                                alt="Logo"
+                            />
                     </div>
                 </div>
                 <div
