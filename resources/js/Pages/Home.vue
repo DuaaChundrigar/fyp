@@ -25,7 +25,7 @@
                                     >Home</a
                                 >
                                 <a
-                                    href="#"
+                                    href="#aboutus"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                                     >About</a
                                 >
@@ -77,7 +77,12 @@
             </div>
 
             <div class="m-auto">
-                <div class="mt-10 text-6xl font-bold text-gray-800">About</div>
+                <div
+                    class="mt-10 text-6xl font-bold text-gray-800"
+                    id="aboutus"
+                >
+                    About
+                </div>
 
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14">
                     <div>

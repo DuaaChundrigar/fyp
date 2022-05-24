@@ -22238,7 +22238,7 @@ var _hoisted_3 = {
   "class": "relative flex items-center justify-between h-16"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"absolute inset-y-0 left-0 flex items-center sm:hidden\"></div><div class=\"flex items-center justify-center flex-1 sm:items-stretch sm:justify-start\"><div class=\"flex items-center flex-shrink-0\"><img class=\"hidden w-auto h-8 lg:block\" src=\"1.png\" alt=\"Logo\"></div><div class=\"hidden sm:block sm:ml-6\"><div class=\"flex space-x-4\"><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\" aria-current=\"page\">Home</a><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">About</a><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">Terms and Conditions</a><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">Contact Us</a></div></div></div>", 2);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"absolute inset-y-0 left-0 flex items-center sm:hidden\"></div><div class=\"flex items-center justify-center flex-1 sm:items-stretch sm:justify-start\"><div class=\"flex items-center flex-shrink-0\"><img class=\"hidden w-auto h-8 lg:block\" src=\"1.png\" alt=\"Logo\"></div><div class=\"hidden sm:block sm:ml-6\"><div class=\"flex space-x-4\"><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\" aria-current=\"page\">Home</a><a href=\"#aboutus\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">About</a><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">Terms and Conditions</a><a href=\"#\" class=\"px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white\">Contact Us</a></div></div></div>", 2);
 
 var _hoisted_6 = {
   "class": "absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
@@ -22260,8 +22260,9 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "m-auto"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mt-10 text-6xl font-bold text-gray-800"
-}, "About"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mt-10 text-6xl font-bold text-gray-800",
+  id: "aboutus"
+}, " About "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "grid justify-center grid-cols-3 gap-4 mt-10 m-14"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mb-10 text-4xl font-bold text-gray-800"

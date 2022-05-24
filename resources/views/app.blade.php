@@ -16,6 +16,10 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <style>
+        html{scroll-behavior:smooth}
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia
