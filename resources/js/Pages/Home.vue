@@ -69,8 +69,9 @@
             <div>
                 <video
                     class="flex w-full h-[60vh] items-center m-auto mt-10"
-                    autoplay="true"
-                    controls
+                    autoplay
+                    loop
+                    muted
                 >
                     <source src="/storage/videos/GYM.mp4" type="video/mp4" />
                 </video>
@@ -273,6 +274,7 @@
 </template>
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+
 export default {
     components: {
         Link,

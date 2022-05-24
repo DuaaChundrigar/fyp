@@ -261,13 +261,14 @@ class AdminController extends Controller
 
     function addContact(Request $request)
     {
+
         $contact = new Contact();
 
         $contact->regno  = $request->formData['regno'];
         $contact->name = $request->formData['name'];
         $contact->email  = $request->formData['email'];
         $contact->msg = $request->formData['msg'];
-        
+
         $contact->save();
 
         return redirect('/');
@@ -283,5 +284,4 @@ class AdminController extends Controller
 
         return response(json_encode($contacts), 200);
     }
-
 }
