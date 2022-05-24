@@ -66,6 +66,12 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::get('/admin/settings' , [AdminController::class, 'settings']);
 
+    Route::get('/admin/contact' , [AdminController::class, 'contact']);
+    Route::post('/admin/contact', [AdminController::class, 'addContact']);
+    Route::post('/admin/contacts/delete/{contact_id}', [AdminController::class, 'deleteMsg']);
+
+
+
 });
 
     Route::middleware('hasRole:User')->group(function () {

@@ -67,6 +67,7 @@
                         Register now
                     </Link>
                 </span>
+                
             </div>
         </div>
     </div>

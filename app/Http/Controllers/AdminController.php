@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Books;
 use App\Models\Categories;
+use App\Models\Contact;
 use App\Models\Student;
 use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
@@ -251,6 +252,36 @@ class AdminController extends Controller
     function settings(Request $request)
     {
         return Inertia::render('Admin/Settings');
+    }
+
+    function contact(Request $request)
+    {
+        return Inertia::render('Admin/Contact');
+    }
+
+    function addContact(Request $request)
+    {
+        $contact = new Contact();
+
+        $contact->regno  = $request->formData['regno'];
+        $contact->name = $request->formData['name'];
+        $contact->email  = $request->formData['email'];
+        $contact->msg = $request->formData['msg'];
+        
+        $contact->save();
+
+        return redirect('/');
+    }
+
+    function  deleteMsg($contact_id)
+    {
+        $contact = Student::find($contact_id);
+
+        $contact->delete();
+
+        $contacts = Student::all();
+
+        return response(json_encode($contacts), 200);
     }
 
 }

@@ -1,27 +1,25 @@
 <template>
     <div>
         <nav class="bg-gray-800">
-            <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="relative flex items-center justify-between h-16">
-                    <div
-                        class="absolute inset-y-0 left-0 flex items-center sm:hidden"
-                    ></div>
+            <div class="max-w-7xl sm:px-6 lg:px-8">
+                <div class="flex mx-auto items-center justify-between h-16">
                     <div
                         class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
                     >
                         <div class="flex items-center flex-shrink-0">
                             <img
-                                class="hidden w-auto h-8 lg:block"
-                                src="1.png"
+                                class="hidden w-auto h-10 lg:block shadow-md"
+                                src="/storage/logo/logo.png"
                                 alt="Logo"
                             />
                         </div>
                         <div class="hidden sm:block sm:ml-6">
-                            <div class="flex space-x-4">
+                            <div
+                                class="flex space-x-4 text-gray-300 font-bold text-1xl hover:text-white"
+                            >
                                 <a
                                     href="#"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                                    aria-current="page"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Home</a
                                 >
                                 <a
@@ -31,12 +29,12 @@
                                 >
                                 <a
                                     href="#"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Terms and Conditions</a
                                 >
                                 <a
                                     href="#"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
                                     >Contact Us</a
                                 >
                             </div>
@@ -50,7 +48,7 @@
                             <Link
                                 href="/login"
                                 type="button"
-                                class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                                class="px-3 py-2 text-1xl font-bold text-white hover:bg-gray-700 bg-gray-900 rounded-md"
                             >
                                 Login
                             </Link>
@@ -63,7 +61,9 @@
         <!--Body start-->
 
         <div class="m-10">
-            <div class="text-6xl font-bold text-center text-gray-800">
+            <div
+                class="text-6xl font-bold text-center text-gray-800 font-serif"
+            >
                 Hiast Library Management System
             </div>
             <div>
@@ -72,18 +72,16 @@
                     autoplay="true"
                     controls
                 >
-                    <source src="/storage/videos/video.mp4" type="video/mp4" />
+                    <source src="/storage/videos/GYM.mp4" type="video/mp4" />
                 </video>
             </div>
-
-            <div class="m-auto">
+            <div>
                 <div
-                    class="mt-10 text-6xl font-bold text-gray-800"
+                    class="mt-10 ml-12 text-6xl font-bold text-gray-800"
                     id="aboutus"
                 >
                     About
                 </div>
-
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14">
                     <div>
                         <div class="mb-10 text-4xl font-bold text-gray-800">
@@ -91,7 +89,7 @@
                         </div>
                         <img
                             class="rounded h-2/4"
-                            src="/storage/images/image.png"
+                            src="/storage/images/About.jpg"
                         />
                         <div class="mt-2">
                             <div>
@@ -115,7 +113,10 @@
                         <div class="mb-10 text-4xl font-bold text-gray-800">
                             Our Mission
                         </div>
-                        <img class="rounded h-2/4" src="Mission.jpg" />
+                        <img
+                            class="rounded h-2/4"
+                            src="/storage/images/Mission.jpg"
+                        />
                         <div class="mt-2">
                             <div>
                                 <div class="text-gray-700 text-1xl">
@@ -135,7 +136,10 @@
                         <div class="mb-10 text-4xl font-bold text-gray-800">
                             Our Vision
                         </div>
-                        <img class="rounded h-2/4" src="Vision.jpg" />
+                        <img
+                            class="rounded h-2/4"
+                            src="/storage/images/Vision.jpg"
+                        />
                         <div class="mt-2">
                             <div>
                                 <div class="text-gray-700 text-1xl">
@@ -155,12 +159,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-6xl font-bold text-gray-800">
-                    Terms & Conditions
-                </div>
                 <div
                     class="grid grid-cols-1 gap-4 mt-5 mb-10 text-gray-800 text-1xl m-14"
                 >
+                    <div class="text-6xl font-bold text-gray-800">
+                        Terms & Conditions
+                    </div>
                     <ol>
                         <li>
                             1. Login I.D.’s, Passwords of various e-resources or
@@ -193,13 +197,12 @@
                         <div class="mb-10 text-6xl font-bold text-gray-800">
                             Contact Us
                         </div>
-                        <form>
+                        <form @submit.prevent="submitForm">
                             <div class="flex flex-col mb-2">
                                 <div class="relative">
                                     <input
-                                        id="regno"
                                         type="text"
-                                        name="regno"
+                                        v-model="formData.regno"
                                         class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                         placeholder="Enter your register number"
                                     />
@@ -208,9 +211,8 @@
                             <div class="flex flex-col mb-2">
                                 <div class="relative">
                                     <input
-                                        id="name"
                                         type="text"
-                                        name="name"
+                                        v-model="formData.name"
                                         class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                         placeholder="Enter your name"
                                     />
@@ -219,9 +221,8 @@
                             <div class="flex flex-col mb-2">
                                 <div class="relative">
                                     <input
-                                        id="email"
                                         type="email"
-                                        name="email"
+                                        v-model="formData.email"
                                         class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                         placeholder="Enter your email"
                                     />
@@ -231,9 +232,8 @@
                             <div class="flex flex-col mb-2">
                                 <div class="relative">
                                     <input
-                                        id="msg"
                                         type="textbox"
-                                        name="msg"
+                                        v-model="formData.msg"
                                         class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                         placeholder="Enter your message here"
                                     />
@@ -257,8 +257,8 @@
                         <div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14419.42716082293!2d68.3444061!3d25.3761157!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e0f6881f3d90524!2s(HIAST)%20Hyderabad%20Institute%20Of%20Arts%20Science%20and%20Technology!5e0!3m2!1sen!2s!4v1648832136748!5m2!1sen!2s"
-                                width="400"
-                                height="400"
+                                width="600"
+                                height="300"
                                 style="border: 0"
                                 allowfullscreen=""
                                 loading="lazy"
@@ -276,6 +276,24 @@ import { Link } from "@inertiajs/inertia-vue3";
 export default {
     components: {
         Link,
+    },
+
+    data() {
+        return {
+            formData: {
+                regno: "",
+                name: "",
+                email: "",
+                msg: "",
+            },
+        };
+    },
+    methods: {
+        submitForm() {
+            this.$inertia.post("/admin/contact", {
+                formData: this.formData,
+            });
+        },
     },
 };
 </script>
