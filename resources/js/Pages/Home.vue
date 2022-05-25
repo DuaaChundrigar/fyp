@@ -64,7 +64,7 @@
                     loop
                     muted
                 >
-                    <source src="/storage/videos/GYM.mp4" type="video/mp4" />
+                    <source src="/storage/videos/hiast.mp4" type="video/mp4" />
                 </video>
             </div>
             <div>
