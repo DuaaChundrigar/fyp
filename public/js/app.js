@@ -20331,7 +20331,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center flex-shrink-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  "class": "hidden w-auto h-10 lg:block",
+  "class": "w-auto h-16",
   src: "/storage/logo/logo.png",
   alt: "Logo"
 })])], -1
@@ -20542,76 +20542,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-gray-400"
-};
-var _hoisted_2 = {
-  "class": "px-2 mx-auto max-w-7xl sm:px-6 lg:px-8"
-};
-var _hoisted_3 = {
-  "class": "relative flex items-center justify-between h-16"
+  "class": "flex justify-between m-auto space-x-8 bg-gray-100 shadow-lg"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex items-center flex-shrink-0"
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex ml-10"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  "class": "hidden w-auto h-10 lg:block",
+  "class": "flex-shrink-0 w-auto h-20",
   src: "/storage/logo/logo.png",
   alt: "Logo"
-})])], -1
+})], -1
 /* HOISTED */
 );
 
+var _hoisted_3 = {
+  "class": "m-auto"
+};
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Home ");
+
 var _hoisted_5 = {
-  "class": "absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-};
-var _hoisted_6 = {
-  type: "button",
-  "class": "px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md hover:bg-gray-500"
-};
-
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Home");
-
-var _hoisted_8 = {
   "class": "flex flex-col items-center justify-center min-h-screen bg-gray-100"
 };
-var _hoisted_9 = {
+var _hoisted_6 = {
   "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "self-center text-xl font-bold text-gray-100 sm:text-3xl"
 }, " Login ", -1
 /* HOISTED */
 );
 
-var _hoisted_11 = {
+var _hoisted_8 = {
   "class": "mt-4"
 };
-var _hoisted_12 = {
+var _hoisted_9 = {
   "class": "flex flex-col mb-2"
 };
-var _hoisted_13 = {
+var _hoisted_10 = {
   "class": "text-sm text-red-600"
 };
-var _hoisted_14 = {
+var _hoisted_11 = {
   "class": "relative"
 };
-var _hoisted_15 = {
+var _hoisted_12 = {
   "class": "flex flex-col mb-1"
 };
-var _hoisted_16 = {
+var _hoisted_13 = {
   "class": "relative"
 };
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "ml-2 text-white"
 }, "Remember Me", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center justify-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
@@ -20620,40 +20608,41 @@ var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_19 = {
+var _hoisted_16 = {
   "class": "flex items-center justify-center mt-6"
 };
-var _hoisted_20 = {
+var _hoisted_17 = {
   "class": "inline-flex items-center text-xs font-medium text-center text-gray-700"
 };
-var _hoisted_21 = {
+var _hoisted_18 = {
   "class": "ml-2"
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("You don't have an account? ");
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("You don't have an account? ");
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register now ");
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register now ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/",
-    "class": ""
+    type: "button",
+    "class": "px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_7];
+      return [_hoisted_4];
     }),
     _: 1
     /* STABLE */
 
-  })])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.login && $options.login.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors[0]), 1
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.errors[0]), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     id: "email",
     type: "email",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -20663,7 +20652,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your email"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     id: "password",
     type: "password",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
@@ -20680,21 +20669,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_17, _hoisted_18], 32
+  ), _hoisted_14, _hoisted_15], 32
   /* HYDRATE_EVENTS */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/register",
     "class": "ml-2 text-xs font-semibold text-blue-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_23];
+      return [_hoisted_20];
     }),
     _: 1
     /* STABLE */
 
-  })])])])])], 64
-  /* STABLE_FRAGMENT */
-  );
+  })])])])])]);
 }
 
 /***/ }),
@@ -20727,7 +20714,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center flex-shrink-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  "class": "hidden w-auto h-10 lg:block",
+  "class": "w-auto h-24",
   src: "/storage/logo/logo.png",
   alt: "Logo"
 })])], -1
@@ -21576,22 +21563,22 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_9 = {
-  "class": "px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_10 = {
-  "class": "px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_11 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_12 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_13 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_14 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_15 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -21599,11 +21586,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_SideMenu = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SideMenu");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Body"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Side bar"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SideMenu), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Right Side"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.contacts, function (contact) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Body"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Side bar"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SideMenu), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Right Side"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.contacts, function (contact, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
       key: contact.id,
-      "class": "transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.index + 1), 1
+      "class": "px-6 py-4 text-sm font-medium text-gray-900 bg-white border-b hover:bg-gray-100"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(index + 1), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(contact.regno), 1
     /* TEXT */
@@ -22182,21 +22169,21 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_10 = {
-  "class": "px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_11 = {
-  "class": "px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_12 = ["href"];
 var _hoisted_13 = ["src"];
 var _hoisted_14 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_15 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_16 = {
-  "class": "px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+  "class": ""
 };
 var _hoisted_17 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -22220,10 +22207,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.searchTerm]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button\r\n                        class=\"btn px-6 py-2.5 bg-blue-600 text-white rounded shadow-md hover:bg-blue-700 active:bg-blue-800\"\r\n                        type=\"button\"\r\n                        id=\"\"\r\n                    >\r\n                        <svg\r\n                            aria-hidden=\"true\"\r\n                            focusable=\"false\"\r\n                            data-prefix=\"fas\"\r\n                            data-icon=\"search\"\r\n                            class=\"w-4\"\r\n                            role=\"img\"\r\n                            xmlns=\"http://www.w3.org/2000/svg\"\r\n                            viewBox=\"0 0 512 512\"\r\n                        >\r\n                            <path\r\n                                fill=\"currentColor\"\r\n                                d=\"M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z\"\r\n                            ></path>\r\n                        </svg>\r\n                    </button> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Table  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.filteredstudents, function (student, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
       key: student.id,
-      "class": "transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
+      "class": "px-6 py-4 text-sm font-medium text-center bg-white border-b text-gray-50ay-900 whitespace-nowrap hover:bg-gray-100"
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(index + 1), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" {{ student.profile_image }} "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
       target: "_blank",
       href: '/storage/profile_images/' + student.profile_image
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
@@ -22524,34 +22511,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-gray-800"
-};
-var _hoisted_2 = {
-  "class": "max-w-7xl sm:px-6 lg:px-8"
-};
-var _hoisted_3 = {
-  "class": "flex items-center justify-between h-16 mx-auto"
+  "class": "flex justify-between m-auto bg-gray-100 shadow-lg"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex items-center justify-center flex-1 sm:items-stretch sm:justify-start\"><div class=\"flex items-center flex-shrink-0\"><img class=\"hidden w-auto h-10 shadow-md lg:block\" src=\"/storage/logo/logo.png\" alt=\"Logo\"></div><div class=\"hidden sm:block sm:ml-6\"><div class=\"flex space-x-4 font-bold text-gray-300 text-1xl hover:text-white\"><a href=\"#home\" class=\"px-3 py-2 rounded-md hover:bg-gray-700\">Home</a><a href=\"#aboutus\" class=\"px-3 py-2 rounded-md hover:bg-gray-700\">About</a><a href=\"#tandc\" class=\"px-3 py-2 rounded-md hover:bg-gray-700\">Terms and Conditions</a><a href=\"#contact\" class=\"px-3 py-2 rounded-md hover:bg-gray-700\">Contact Us</a></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex ml-10\"><img class=\"flex-shrink-0 w-auto h-20\" src=\"/storage/logo/logo.png\" alt=\"Logo\"></div><div class=\"m-auto space-x-4 font-bold text-gray-900 text-1xl\"><a href=\"#home\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Home</a><a href=\"#aboutus\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">About</a><a href=\"#tandc\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Terms and Conditions</a><a href=\"#contact\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Contact Us</a></div>", 2);
 
-var _hoisted_5 = {
-  "class": "absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+var _hoisted_4 = {
+  "class": "m-auto ml-36"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login ");
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login ");
 
-var _hoisted_7 = {
+var _hoisted_6 = {
   "class": "m-10"
 };
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "font-serif text-6xl font-bold text-center text-gray-800"
 }, " Hiast Library Management System ", -1
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
   "class": "flex w-full h-[60vh] items-center m-auto mt-10",
   autoplay: "",
   loop: "",
@@ -22563,48 +22544,48 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mt-10 ml-12 text-6xl font-bold text-gray-800\" id=\"aboutus\"> About </div><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 m-14\"><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> About Us </div><img class=\"rounded h-2/4\" src=\"/storage/images/About.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> About us HiAST Established in 2001, the Hyderabad Institute of Arts, Science and Technology (HiAST) is a chartered institute that offers a variety of undergraduate and graduate programs in affiliation with the University of Sindh and Mehran University of Engineering and Technology. Additionally, the HiAST education system comprises of the Royal Cedar Montessori and HiAST School and College. </div></div></div></div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Mission </div><img class=\"rounded h-2/4\" src=\"/storage/images/Mission.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> To equip students with the state-of-the-art knowledge, skills and exposure required to succeed in todays’ global marketplace. As a private non-denominational Institution, HiAST will equip fully and prepare students for holding the reign of the future of the region and the country. </div></div></div></div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Vision </div><img class=\"rounded h-2/4\" src=\"/storage/images/Vision.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> HiAST will maintain its tradition and surface as a still higher symbol of quality education with relevance to national needs to be provided to young men and women in the areas it will serve, imbibing in its ambit all the ingredients, tangibles and intangibles, which are pre-requisites for it in order to promote social growth and knowledge-based economic prosperity with special emphasis on proper harnessing and management of available resources. </div></div></div></div></div><div class=\"grid grid-cols-1 gap-4 mt-5 mb-10 text-gray-800 text-1xl m-14\"><div class=\"text-6xl font-bold text-gray-800\" id=\"tandc\"> Terms &amp; Conditions </div><ol><li> 1. Login I.D.’s, Passwords of various e-resources or online resources will be communicated to the students and faculty members from time to time. </li><li> 2. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 3. After reading, leave books on the table or on the book trolley. Please do not shelve the books. </li><li> 4. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 5. Members must not to be sharing their net access ID and Password with other students. . </li></ol></div>", 3);
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mt-10 ml-12 text-6xl font-bold text-gray-800\" id=\"aboutus\"> About </div><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 m-14\"><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> About Us </div><img class=\"rounded h-2/4\" src=\"/storage/images/About.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> About us HiAST Established in 2001, the Hyderabad Institute of Arts, Science and Technology (HiAST) is a chartered institute that offers a variety of undergraduate and graduate programs in affiliation with the University of Sindh and Mehran University of Engineering and Technology. Additionally, the HiAST education system comprises of the Royal Cedar Montessori and HiAST School and College. </div></div></div></div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Mission </div><img class=\"rounded h-2/4\" src=\"/storage/images/Mission.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> To equip students with the state-of-the-art knowledge, skills and exposure required to succeed in todays’ global marketplace. As a private non-denominational Institution, HiAST will equip fully and prepare students for holding the reign of the future of the region and the country. </div></div></div></div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Vision </div><img class=\"rounded h-2/4\" src=\"/storage/images/Vision.jpg\"><div class=\"mt-2\"><div><div class=\"text-gray-700 text-1xl\"> HiAST will maintain its tradition and surface as a still higher symbol of quality education with relevance to national needs to be provided to young men and women in the areas it will serve, imbibing in its ambit all the ingredients, tangibles and intangibles, which are pre-requisites for it in order to promote social growth and knowledge-based economic prosperity with special emphasis on proper harnessing and management of available resources. </div></div></div></div></div><div class=\"grid grid-cols-1 gap-4 mt-5 mb-10 text-gray-800 text-1xl m-14\"><div class=\"text-6xl font-bold text-gray-800\" id=\"tandc\"> Terms &amp; Conditions </div><ol><li> 1. Login I.D.’s, Passwords of various e-resources or online resources will be communicated to the students and faculty members from time to time. </li><li> 2. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 3. After reading, leave books on the table or on the book trolley. Please do not shelve the books. </li><li> 4. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 5. Members must not to be sharing their net access ID and Password with other students. . </li></ol></div>", 3);
 
-var _hoisted_13 = {
+var _hoisted_12 = {
   "class": "grid justify-center grid-cols-2 gap-4 mt-10 m-14"
 };
-var _hoisted_14 = {
+var _hoisted_13 = {
   "class": ""
 };
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mb-10 text-6xl font-bold text-gray-800",
   id: "contact"
 }, " Contact Us ", -1
 /* HOISTED */
 );
 
-var _hoisted_16 = {
+var _hoisted_15 = {
   "class": "flex flex-col mb-2"
+};
+var _hoisted_16 = {
+  "class": "relative"
 };
 var _hoisted_17 = {
-  "class": "relative"
+  "class": "flex flex-col mb-2"
 };
 var _hoisted_18 = {
-  "class": "flex flex-col mb-2"
+  "class": "relative"
 };
 var _hoisted_19 = {
-  "class": "relative"
+  "class": "flex flex-col mb-2"
 };
 var _hoisted_20 = {
-  "class": "flex flex-col mb-2"
-};
-var _hoisted_21 = {
   "class": "relative"
 };
-var _hoisted_22 = {
+var _hoisted_21 = {
   "class": "flex flex-col mb-2"
 };
-var _hoisted_23 = {
+var _hoisted_22 = {
   "class": "relative"
 };
 
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center justify-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
@@ -22613,7 +22594,7 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mb-10 text-6xl font-bold text-gray-800"
 }, " Location "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
   src: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14419.42716082293!2d68.3444061!3d25.3761157!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e0f6881f3d90524!2s(HIAST)%20Hyderabad%20Institute%20Of%20Arts%20Science%20and%20Technology!5e0!3m2!1sen!2s!4v1648832136748!5m2!1sen!2s",
@@ -22632,22 +22613,22 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/login",
     type: "button",
-    "class": "px-3 py-2 font-bold text-white bg-gray-900 rounded-md text-1xl hover:bg-gray-700"
+    "class": "px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_6];
+      return [_hoisted_5];
     }),
     _: 1
     /* STABLE */
 
-  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Body start"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Body start"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submitForm && $options.submitForm.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $data.formData.regno = $event;
@@ -22656,7 +22637,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your register number"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.regno]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.regno]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.formData.name = $event;
@@ -22665,7 +22646,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your name"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "email",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.formData.email = $event;
@@ -22674,7 +22655,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your email"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "textbox",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.formData.msg = $event;
@@ -22683,9 +22664,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your message here"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.msg]])])]), _hoisted_24], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.msg]])])]), _hoisted_23], 32
   /* HYDRATE_EVENTS */
-  )]), _hoisted_25])])])]);
+  )]), _hoisted_24])])])]);
 }
 
 /***/ }),

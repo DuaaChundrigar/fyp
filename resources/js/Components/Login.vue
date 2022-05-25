@@ -1,34 +1,31 @@
 <template>
-<nav class="bg-gray-400">
-        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div
-                    class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-                >
-                    <div class="flex items-center flex-shrink-0">
-                        <img
-                                class="hidden w-auto h-10 lg:block"
-                                src="/storage/logo/logo.png"
-                                alt="Logo"
-                            />
-                    </div>
-                </div>
-                <div
-                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                >
-                    <div>
-                        <button
-                            type="button"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md hover:bg-gray-500"
-                        >
-                            <Link href="/" class="">Home</Link>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
+<div>
+
+            <div  class="flex justify-between m-auto space-x-8 bg-gray-100 shadow-lg ">
+                    
+                            <div class="flex ml-10">
+                                <img
+                                    class="flex-shrink-0 w-auto h-20"
+                                    src="/storage/logo/logo.png"
+                                    alt="Logo"
+                                />
+                            </div>
+                            
+                            
+                    
+                            <div class="m-auto ">
+                                <Link
+                                    href="/"
+                                    type="button"
+                                    class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                                >
+                                    Home
+                                </Link>
+                            </div>
+                        
+
+            </div>
 
 
     <div
@@ -103,6 +100,10 @@
             </div>
         </div>
     </div>
+    
+</div>
+
+
 </template>
 
 <script>

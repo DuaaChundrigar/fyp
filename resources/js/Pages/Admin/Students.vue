@@ -88,17 +88,16 @@
                                         <tr
                                             v-for="(student, index) in filteredstudents"
                                             :key="student.id"
-                                            class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
+                                            class="px-6 py-4 text-sm font-medium text-center bg-white border-b text-gray-50ay-900 whitespace-nowrap hover:bg-gray-100"
                                         >
                                             <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ index + 1 }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
-                                                <!-- {{ student.profile_image }} -->
                                                 <a
                                                     target="_blank"
                                                     :href="
@@ -116,18 +115,18 @@
                                                 </a>
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ student.regno }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ student.name }}
                                             </td>
 
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 <button
                                                     type="button"

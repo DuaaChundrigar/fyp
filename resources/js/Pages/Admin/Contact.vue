@@ -11,7 +11,7 @@
 
                 <div class="flex flex-col m-10">
                     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="inline-block py-2  sm:px-6 lg:px-8">
+                        <div class="inline-block py-2 sm:px-6 lg:px-8">
                             <div class="overflow-hidden">
                                 <table class="border">
                                     <thead class="bg-white border-b">
@@ -57,38 +57,38 @@
 
                                     <tbody>
                                         <tr
-                                            v-for="contact in contacts"
+                                            v-for="(contact , index ) in contacts"
                                             :key="contact.id"
-                                            class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
+                                            class="px-6 py-4 text-sm font-medium text-gray-900 bg-white border-b hover:bg-gray-100"
                                         >
                                             <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ index + 1 }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ contact.regno }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ contact.name }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ contact.email }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 {{ contact.msg }}
                                             </td>
 
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class=""
                                             >
                                                 <button
                                                     type="button"

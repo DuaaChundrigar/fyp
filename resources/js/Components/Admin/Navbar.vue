@@ -7,7 +7,7 @@
                 >
                     <div class="flex items-center flex-shrink-0">
                         <img
-                                class="hidden w-auto h-10 lg:block"
+                                class="w-auto h-16"
                                 src="/storage/logo/logo.png"
                                 alt="Logo"
                             />

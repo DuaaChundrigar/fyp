@@ -1,62 +1,53 @@
 <template>
     <div>
-        <nav class="bg-gray-800">
-            <div class="max-w-7xl sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16 mx-auto">
-                    <div
-                        class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-                    >
-                        <div class="flex items-center flex-shrink-0">
-                            <img
-                                class="hidden w-auto h-10 shadow-md lg:block"
-                                src="/storage/logo/logo.png"
-                                alt="Logo"
-                            />
-                        </div>
-                        <div class="hidden sm:block sm:ml-6">
+        
+        <div  class="flex justify-between m-auto bg-gray-100 shadow-lg ">
+                    
+                            <div class="flex ml-10">
+                                <img
+                                    class="flex-shrink-0 w-auto h-20"
+                                    src="/storage/logo/logo.png"
+                                    alt="Logo"
+                                />
+                            </div>
+                            
                             <div
-                                class="flex space-x-4 font-bold text-gray-300 text-1xl hover:text-white"
+                                class="m-auto space-x-4 font-bold text-gray-900 text-1xl"
                             >
                                 <a
                                     href="#home"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
                                     >Home</a
                                 >
                                 <a
                                     href="#aboutus"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-700 "
+                                    class="px-3 py-2 rounded-md hover:bg-gray-200 "
                                     >About</a
                                 >
                                 <a
                                     href="#tandc"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
                                     >Terms and Conditions</a
                                 >
                                 <a
                                     href="#contact"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-700"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
                                     >Contact Us</a
                                 >
                             </div>
-                        </div>
-                    </div>
+                    
+                            <div class="m-auto ml-36">
+                                <Link
+                                    href="/login"
+                                    type="button"
+                                    class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                                >
+                                    Login
+                                </Link>
+                            </div>
+                        
 
-                    <div
-                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                    >
-                        <div>
-                            <Link
-                                href="/login"
-                                type="button"
-                                class="px-3 py-2 font-bold text-white bg-gray-900 rounded-md text-1xl hover:bg-gray-700"
-                            >
-                                Login
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        </div>
 
         <!--Body start-->
 
