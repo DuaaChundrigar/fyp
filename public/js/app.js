@@ -22541,7 +22541,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   loop: "",
   muted: ""
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
-  src: "/storage/videos/GYM.mp4",
+  src: "/storage/videos/hiast.mp4",
   type: "video/mp4"
 })])], -1
 /* HOISTED */
