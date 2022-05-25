@@ -256,7 +256,9 @@ class AdminController extends Controller
 
     function contact(Request $request)
     {
-        return Inertia::render('Admin/Contact');
+        $contacts = Contact::all();
+
+        return Inertia::render('Admin/Contact', ['contacts' => $contacts]);
     }
 
     function addContact(Request $request)
