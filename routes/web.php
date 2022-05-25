@@ -64,6 +64,8 @@ Route::middleware('hasRole:Admin')->group(function () {
 
     Route::get('/admin/report', [AdminController::class, 'report']);
 
+    
+
     Route::get('/admin/settings', [AdminController::class, 'settings']);
 
     Route::get('/admin/contact', [AdminController::class, 'contact']);

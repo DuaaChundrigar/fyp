@@ -10,17 +10,31 @@ use App\Models\Student;
 use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 
 class AdminController extends Controller
 {
     function index()
     {
-
+        
         $books = Books::all();
-        $user = session('user');
 
-        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user]);
+        $user = session('user');
+        
+        $bookings = Booking::with('book', 'student')->get();
+
+        $count = DB::table('bookings')->count();
+        $checkin = DB::table('bookings')->count('checkin_datetime');
+        $checkout = DB::table('bookings')->count('checkout_datetime');
+
+        // echo json_encode($count);
+        // echo json_encode($checkin);
+        // echo json_encode($checkout);
+
+        // exit;
+
+        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user ] , [ 'bookings' => $bookings]);
     }
 
     function books(Request $request)
@@ -246,7 +260,12 @@ class AdminController extends Controller
 
     function report(Request $request)
     {
-        return Inertia::render('Admin/Report');
+        
+        $bookings = Booking::with('book', 'student')->get();
+        
+        return Inertia::render('Admin/Report', ['bookings' => $bookings]);
+
+        
     }
 
     function settings(Request $request)

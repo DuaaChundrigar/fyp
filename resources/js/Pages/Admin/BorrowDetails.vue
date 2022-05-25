@@ -9,8 +9,9 @@
 
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
-                <!-- Table  -->
+                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Lending Books</h1>
 
+                <!-- Table  -->
                 <div class="flex flex-col m-10">
                     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="inline-block py-2 sm:px-6 lg:px-8">

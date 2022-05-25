@@ -44,6 +44,13 @@
                                 >
                                     Login
                                 </Link>
+                                <Link
+                                    href="/register"
+                                    type="button"
+                                    class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                                >
+                                    Register
+                                </Link>
                             </div>
                         
 

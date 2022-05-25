@@ -8,48 +8,47 @@
             <SideMenu />
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
-                <div class="flex flex-col m-10">
-                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="inline-block w-full py-2 sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
-                                <table class="border w-full">
+
+                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Contact Messages</h1>
+                <div class="flex flex-col ">
+                                <table class="text-center border">
                                     <thead class="bg-white border-b">
                                         <tr>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
                                                 S.No
                                             </th>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
                                                 Student Reg No
                                             </th>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
                                                 Student Name
                                             </th>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
                                                 Student Email
                                             </th>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
                                                 Message
                                             </th>
                                             <th
                                                 scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
-                                                Delete Student
+                                                Delete Message
                                             </th>
                                         </tr>
                                     </thead>
@@ -90,9 +89,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,35 +1,28 @@
 <template>
-<nav class="bg-gray-400">
-        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div
-                    class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-                >
-                    <div class="flex items-center flex-shrink-0">
-                        <img
-                                class="w-auto h-24 "
-                                src="/storage/logo/logo.png"
-                                alt="Logo"
-                            />
-                    </div>
+
+<div class="bg-gray-100 shadow-lg">
+            <div
+                class="container flex justify-between m-auto mx-auto space-x-8"
+            >
+                <div class="flex">
+                    <img
+                        class="flex-shrink-0 w-auto h-20"
+                        src="/storage/logo/logo.png"
+                        alt="Logo"
+                    />
                 </div>
-                <div
-                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-                >
-                    <div>
-                        <button
-                            type="button"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md hover:bg-gray-500"
-                        >
-                            <Link href="/" class="">Home</Link>
-                        </button>
-                    </div>
+
+                <div class="flex items-center justify-center">
+                    <Link
+                        href="/"
+                        type="button"
+                        class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                    >
+                        Home
+                    </Link>
                 </div>
             </div>
         </div>
-    </nav>
-
-
 
     <div
         class="flex flex-col items-center justify-center min-h-screen mt-10 bg-gray-100"

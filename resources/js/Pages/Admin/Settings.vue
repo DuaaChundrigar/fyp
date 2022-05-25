@@ -8,6 +8,9 @@
             <SideMenu />
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
+                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Password Reset</h1>
+
+                
             </div>
         </div>
     </div>

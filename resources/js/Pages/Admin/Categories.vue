@@ -12,7 +12,7 @@
         <div class="col-span-5 ... m-2">
             <div class="grid grid-cols-4">
                 <div class="col-span-1"></div>
-                <div class="col-span-1"></div>
+                <div class="col-span-1 mb-5 font-serif text-3xl font-bold text-center text-gray-800">Categories List</div>
                 <div class="col-span-1"></div>
                 <div class="col-span-1 m-2">
                     <Link
@@ -26,36 +26,33 @@
 
             <!-- Table  -->
 
-            <div class="flex flex-col m-10">
-                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="inline-block py-2 sm:px-6 lg:px-8 ml-60">
-                        <div class="overflow-hidden">
-                            <table class="ml-32 border">
+            <div class="flex flex-col mt-10 ">
+                            <table class="text-center border ">
                                 <thead class="bg-white border-b">
                                     <tr>
                                         <th
                                             scope="col"
-                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            class="px-6 py-4 text-sm font-medium text-gray-900"
                                         >
                                             S.no
                                         </th>
 
                                         <th
                                             scope="col"
-                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            class="px-6 py-4 text-sm font-medium text-gray-900 "
                                         >
                                             Category Name
                                         </th>
 
                                         <th
                                             scope="col"
-                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            class="px-6 py-4 text-sm font-medium text-gray-900"
                                         >
                                             Edit
                                         </th>
                                         <th
                                             scope="col"
-                                            class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            class="px-6 py-4 text-sm font-medium text-gray-900"
                                         >
                                             Delete
                                         </th>
@@ -108,9 +105,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
