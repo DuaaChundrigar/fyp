@@ -7,10 +7,12 @@ use App\Models\Books;
 use App\Models\Categories;
 use App\Models\Contact;
 use App\Models\Student;
+use App\Models\User;
 use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 
 class AdminController extends Controller
@@ -268,9 +270,37 @@ class AdminController extends Controller
         
     }
 
-    function settings(Request $request)
+    function settings(Request $request , $users_id)
     {
+        $users = Student::find($users_id);
+
+        $users = User::all();
+
         return Inertia::render('Admin/Settings');
+    }
+
+    function updatepassword(Request $request , $user_id ){
+
+        $user_id= User::find($user_id);
+
+        $user = User::where(['email' => $request->formData['email']])->first();
+
+        if ($user) {
+            if (Hash::check($request->formData['password'], $user->password)) {
+
+                session(['user' => $user]);
+
+                if ($user->role == 'Admin') {
+                    return redirect('/admin/dashboard');
+                } else {
+                    return redirect()->back()->withErrors('Incorrect Password!');
+                }
+        $user_id->save();
+
+        return redirect('/admin/settings');
+
+            }
+        }   
     }
 
     function contact(Request $request)

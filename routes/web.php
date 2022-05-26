@@ -67,6 +67,9 @@ Route::middleware('hasRole:Admin')->group(function () {
     
 
     Route::get('/admin/settings', [AdminController::class, 'settings']);
+    Route::post('/admin/settings/update/{user_id}', [AdminController::class, 'updatepassword']);
+
+
 
     Route::get('/admin/contact', [AdminController::class, 'contact']);
     Route::post('/admin/contacts/delete/{contact_id}', [AdminController::class, 'deleteMsg']);
