@@ -10,7 +10,7 @@
             <div class="col-span-5 ... m-2">
                 <div class="grid grid-cols-4">
                     <div class="col-span-1"></div>
-                    <div class="col-span-1"></div>
+                    <div class="col-span-1 mb-5 font-serif text-3xl font-bold text-center text-gray-800">Books List</div>
                     <div class="col-span-1"></div>
                     <div class="col-span-1 m-2">
                         <Link

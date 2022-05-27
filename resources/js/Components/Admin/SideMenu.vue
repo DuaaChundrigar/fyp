@@ -1,71 +1,72 @@
 <template>
     <div class="...">
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-            >
-                <Link href="/" class="">Dashboard</Link>
-            </button>
+        <div
+            :class="
+                checkIfWeAreOnSamePage('/admin/dashboard')
+                    ? 'bg-gray-900 text-white'
+                    : 'bg-gray-700 text-white'
+            "
+            class="w-full px-24 py-4 m-1 text-center rounded-md text-1xl"
+        >
+            <Link href="/"> Dashboard </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-            >
-                <Link href="/admin/books" class="">Books</Link>
-            </button>
+        <div
+            :class="
+                checkIfWeAreOnSamePage('/admin/books')
+                    ? 'bg-gray-900 text-white'
+                    : 'bg-gray-700 text-white'
+            "
+            class="w-full px-24 py-4 m-1 text-center rounded-md text-1xl"
+        >
+            <Link href="/admin/books"> Books </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+        <div class="mt-8">
+            <Link
+                href="/admin/categories"
+                class="w-full px-24 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
             >
-                <Link href="/admin/categories" class="Categories"
-                    >Categories</Link
-                >
-            </button>
+                Categories
+            </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+        <div class="mt-8">
+            <Link
+                href="/admin/borrowDetails"
+                class="w-full px-16 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
             >
-                <Link href="/admin/borrowDetails" class="">Borrow Details</Link>
-            </button>
+                Borrow Details
+            </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+        <div class="mt-8">
+            <Link
+                href="/admin/students"
+                class="w-full px-24 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
             >
-                <Link href="/admin/students" class="">Students</Link>
-            </button>
+                Students
+            </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+        <div class="mt-8">
+            <Link
+                class="w-full px-24 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
+                href="/admin/contact"
             >
-                <Link href="/admin/contact" class="">Contact</Link>
-            </button>
+                Contact
+            </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
+        <div class="mt-8">
+            <Link
+                class="w-full px-24 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
+                href="/admin/report"
             >
-                <Link href="/admin/report" class="">Report</Link>
-            </button>
+                Report
+            </Link>
         </div>
-        <div>
-            <button
-                type="button"
-                class="w-full px-3 py-2 m-1 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-500"
-                id="login"
+        <div class="mt-8">
+            <Link
+                href="/admin/settings"
+                class="w-full px-16 py-4 m-1 text-center text-white bg-gray-700 rounded-md text-1xl hover:bg-gray-500"
             >
-                <Link href="/admin/settings" class="">Settings</Link>
-            </button>
+                Password Reset
+            </Link>
         </div>
     </div>
 </template>
@@ -76,7 +77,12 @@ export default {
     components: {
         Link,
     },
+
+    methods: {
+        checkIfWeAreOnSamePage(url) {
+            console.log(url);
+            return window.location.pathname === url;
+        },
+    },
 };
 </script>
-
-<style lang="scss" scoped></style>

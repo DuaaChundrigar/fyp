@@ -144,8 +144,7 @@
                                 >
                                     <button
                                         type="button"
-                                        class="px-3 py-2 text-sm font-medium text-white rounded-md"
-                                        id="login"
+                                        class="px-3 py-2 text-sm font-medium text-white rounded-md" 
                                         :class="{
                                             'bg-green-500':
                                                 booking.status == 'approved',

@@ -7,9 +7,13 @@ use App\Models\Books;
 use App\Models\Categories;
 use App\Models\Contact;
 use App\Models\Student;
+use App\Models\User;
 use Database\Seeders\BookingSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 
 class AdminController extends Controller
@@ -18,9 +22,22 @@ class AdminController extends Controller
     {
 
         $books = Books::all();
+
         $user = session('user');
 
-        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user]);
+        $bookings = Booking::with('book', 'student')->get();
+
+        $count = DB::table('bookings')->count();
+        $checkin = DB::table('bookings')->count('checkin_datetime');
+        $checkout = DB::table('bookings')->count('checkout_datetime');
+
+        // echo json_encode($count);
+        // echo json_encode($checkin);
+        // echo json_encode($checkout);
+
+        // exit;
+
+        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user], ['bookings' => $bookings]);
     }
 
     function books(Request $request)
@@ -246,12 +263,57 @@ class AdminController extends Controller
 
     function report(Request $request)
     {
-        return Inertia::render('Admin/Report');
+
+        $bookings = Booking::with('book', 'student')->get();
+
+        return Inertia::render('Admin/Report', ['bookings' => $bookings]);
     }
 
-    function settings(Request $request)
+    function settings()
     {
+
+        // $currentUser = session('user');
+        // echo json_encode($currentUser);
+        // exit;
+        // // $users = Student::find($users_id);
+
+        // $users = User::all();
+
         return Inertia::render('Admin/Settings');
+    }
+
+    function updatepassword(Request $request)
+    {
+
+        $currentUser = session('user');
+
+        $user = User::find($currentUser->id);
+
+        $user->password = Hash::make($request->formData['password']);
+
+        $user->save();
+
+        return redirect('/admin/settings');
+
+        // $user_id = User::find($user_id);
+
+        // $user = User::where(['email' => $request->formData['email']])->first();
+
+        // if ($user) {
+        //     if (Hash::check($request->formData['password'], $user->password)) {
+
+        //         session(['user' => $user]);
+
+        //         if ($user->role == 'Admin') {
+        //             return redirect('/admin/dashboard');
+        //         } else {
+        //             return redirect()->back()->withErrors('Incorrect Password!');
+        //         }
+        //         $user_id->save();
+
+        //         return redirect('/admin/settings');
+        //     }
+        // }
     }
 
     function contact(Request $request)

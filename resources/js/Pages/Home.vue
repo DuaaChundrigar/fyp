@@ -12,7 +12,7 @@
                             </div>
                             
                             <div
-                                class="m-auto space-x-4 font-bold text-gray-900 text-1xl"
+                                class="m-auto space-x-4 font-bold text-gray-900 text-1xl "
                             >
                                 <a
                                     href="#home"
@@ -36,13 +36,20 @@
                                 >
                             </div>
                     
-                            <div class="m-auto ml-36">
+                            <div class="m-auto ml-60">
                                 <Link
                                     href="/login"
                                     type="button"
-                                    class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                                    class="px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
                                 >
                                     Login
+                                </Link>
+                                <Link
+                                    href="/register"
+                                    type="button"
+                                    class="px-3 py-2 ml-4 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
+                                >
+                                    Register
                                 </Link>
                             </div>
                         
