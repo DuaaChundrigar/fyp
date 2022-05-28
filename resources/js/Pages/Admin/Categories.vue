@@ -10,10 +10,8 @@
 
         <!--Right Side-->
         <div class="col-span-5 ... m-2">
+            <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Categories List</h1>
             <div class="grid grid-cols-4">
-                <div class="col-span-1"></div>
-                <div class="col-span-1 mb-5 font-serif text-3xl font-bold text-center text-gray-800">Categories List</div>
-                <div class="col-span-1"></div>
                 <div class="col-span-1 m-2">
                     <Link
                         href="/admin/categoriess"
@@ -22,6 +20,9 @@
                         Add New Category
                     </Link>
                 </div>
+                <div class="col-span-1"></div>
+                <div class="col-span-1 "></div>
+                <div class="col-span-1"></div>
             </div>
 
             <!-- Table  -->

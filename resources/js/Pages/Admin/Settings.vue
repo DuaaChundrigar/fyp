@@ -15,7 +15,7 @@
                 </h1>
 
                 <div
-                    class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
+                    class="flex flex-col w-5/12 px-4 py-8 m-auto mt-10 bg-gray-800 shadow-md rounded-2xl"
                 >
                     <div
                         class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
@@ -32,9 +32,21 @@
                                     </label>
                                     <input
                                         type="text"
+                                        required
                                         v-model="formData.password"
                                         class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                         placeholder="Enter New Password"
+                                    />
+                                </div>
+                                <div class="relative">
+                                    <label for="category" class="text-white">
+                                        Confirm Password
+                                    </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                        placeholder="Enter Confirm Password"
                                     />
                                 </div>
                             </div>
@@ -58,6 +70,7 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu";
+import Swal from 'sweetalert2';
 
 //import axios from "axios";
 export default {
@@ -65,6 +78,7 @@ export default {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
 
     props: {},
@@ -79,14 +93,23 @@ export default {
     },
     methods: {
         submitForm() {
+            var vm = this;
             axios
                 .post("/admin/settings/update", {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    window.location.href = "/admin/settings";
+                    vm.showNotification("Password Reset Successfully", "success");
+                    window.location.href = "/logout";
                 });
         },
     },
+    showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+            });
+        },
 };
 </script>

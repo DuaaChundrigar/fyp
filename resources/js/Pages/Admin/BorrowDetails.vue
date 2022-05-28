@@ -13,9 +13,6 @@
 
                 <!-- Table  -->
                 <div class="flex flex-col m-10">
-                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="inline-block py-2 sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
                                 <table class="border">
                                     <thead class="bg-white border-b">
                                         <tr>
@@ -122,7 +119,7 @@
                                                 }}
                                             </td>
                                             <td
-                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                                class="px-3 py-4 text-white"
                                             >
                                                 <div
                                                     class="grid grid-cols-2 gap-2"
@@ -134,7 +131,7 @@
                                                             booking.id +
                                                             `/approved`
                                                         "
-                                                        class="px-2 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                        class="px-2 py-2 text-sm bg-green-600 rounded-md"
                                                     >
                                                         Approved
                                                     </Link>
@@ -145,7 +142,7 @@
                                                             booking.id +
                                                             `/rejected`
                                                         "
-                                                        class="px-2 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                                        class="px-2 py-2 text-sm bg-red-600 rounded-md"
                                                     >
                                                         Rejected
                                                     </Link>
@@ -156,7 +153,7 @@
                                                             booking.id +
                                                             `/checkin`
                                                         "
-                                                        class="px-2 py-2 text-sm font-medium text-white bg-green-600 rounded-md"
+                                                        class="px-2 py-2 text-sm bg-green-600 rounded-md"
                                                     >
                                                         Check-in
                                                     </Link>
@@ -167,7 +164,7 @@
                                                             booking.id +
                                                             '/checkout'
                                                         "
-                                                        class="px-2 py-2 text-sm font-medium text-white bg-blue-600 rounded-md"
+                                                        class="px-2 py-2 text-sm bg-blue-600 rounded-md"
                                                     >
                                                         Cehck-out
                                                     </Link>
@@ -176,9 +173,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

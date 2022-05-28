@@ -34,6 +34,11 @@
                                     class="px-3 py-2 rounded-md hover:bg-gray-200"
                                     >Contact Us</a
                                 >
+                                <a
+                                    href="#team"
+                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
+                                    >Our Team</a
+                                >
                             </div>
                     
                             <div class="m-auto ml-60">
@@ -66,7 +71,7 @@
             </div>
             <div>
                 <video
-                    class="flex w-full h-[60vh] items-center m-auto mt-10"
+                    class="flex w-full h-[60vh] items-center m-auto mt-10 mb-24"
                     autoplay
                     loop
                     muted
@@ -76,10 +81,10 @@
             </div>
             <div>
                 <div
-                    class="mt-10 ml-12 text-6xl font-bold text-gray-800"
+                    class="mt-10 ml-12 text-6xl font-bold text-gray-800 "
                     id="aboutus"
                 >
-                    About
+                    <h1 class="mt-10 font-serif text-6xl font-bold text-center text-gray-800 ">About Us</h1>
                 </div>
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14">
                     <div>
@@ -87,12 +92,9 @@
                             About Us
                         </div>
                         <img
-                            class="rounded h-2/4"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/About.jpg"
                         />
-                        <div class="mt-2">
-                            <div>
-                                <div class="text-gray-700 text-1xl">
                                     About us HiAST Established in 2001, the
                                     Hyderabad Institute of Arts, Science and
                                     Technology (HiAST) is a chartered institute
@@ -103,9 +105,6 @@
                                     the HiAST education system comprises of the
                                     Royal Cedar Montessori and HiAST School and
                                     College.
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div>
@@ -113,12 +112,10 @@
                             Our Mission
                         </div>
                         <img
-                            class="rounded h-2/4"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/Mission.jpg"
                         />
-                        <div class="mt-2">
-                            <div>
-                                <div class="text-gray-700 text-1xl">
+                        
                                     To equip students with the state-of-the-art
                                     knowledge, skills and exposure required to
                                     succeed in todays’ global marketplace. As a
@@ -126,9 +123,6 @@
                                     HiAST will equip fully and prepare students
                                     for holding the reign of the future of the
                                     region and the country.
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div>
@@ -136,12 +130,9 @@
                             Our Vision
                         </div>
                         <img
-                            class="rounded h-2/4"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/Vision.jpg"
                         />
-                        <div class="mt-2">
-                            <div>
-                                <div class="text-gray-700 text-1xl">
                                     HiAST will maintain its tradition and
                                     surface as a still higher symbol of quality
                                     education with relevance to national needs
@@ -153,18 +144,16 @@
                                     knowledge-based economic prosperity with
                                     special emphasis on proper harnessing and
                                     management of available resources.
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div
-                    class="grid grid-cols-1 gap-4 mt-5 mb-10 text-gray-800 text-1xl m-14"
+                    class="grid grid-cols-1 gap-4 text-gray-800 text-1xl m-14"
                 >
                     <div class="text-6xl font-bold text-gray-800"
                     id="tandc"
                     >
-                        Terms & Conditions
+            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Terms And Conditions</h1>
+
                     </div>
                     <ol>
                         <li>
@@ -193,12 +182,13 @@
                     </ol>
                 </div>
 
-                <div class="grid justify-center grid-cols-2 gap-4 mt-10 m-14">
+                <div class="grid justify-center gap-4 mt-10 m-14">
                     <div class="">
                         <div class="mb-10 text-6xl font-bold text-gray-800"
                         id="contact"
                         >
-                            Contact Us
+            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Contact Us</h1>
+
                         </div>
                         <form @submit.prevent="submitForm">
                             <div class="flex flex-col mb-2">
@@ -253,14 +243,18 @@
                             </div>
                         </form>
                     </div>
+                </div>
                     <div>
                         <div class="mb-10 text-6xl font-bold text-gray-800">
-                            Location
+        <h1 class="font-serif text-6xl font-bold text-center text-gray-800 "
+        id="location"
+        >Location</h1>
+
                         </div>
                         <div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14419.42716082293!2d68.3444061!3d25.3761157!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e0f6881f3d90524!2s(HIAST)%20Hyderabad%20Institute%20Of%20Arts%20Science%20and%20Technology!5e0!3m2!1sen!2s!4v1648832136748!5m2!1sen!2s"
-                                width="600"
+                                width="100%"
                                 height="300"
                                 style="border: 0"
                                 allowfullscreen=""
@@ -269,7 +263,76 @@
                             ></iframe>
                         </div>
                     </div>
+
+                    <h1 class="mt-10 font-serif text-6xl font-bold text-center text-gray-800 "
+                    id="team"
+                    >Our Supervisor</h1>
+                <div class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14">
+                    <div>
+                        <!-- <img
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
+                            src="/storage/images/About.jpg"
+                        /> -->
+                                    <!-- <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Saima Palari</h1> -->
+                    </div>
+
+                    <div>
+                        <img
+                            class="w-full text-gray-700 rounded h-4/4 text-1xl"
+                            src="/storage/images/Mission.jpg"
+                        />
+                        
+                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Prof. Tehseen Hafiz</h1>
+
+                    </div>
+
+                    <div class="">
+                        <!-- <img
+                            class="w-full text-gray-700 rounded h-2/4 "
+                            src="/storage/images/Vision.jpg"
+                        /> -->
+                        <!-- <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1> -->
+
+                    </div>
                 </div>
+
+                 <h1 class="mb-5 font-serif text-6xl font-bold text-center text-gray-800 "
+                    id="team"
+                    >Our Team</h1>
+                <div class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14">
+                    <div>
+                        <img
+                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                            src="/storage/images/About.jpg"
+                        />
+                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800 ">Saima Palari</h1>
+                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT066</h1>
+
+                    </div>
+
+                    <div>
+                        <img
+                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                            src="/storage/images/Mission.jpg"
+                        />
+                        
+                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Mahnoor Tahir</h1>
+                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT052</h1>
+
+
+                    </div>
+
+                    <div class="">
+                        <img
+                            class="w-full text-gray-700 rounded h-3/4 "
+                            src="/storage/images/Vision.jpg"
+                        />
+                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1>
+                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT067</h1>
+
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

@@ -1,5 +1,7 @@
 <template>
 
+<div class="bg-gray-100">
+
 <div class="bg-gray-100 shadow-lg">
             <div
                 class="container flex justify-between m-auto mx-auto space-x-8"
@@ -25,7 +27,7 @@
         </div>
 
     <div
-        class="flex flex-col items-center justify-center min-h-screen mt-10 bg-gray-100"
+        class="flex flex-col items-center justify-center min-h-screen mt-10"
     >
         <div
             class="flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
@@ -86,9 +88,9 @@
                             />
                         </div>
                     </div> -->
-                    <div class="flex flex-col mb-2">
+                    <div class="flex flex-col mb-1">
                         <div class="relative">
-                            <label class="m-2 text-sm text-gray-100">Batch</label>
+                            <label class="m-2 text-sm text-gray-100">School / College / Batch</label>
 
                             <select class="w-full rounded-full" v-model="formData.batch">
                                 <option value="">Select an option</option>
@@ -125,6 +127,7 @@
 
                             <select class="w-full rounded-full" v-model="formData.program">
                                 <option value="">Select an option</option>
+                                <option value="BBA 21">School</option>
                                 <option value="BBA 21">College</option>
                                 <option value="BSIT 18">BSIT</option>
                                 <option value="BSIT 19">BBA</option>
@@ -199,6 +202,9 @@
             </div>
         </div>
     </div>
+
+</div>
+
 </template>
 
 <script>

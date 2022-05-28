@@ -8,10 +8,8 @@
             <SideMenu />
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
+                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Books List</h1>
                 <div class="grid grid-cols-4">
-                    <div class="col-span-1"></div>
-                    <div class="col-span-1 mb-5 font-serif text-3xl font-bold text-center text-gray-800">Books List</div>
-                    <div class="col-span-1"></div>
                     <div class="col-span-1 m-2">
                         <Link
                             href="/admin/book"
@@ -20,6 +18,9 @@
                             Add New Book
                         </Link>
                     </div>
+                    <div class="col-span-1"></div>
+                    <div class="col-span-1 "></div>
+                    <div class="col-span-1"></div>
                 </div>
 
                 <div
@@ -58,9 +59,6 @@
                 <!-- Table  -->
 
                 <div class="flex flex-col m-10">
-                    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div class="inline-block py-2 sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
                                 <table class="border">
                                     <thead class="bg-white border-b">
                                         <tr>
@@ -189,9 +187,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

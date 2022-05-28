@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="bg-gray-100">
         <div class="bg-gray-100 shadow-lg">
             <div
-                class="flex container mx-auto justify-between m-auto space-x-8"
+                class="container flex justify-between m-auto mx-auto space-x-8"
             >
                 <div class="flex">
                     <img
@@ -12,7 +12,7 @@
                     />
                 </div>
 
-                <div class="flex justify-center items-center">
+                <div class="flex items-center justify-center">
                     <Link
                         href="/"
                         type="button"

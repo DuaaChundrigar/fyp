@@ -156,11 +156,13 @@ import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu";
 
 import axios from "axios";
+import Swal from 'sweetalert2';
 export default {
     components: {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
     props: {
         students: {
@@ -179,10 +181,12 @@ export default {
 
     methods: {
         deleteStudent(student_id) {
+            var vm = this;
             axios
                 .post("/admin/students/delete/" + student_id)
                 .then((response) => {
                     this.students = response.data;
+                    vm.showNotification("Student Deleted Successfully", "success");
                 });
         },
 
@@ -202,6 +206,14 @@ export default {
                     );
                 });
             }
+        },
+
+        showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+            });
         },
     },
 };

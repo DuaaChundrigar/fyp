@@ -293,27 +293,8 @@ class AdminController extends Controller
 
         $user->save();
 
-        return redirect('/admin/settings');
+        return redirect('/');
 
-        // $user_id = User::find($user_id);
-
-        // $user = User::where(['email' => $request->formData['email']])->first();
-
-        // if ($user) {
-        //     if (Hash::check($request->formData['password'], $user->password)) {
-
-        //         session(['user' => $user]);
-
-        //         if ($user->role == 'Admin') {
-        //             return redirect('/admin/dashboard');
-        //         } else {
-        //             return redirect()->back()->withErrors('Incorrect Password!');
-        //         }
-        //         $user_id->save();
-
-        //         return redirect('/admin/settings');
-        //     }
-        // }
     }
 
     function contact(Request $request)
