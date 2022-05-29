@@ -103,13 +103,13 @@ export default {
                     window.location.href = "/logout";
                 });
         },
-    },
     showNotification(message, type) {
-            Swal.fire({
-                icon: type,
+        Swal.fire({
+            icon: type,
                 text: message,
                 showConfirmButton: true,
             });
         },
+            },
 };
 </script>

@@ -78,6 +78,24 @@
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-gray-900"
                                             >
+                                                Email
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
+                                            >
+                                                Batch
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
+                                            >
+                                                Program
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-gray-900"
+                                            >
                                                 Delete Student
                                             </th>
                                         </tr>
@@ -125,7 +143,21 @@
                                             >
                                                 {{ student.name }}
                                             </td>
-
+                                            <td
+                                                class=""
+                                            >
+                                                {{ student.email }}
+                                            </td>
+                                            <td
+                                                class=""
+                                            >
+                                                {{ student.batch }}
+                                            </td>
+                                            <td
+                                                class=""
+                                            >
+                                                {{ student.program }}
+                                            </td>
                                             <td
                                                 class=""
                                             >
@@ -185,8 +217,8 @@ export default {
             axios
                 .post("/admin/students/delete/" + student_id)
                 .then((response) => {
-                    this.students = response.data;
                     vm.showNotification("Student Deleted Successfully", "success");
+                    this.students = response.data;
                 });
         },
 

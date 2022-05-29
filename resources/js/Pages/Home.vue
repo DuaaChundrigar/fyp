@@ -152,7 +152,7 @@
                     <div class="text-6xl font-bold text-gray-800"
                     id="tandc"
                     >
-            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Terms And Conditions</h1>
+                        <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Terms And Conditions</h1>
 
                     </div>
                     <ol>
@@ -246,9 +246,9 @@
                 </div>
                     <div>
                         <div class="mb-10 text-6xl font-bold text-gray-800">
-        <h1 class="font-serif text-6xl font-bold text-center text-gray-800 "
-        id="location"
-        >Location</h1>
+                            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 "
+                            id="location"
+                            >Location</h1>
 
                         </div>
                         <div>
@@ -296,7 +296,7 @@
                     </div>
                 </div>
 
-                 <h1 class="mb-5 font-serif text-6xl font-bold text-center text-gray-800 "
+                <h1 class="mb-5 font-serif text-6xl font-bold text-center text-gray-800 "
                     id="team"
                     >Our Team</h1>
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14">
@@ -335,14 +335,30 @@
                 
             </div>
         </div>
+
+        <!--footer-->
+
+        <div class="p-6 text-center text-white bg-gray-700">
+            <span>Final Year Project of 18 Batch BSIT Students</span>
+            <br>
+            <span>Mahnoor Tahir A18BSIT052</span>
+            <br>
+            <span>Saima Palari A18BSIT066</span>
+            <br>
+            <span>Duaa Chundrigar A18BSIT067</span>
+        </div>
     </div>
 </template>
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
+import Swal from 'sweetalert2';
+import axios from "axios";
+
 
 export default {
     components: {
         Link,
+        Swal,
     },
 
     data() {
@@ -357,8 +373,21 @@ export default {
     },
     methods: {
         submitForm() {
-            this.$inertia.post("/admin/contact", {
-                formData: this.formData,
+            var vm = this;
+            axios
+                .post("/admin/contact", {
+                    formData: this.formData,
+                })
+                .then((response) => {
+                    vm.showNotification("Message Submitted Successfully", "success");
+                    window.location.href = "/";
+                });
+        },
+        showNotification(message, type) {
+        Swal.fire({
+            icon: type,
+                text: message,
+                showConfirmButton: false,
             });
         },
     },

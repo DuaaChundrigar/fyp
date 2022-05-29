@@ -20008,14 +20008,14 @@ __webpack_require__.r(__webpack_exports__);
         vm.showNotification("Password Reset Successfully", "success");
         window.location.href = "/logout";
       });
+    },
+    showNotification: function showNotification(message, type) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: type,
+        text: message,
+        showConfirmButton: true
+      });
     }
-  },
-  showNotification: function showNotification(message, type) {
-    sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
-      icon: type,
-      text: message,
-      showConfirmButton: true
-    });
   }
 });
 
@@ -20070,8 +20070,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var vm = this;
       axios__WEBPACK_IMPORTED_MODULE_3___default().post("/admin/students/delete/" + student_id).then(function (response) {
-        _this.students = response.data;
         vm.showNotification("Student Deleted Successfully", "success");
+        _this.students = response.data;
       });
     },
     search: function search() {
@@ -20157,10 +20157,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link,
+    Swal: (sweetalert2__WEBPACK_IMPORTED_MODULE_1___default())
   },
   data: function data() {
     return {
@@ -20174,8 +20181,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitForm: function submitForm() {
-      this.$inertia.post("/admin/contact", {
+      var vm = this;
+      axios__WEBPACK_IMPORTED_MODULE_2___default().post("/admin/contact", {
         formData: this.formData
+      }).then(function (response) {
+        vm.showNotification("Message Submitted Successfully", "success");
+        window.location.href = "/";
+      });
+    },
+    showNotification: function showNotification(message, type) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+        icon: type,
+        text: message,
+        showConfirmButton: false
       });
     }
   }
@@ -20804,7 +20822,7 @@ var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\">Select an option</option><option value=\"09\">9</option><option value=\"10\">10</option><option value=\"11\">11</option><option value=\"12\">12</option><option value=\"BSIT 18\">18</option><option value=\"BSIT 19\">19</option><option value=\"BSCS Meut 21 \">21st</option><option value=\"GCU 1st\">1st</option><option value=\"BBA 23\">23</option><option value=\"BBA 24\">24</option><option value=\"BBA 25\">25</option><option value=\"BBA 26\">26</option><option value=\"BBA 27\">27</option>", 14);
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\">Select an option</option><option>9</option><option>10</option><option>11</option><option>12</option><option>18</option><option>19</option><option>21st</option><option>1st</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option>", 14);
 
 var _hoisted_34 = [_hoisted_20];
 var _hoisted_35 = {
@@ -20820,9 +20838,37 @@ var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\">Select an option</option><option value=\"BBA 21\">School</option><option value=\"BBA 21\">College</option><option value=\"BSIT 18\">BSIT</option><option value=\"BSIT 19\">BBA</option><option value=\"BSCS\">BSCS MEUT</option><option value=\"BBA 24\">BSCS GCU</option>", 7);
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: ""
+}, "Select an option", -1
+/* HOISTED */
+);
 
-var _hoisted_45 = [_hoisted_38];
+var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "School", -1
+/* HOISTED */
+);
+
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "College", -1
+/* HOISTED */
+);
+
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "BSIT", -1
+/* HOISTED */
+);
+
+var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "BBA", -1
+/* HOISTED */
+);
+
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "BSCS MEUT", -1
+/* HOISTED */
+);
+
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", null, "BSCS GCU", -1
+/* HOISTED */
+);
+
+var _hoisted_45 = [_hoisted_38, _hoisted_39, _hoisted_40, _hoisted_41, _hoisted_42, _hoisted_43, _hoisted_44];
 var _hoisted_46 = {
   "class": "flex flex-col mb-2"
 };
@@ -20835,6 +20881,7 @@ var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "relative"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  required: "",
   id: "confirm_password",
   type: "password",
   name: "confirm_password",
@@ -20900,6 +20947,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.submitForm && $options.submitForm.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    required: "",
     id: "regno",
     type: "text",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -20911,6 +20959,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.regno]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    required: "",
     id: "name",
     type: "text",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
@@ -20922,6 +20971,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    required: "",
     id: "email",
     type: "email",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
@@ -20936,17 +20986,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "w-full rounded-full",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.formData.batch = $event;
-    })
+    }),
+    required: ""
   }, _hoisted_34, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formData.batch]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\r\n                        <div class=\"relative\">\r\n                            <input\r\n                                id=\"program\"\r\n                                type=\"text\"\r\n                                v-model=\"formData.program\"\r\n                                name=\"program\"\r\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\r\n                                placeholder=\"Enter your program\"\r\n                            />\r\n                        </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [_hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "w-full rounded-full",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.formData.program = $event;
-    })
+    }),
+    required: ""
   }, _hoisted_45, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formData.program]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    required: "",
     id: "password",
     type: "password",
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
@@ -20960,6 +21013,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.password]])])]), _hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     id: "profile_image",
     type: "file",
+    required: "",
     onChange: _cache[6] || (_cache[6] = function ($event) {
       return $options.onFileChange($event);
     }),
@@ -22291,6 +22345,15 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, " Student Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   scope: "col",
   "class": "px-6 py-4 text-sm font-medium text-gray-900"
+}, " Email "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col",
+  "class": "px-6 py-4 text-sm font-medium text-gray-900"
+}, " Batch "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col",
+  "class": "px-6 py-4 text-sm font-medium text-gray-900"
+}, " Program "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col",
+  "class": "px-6 py-4 text-sm font-medium text-gray-900"
 }, " Delete Student ")])], -1
 /* HOISTED */
 );
@@ -22315,7 +22378,16 @@ var _hoisted_14 = {
 var _hoisted_15 = {
   "class": ""
 };
-var _hoisted_16 = ["onClick"];
+var _hoisted_16 = {
+  "class": ""
+};
+var _hoisted_17 = {
+  "class": ""
+};
+var _hoisted_18 = {
+  "class": ""
+};
+var _hoisted_19 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Navbar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Navbar");
 
@@ -22354,7 +22426,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(student.name), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(student.email), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(student.batch), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(student.program), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
       type: "button",
       onClick: function onClick($event) {
         return $options.deleteStudent(student.id);
@@ -22362,7 +22440,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "class": "px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
     }, " Delete ", 8
     /* PROPS */
-    , _hoisted_16)])]);
+    , _hoisted_19)])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])])])]);
@@ -22749,6 +22827,12 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1 class=\"mt-10 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\">Our Supervisor</h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><!-- &lt;img\r\n                            class=&quot;w-full text-gray-700 rounded h-2/4 text-1xl&quot;\r\n                            src=&quot;/storage/images/About.jpg&quot;\r\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Saima Palari&lt;/h1&gt; --></div><div><img class=\"w-full text-gray-700 rounded h-4/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\">Prof. Tehseen Hafiz</h1></div><div class=\"\"><!-- &lt;img\r\n                            class=&quot;w-full text-gray-700 rounded h-2/4 &quot;\r\n                            src=&quot;/storage/images/Vision.jpg&quot;\r\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Duaa Chundrigar&lt;/h1&gt; --></div></div><h1 class=\"mb-5 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\">Our Team</h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><img class=\"w-full text-gray-700 rounded h-3/4 text-1xl\" src=\"/storage/images/About.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\">Saima Palari</h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\">A18BSIT066</h1></div><div><img class=\"w-full text-gray-700 rounded h-3/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\">Mahnoor Tahir</h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\">A18BSIT052</h1></div><div class=\"\"><img class=\"w-full text-gray-700 rounded h-3/4\" src=\"/storage/images/Vision.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\">Duaa Chundrigar</h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\">A18BSIT067</h1></div></div>", 4);
 
+var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "p-6 text-center text-white bg-gray-700"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Final Year Project of 18 Batch BSIT Students"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Mahnoor Tahir A18BSIT052"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Saima Palari A18BSIT066"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Duaa Chundrigar A18BSIT067")], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
@@ -22816,7 +22900,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.msg]])])]), _hoisted_24], 32
   /* HYDRATE_EVENTS */
-  )])]), _hoisted_25, _hoisted_26])])]);
+  )])]), _hoisted_25, _hoisted_26])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("footer"), _hoisted_30]);
 }
 
 /***/ }),
