@@ -58,7 +58,6 @@
                                 </Link>
                             </div>
                         
-
         </div>
 
         <!--Body start-->
@@ -187,7 +186,7 @@
                         <div class="mb-10 text-6xl font-bold text-gray-800"
                         id="contact"
                         >
-            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Contact Us</h1>
+                            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Contact Us</h1>
 
                         </div>
                         <form @submit.prevent="submitForm">
@@ -249,7 +248,6 @@
                             <h1 class="font-serif text-6xl font-bold text-center text-gray-800 "
                             id="location"
                             >Location</h1>
-
                         </div>
                         <div>
                             <iframe
@@ -264,7 +262,7 @@
                         </div>
                     </div>
 
-                    <h1 class="mt-10 font-serif text-6xl font-bold text-center text-gray-800 "
+                <h1 class="mt-10 font-serif text-6xl font-bold text-center text-gray-800 "
                     id="team"
                     >Our Supervisor</h1>
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14">
@@ -277,13 +275,11 @@
                     </div>
 
                     <div>
-                        <img
-                            class="w-full text-gray-700 rounded h-4/4 text-1xl"
-                            src="/storage/images/Mission.jpg"
-                        />
-                        
+                            <img
+                                class="w-full text-gray-700 rounded h-4/4 text-1xl"
+                                src="/storage/images/Mission.jpg"
+                            />
                         <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Prof. Tehseen Hafiz</h1>
-
                     </div>
 
                     <div class="">
@@ -292,7 +288,6 @@
                             src="/storage/images/Vision.jpg"
                         /> -->
                         <!-- <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1> -->
-
                     </div>
                 </div>
 
@@ -301,35 +296,30 @@
                     >Our Team</h1>
                 <div class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14">
                     <div>
-                        <img
-                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
-                            src="/storage/images/About.jpg"
-                        />
+                            <img
+                                class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                                src="/storage/images/About.jpg"
+                            />
                         <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800 ">Saima Palari</h1>
                         <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT066</h1>
-
                     </div>
 
                     <div>
-                        <img
-                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
-                            src="/storage/images/Mission.jpg"
-                        />
-                        
+                            <img
+                                class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                                src="/storage/images/Mission.jpg"
+                            />
                         <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Mahnoor Tahir</h1>
                         <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT052</h1>
-
-
                     </div>
 
                     <div class="">
-                        <img
-                            class="w-full text-gray-700 rounded h-3/4 "
-                            src="/storage/images/Vision.jpg"
-                        />
+                            <img
+                                class="w-full text-gray-700 rounded h-3/4 "
+                                src="/storage/images/Vision.jpg"
+                            />
                         <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1>
                         <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT067</h1>
-
                     </div>
                 </div>
                 
