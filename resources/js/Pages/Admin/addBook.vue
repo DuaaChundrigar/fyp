@@ -164,13 +164,14 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import SideMenu from "../../Components/Admin/SideMenu.vue";
 import Navbar from "../../Components/Admin/Navbar";
-
+import Swal from 'sweetalert2';
 
 export default {
     components: {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
 
     data() {
@@ -189,9 +190,27 @@ export default {
     },
 
     methods: {
+        // submitForm() {
+        //     this.$inertia.post("/admin/book", {
+        //         formData: this.formData,
+        //     });
+        // },
         submitForm() {
-            this.$inertia.post("/admin/book", {
-                formData: this.formData,
+            var vm = this;
+            axios
+                .post("/admin/book", {
+                    formData: this.formData,
+                })
+                .then((response) => {
+                    vm.showNotification("Book Added Successfully", "success");
+                    window.location.href = "/admin/books";
+                });
+        },
+        showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: false,
             });
         },
     },

@@ -329,13 +329,7 @@
         <!--footer-->
 
         <div class="p-6 text-center text-white bg-gray-700">
-            <span>Final Year Project of 18 Batch BSIT Students</span>
-            <br>
-            <span>Mahnoor Tahir A18BSIT052</span>
-            <br>
-            <span>Saima Palari A18BSIT066</span>
-            <br>
-            <span>Duaa Chundrigar A18BSIT067</span>
+            <span> Copyright: 2021-2022 Final Year Project of 18 Batch BSIT Hiast Students</span>
         </div>
     </div>
 </template>

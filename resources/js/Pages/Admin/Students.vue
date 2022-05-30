@@ -186,9 +186,9 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu";
-
 import axios from "axios";
 import Swal from 'sweetalert2';
+
 export default {
     components: {
         Link,
@@ -222,6 +222,14 @@ export default {
                 });
         },
 
+        showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+            });
+        },
+
         search() {
             if (this.searchTerm == "") {
                 this.filteredstudents = this.students;
@@ -240,13 +248,7 @@ export default {
             }
         },
 
-        showNotification(message, type) {
-            Swal.fire({
-                icon: type,
-                text: message,
-                showConfirmButton: true,
-            });
-        },
+        
     },
 };
 </script>

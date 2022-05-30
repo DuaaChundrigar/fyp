@@ -93,10 +93,9 @@
                     </div> -->
                     <div class="flex flex-col mb-1">
                         <div class="relative">
-                            <label class="m-2 text-sm text-gray-100">School / College / Batch</label>
 
-                            <select class="w-full rounded-full" v-model="formData.batch" required>
-                                <option value="">Select an option</option>
+                            <select class="w-full text-gray-500 rounded-full" v-model="formData.batch" required>
+                                <option value="">School / College / Batch</option>
                                 <option >9</option>
                                 <option >10</option>
                                 <option >11</option>
@@ -126,10 +125,8 @@
                         </div> -->
                         <div class="flex flex-col mb-2">
                         <div class="relative">
-                        <label class="m-2 text-sm text-gray-100">Program</label>
-
                             <select class="w-full rounded-full" v-model="formData.program" required>
-                                <option value="">Select an option</option>
+                                <option value="">Program</option>
                                 <option >School</option>
                                 <option >College</option>
                                 <option >BSIT</option>
