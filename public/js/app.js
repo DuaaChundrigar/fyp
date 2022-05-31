@@ -19711,8 +19711,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var _Components_Admin_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Components/Admin/Navbar */ "./resources/js/Components/Admin/Navbar.vue");
 /* harmony import */ var _Components_Admin_SideMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/Admin/SideMenu */ "./resources/js/Components/Admin/SideMenu.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -19721,7 +19724,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link,
     Navbar: _Components_Admin_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"],
-    SideMenu: _Components_Admin_SideMenu__WEBPACK_IMPORTED_MODULE_2__["default"]
+    SideMenu: _Components_Admin_SideMenu__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Swal: (sweetalert2__WEBPACK_IMPORTED_MODULE_3___default())
   },
   props: {
     contacts: {
@@ -19738,8 +19742,17 @@ __webpack_require__.r(__webpack_exports__);
     deleteMsg: function deleteMsg(contact_id) {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_3___default().post("/admin/contacts/delete/" + contact_id).then(function (response) {
+      var vm = this;
+      axios__WEBPACK_IMPORTED_MODULE_4___default().post("/admin/contacts/delete/" + contact_id).then(function (response) {
+        vm.showNotification("Delete Massege Successfully", "success");
         _this.contacts = response.data;
+      });
+    },
+    showNotification: function showNotification(message, type) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        icon: type,
+        text: message,
+        showConfirmButton: true
       });
     }
   }
