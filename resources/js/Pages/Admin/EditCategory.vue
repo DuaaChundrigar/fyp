@@ -57,6 +57,7 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu.vue";
+import Swal from 'sweetalert2';
 
 import axios from "axios";
 export default {
@@ -64,6 +65,7 @@ export default {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
 
     props: {
@@ -85,14 +87,22 @@ export default {
             // this.$inertia.post("/admin/book/update/" + this.book.id, {
             //     formData: this.formData,
             // });
-
+            var vm = this;
             axios
                 .post("/admin/categories/update/" + this.categories.id, {
                     formData: this.formData,
                 })
                 .then((response) => {
+                    vm.showNotification("Category Updated Successfully", "success");
                     window.location.href = "/admin/categories";
                 });
+        },
+        showNotification(message, type) {
+        Swal.fire({
+            icon: type,
+                text: message,
+                showConfirmButton: false,
+            });
         },
     },
 };

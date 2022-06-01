@@ -139,7 +139,9 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu"
+import SideMenu from "../../Components/Admin/SideMenu";
+import Swal from 'sweetalert2';
+
 
 import axios from "axios";
 export default {
@@ -147,6 +149,7 @@ export default {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
     props: {
         book: {
@@ -176,12 +179,21 @@ export default {
             //     formData: this.formData,
             // });
 
-            axios
-                .post("/admin/book/update/" + this.book.id, {
-                    formData: this.formData,
-                })
-                .then((response) => {
-                    window.location.href = "/admin/books";
+                var vm = this;
+                axios
+                    .post("/admin/book/update/" + this.book.id, {
+                        formData: this.formData,
+                    })
+                    .then((response) => {
+                        window.location.href = "/admin/books";
+                    vm.showNotification("Book Updated Successfully", "success");
+                    });
+        },
+                showNotification(message, type) {
+                Swal.fire({
+                    icon: type,
+                    text: message,
+                    showConfirmButton: false,
                 });
         },
     },

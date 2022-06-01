@@ -98,6 +98,7 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu";
+import Swal from 'sweetalert2';
 
 import axios from "axios";
 export default {
@@ -105,6 +106,7 @@ export default {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
     props: {
         contacts: {
@@ -121,11 +123,20 @@ export default {
 
     methods: {
         deleteMsg(contact_id) {
+            var vm = this;
             axios
                 .post("/admin/contacts/delete/" + contact_id)
                 .then((response) => {
+                    vm.showNotification("Delete Massege Successfully", "success");
                     this.contacts = response.data;
                 });
+        },
+            showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+            });
         },
     },
 };

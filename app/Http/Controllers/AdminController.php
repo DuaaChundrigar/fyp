@@ -120,7 +120,7 @@ class AdminController extends Controller
     {
         $categories = Categories::find($category_id);
 
-        return Inertia::render('Admin/EditCategory', ['categories' => $categories]);
+        return Inertia::render('Admin/Categories', ['categories' => $categories]);
     }
 
     function updateCategory(Request $request, $category_id)
@@ -162,7 +162,9 @@ class AdminController extends Controller
 
         $book->save();
 
-        return redirect('/admin/books');
+        return Inertia::render('Admin/AdminBooks');
+
+        // return redirect('/admin/books');
     }
 
     function addCategories(Request $request)

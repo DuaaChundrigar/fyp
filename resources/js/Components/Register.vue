@@ -43,6 +43,7 @@
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
+                                required
                                 id="regno"
                                 type="text"
                                 v-model="formData.regno"
@@ -55,6 +56,7 @@
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
+                                required
                                 id="name"
                                 type="text"
                                 v-model="formData.name"
@@ -67,6 +69,7 @@
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
+                                required
                                 id="email"
                                 type="email"
                                 v-model="formData.email"
@@ -90,23 +93,22 @@
                     </div> -->
                     <div class="flex flex-col mb-1">
                         <div class="relative">
-                            <label class="m-2 text-sm text-gray-100">School / College / Batch</label>
 
-                            <select class="w-full rounded-full" v-model="formData.batch">
-                                <option value="">Select an option</option>
-                                <option value="09">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="BSIT 18">18</option>
-                                <option value="BSIT 19">19</option>
-                                <option value="BSCS Meut 21 ">21st</option>
-                                <option value="GCU 1st">1st</option>
-                                <option value="BBA 23">23</option>
-                                <option value="BBA 24">24</option>
-                                <option value="BBA 25">25</option>
-                                <option value="BBA 26">26</option>
-                                <option value="BBA 27">27</option>
+                            <select class="w-full text-gray-500 rounded-full" v-model="formData.batch" required>
+                                <option value="">School / College / Batch</option>
+                                <option >9</option>
+                                <option >10</option>
+                                <option >11</option>
+                                <option >12</option>
+                                <option >18</option>
+                                <option >19</option>
+                                <option >21st</option>
+                                <option >1st</option>
+                                <option >23</option>
+                                <option >24</option>
+                                <option >25</option>
+                                <option >26</option>
+                                <option >27</option>
                             </select>
                         </div>
                     </div>
@@ -123,22 +125,21 @@
                         </div> -->
                         <div class="flex flex-col mb-2">
                         <div class="relative">
-                        <label class="m-2 text-sm text-gray-100">Program</label>
-
-                            <select class="w-full rounded-full" v-model="formData.program">
-                                <option value="">Select an option</option>
-                                <option value="BBA 21">School</option>
-                                <option value="BBA 21">College</option>
-                                <option value="BSIT 18">BSIT</option>
-                                <option value="BSIT 19">BBA</option>
-                                <option value="BSCS">BSCS MEUT</option>
-                                <option value="BBA 24">BSCS GCU</option>
+                            <select class="w-full rounded-full" v-model="formData.program" required>
+                                <option value="">Program</option>
+                                <option >School</option>
+                                <option >College</option>
+                                <option >BSIT</option>
+                                <option >BBA</option>
+                                <option >BSCS MEUT</option>
+                                <option >BSCS GCU</option>
                             </select>
                         </div>
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
+                                required
                                 id="password"
                                 type="password"
                                 v-model="formData.password"
@@ -151,6 +152,7 @@
                     <div class="flex flex-col mb-2">
                         <div class="relative">
                             <input
+                                required
                                 id="confirm_password"
                                 type="password"
                                 name="confirm_password"
@@ -168,6 +170,7 @@
                             <input
                                 id="profile_image"
                                 type="file"
+                                required
                                 @change="onFileChange($event)"
                                 name="profile_image"
                                 class="py-2 pl-5 pr-4 text-sm focus:outline-none focus:border-blue-400"

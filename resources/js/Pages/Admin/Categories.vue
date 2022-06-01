@@ -116,6 +116,8 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu.vue";
+import Swal from 'sweetalert2';
+
 
 import axios from "axios";
 export default {
@@ -123,6 +125,7 @@ export default {
         Link,
         Navbar,
         SideMenu,
+        Swal,
     },
     props: {
         categories: {
@@ -139,11 +142,20 @@ export default {
 
     methods: {
         deleteCategory(category_id) {
+            var vm = this;
             axios
                 .post("/admin/categories/delete/" + category_id)
                 .then((response) => {
+                        vm.showNotification("Category deleted Successfully", "success");
                     this.categories = response.data;
                 });
+        },
+            showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+            });
         },
     },
 };

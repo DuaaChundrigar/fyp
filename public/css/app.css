@@ -659,14 +659,14 @@ select {
 .m-auto {
   margin: auto;
 }
-.m-2 {
-  margin: 0.5rem;
-}
 .m-10 {
   margin: 2.5rem;
 }
 .m-14 {
   margin: 3.5rem;
+}
+.m-2 {
+  margin: 0.5rem;
 }
 .m-32 {
   margin: 8rem;
@@ -1398,6 +1398,10 @@ select {
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.hover\:text-gray-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 .focus\:z-10:focus {
   z-index: 10;
