@@ -31,13 +31,7 @@ class AdminController extends Controller
         $checkin = DB::table('bookings')->count('checkin_datetime');
         $checkout = DB::table('bookings')->count('checkout_datetime');
 
-        // echo json_encode($count);
-        // echo json_encode($checkin);
-        // echo json_encode($checkout);
-
-        // exit;
-
-        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user], ['bookings' => $bookings]);
+        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user , 'bookings' => $bookings, 'count' => $count, 'checkin' => $checkin, 'checkout' => $checkout]);
     }
 
     function books(Request $request)
@@ -252,11 +246,14 @@ class AdminController extends Controller
     function  deleteStudent($student_id)
     {
 
+        $bookings = Booking::where('student_id', $student_id)->get();
+        foreach ($bookings as $booking) {
+            $booking->delete();
+        }
+
+
         $student = Student::find($student_id);
-
         $student->delete();
-
-
         $students = Student::all();
 
 
@@ -296,7 +293,6 @@ class AdminController extends Controller
         $user->save();
 
         return redirect('/');
-
     }
 
     function contact(Request $request)
@@ -323,11 +319,13 @@ class AdminController extends Controller
 
     function  deleteMsg($contact_id)
     {
-        $contact = Student::find($contact_id);
+        $contact = Contact::find($contact_id);
 
-        $contact->delete();
+        if ($contact) {
+            $contact->delete();
+        }
 
-        $contacts = Student::all();
+        $contacts = Contact::all();
 
         return response(json_encode($contacts), 200);
     }

@@ -1,64 +1,35 @@
 <template>
     <div>
+        <div class="flex justify-between m-auto bg-gray-100 shadow-lg">
+            <div class="flex ml-10">
+                <img
+                    class="flex-shrink-0 w-auto h-20"
+                    src="/storage/logo/logo.png"
+                    alt="Logo"
+                />
+            </div>
 
-        <div  class="flex justify-between m-auto bg-gray-100 shadow-lg ">
-                    
-                            <div class="flex ml-10">
-                                <img
-                                    class="flex-shrink-0 w-auto h-20"
-                                    src="/storage/logo/logo.png"
-                                    alt="Logo"
-                                />
-                            </div>
-                            
-                            <div
-                                class="m-auto space-x-4 font-bold text-gray-900 text-1xl "
-                            >
-                                <a
-                                    href="#home"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
-                                    >Home</a
-                                >
-                                <a
-                                    href="#aboutus"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-200 "
-                                    >About</a
-                                >
-                                <a
-                                    href="#tandc"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
-                                    >Terms and Conditions</a
-                                >
-                                <a
-                                    href="#contact"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
-                                    >Contact Us</a
-                                >
-                                <a
-                                    href="#team"
-                                    class="px-3 py-2 rounded-md hover:bg-gray-200"
-                                    >Our Team</a
-                                >
-                            </div>
-                    
-                            <div class="m-auto ml-60">
-                                <Link
-                                    href="/login"
-                                    type="button"
-                                    class="px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
-                                >
-                                    Login
-                                </Link>
-                                <Link
-                                    href="/register"
-                                    type="button"
-                                    class="px-3 py-2 ml-4 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
-                                >
-                                    Register
-                                </Link>
-                            </div>
-                        
-        </div>
+            <div class="m-auto space-x-4 font-bold text-gray-900 text-1xl">
+                <a href="#home" class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >Home</a
+                >
+                <a
+                    href="#aboutus"
+                    class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >About</a
+                >
+                <a href="#tandc" class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >Terms and Conditions</a
+                >
+                <a
+                    href="#contact"
+                    class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >Contact Us</a
+                >
+                <a href="#team" class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >Our Team</a
+                >
+            </div>
 
             <div class="m-auto ml-60">
                 <Link
@@ -88,8 +59,8 @@
                 <video
                     class="flex w-full h-[60vh] items-center m-auto mt-10 mb-24"
                     autoplay
+                    muted
                     loop
-                    controls
                 >
                     <source src="/storage/videos/hiast.mp4" type="video/mp4" />
                 </video>
@@ -160,7 +131,6 @@
                         available resources.
                     </div>
                 </div>
-<<<<<<< HEAD
                 <div class="grid grid-cols-1 gap-4 text-gray-800 text-1xl m-14">
                     <div class="text-6xl font-bold text-gray-800" id="tandc">
                         <h1
@@ -168,16 +138,6 @@
                         >
                             Terms And Conditions
                         </h1>
-=======
-                <div
-                    class="grid grid-cols-1 gap-4 text-gray-800 text-1xl m-14"
-                >
-                    <div class="text-6xl font-bold text-gray-800"
-                    id="tandc"
-                    >
-                        <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Terms And Conditions</h1>
-
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     </div>
                     <ol>
                         <li>
@@ -212,16 +172,11 @@
                             class="mb-10 text-6xl font-bold text-gray-800"
                             id="contact"
                         >
-<<<<<<< HEAD
                             <h1
                                 class="font-serif text-6xl font-bold text-center text-gray-800"
                             >
                                 Contact Us
                             </h1>
-=======
-                            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 ">Contact Us</h1>
-
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                         </div>
                         <form @submit.prevent="submitForm">
                             <div class="flex flex-col mb-2">
@@ -278,30 +233,14 @@
                     </div>
                 </div>
                 <div>
-                    <div class="mb-10 text-6xl font-bold text-gray-800">
-                        <h1
-                            class="font-serif text-6xl font-bold text-center text-gray-800"
-                            id="location"
-                        >
-                            Location
-                        </h1>
-                    </div>
                     <div>
-<<<<<<< HEAD
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14419.42716082293!2d68.3444061!3d25.3761157!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e0f6881f3d90524!2s(HIAST)%20Hyderabad%20Institute%20Of%20Arts%20Science%20and%20Technology!5e0!3m2!1sen!2s!4v1648832136748!5m2!1sen!2s"
-                            width="100%"
-                            height="300"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
-=======
                         <div class="mb-10 text-6xl font-bold text-gray-800">
-                            <h1 class="font-serif text-6xl font-bold text-center text-gray-800 "
-                            id="location"
-                            >Location</h1>
+                            <h1
+                                class="font-serif text-6xl font-bold text-center text-gray-800"
+                                id="location"
+                            >
+                                Location
+                            </h1>
                         </div>
                         <div>
                             <iframe
@@ -314,16 +253,11 @@
                                 referrerpolicy="no-referrer-when-downgrade"
                             ></iframe>
                         </div>
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <h1
                     class="mt-10 font-serif text-6xl font-bold text-center text-gray-800"
-=======
-                <h1 class="mt-10 font-serif text-6xl font-bold text-center text-gray-800 "
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     id="team"
                 >
                     Our Supervisor
@@ -340,24 +274,15 @@
                     </div>
 
                     <div>
-<<<<<<< HEAD
                         <img
                             class="w-full text-gray-700 rounded h-4/4 text-1xl"
                             src="/storage/images/Mission.jpg"
                         />
-
                         <h1
                             class="mt-4 font-serif text-3xl font-bold text-center text-gray-800"
                         >
                             Prof. Tehseen Hafiz
                         </h1>
-=======
-                            <img
-                                class="w-full text-gray-700 rounded h-4/4 text-1xl"
-                                src="/storage/images/Mission.jpg"
-                            />
-                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Prof. Tehseen Hafiz</h1>
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     </div>
 
                     <div class="">
@@ -369,12 +294,8 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <h1
                     class="mb-5 font-serif text-6xl font-bold text-center text-gray-800"
-=======
-                <h1 class="mb-5 font-serif text-6xl font-bold text-center text-gray-800 "
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     id="team"
                 >
                     Our Team
@@ -383,7 +304,6 @@
                     class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14"
                 >
                     <div>
-<<<<<<< HEAD
                         <img
                             class="w-full text-gray-700 rounded h-3/4 text-1xl"
                             src="/storage/images/About.jpg"
@@ -405,7 +325,6 @@
                             class="w-full text-gray-700 rounded h-3/4 text-1xl"
                             src="/storage/images/Mission.jpg"
                         />
-
                         <h1
                             class="mt-4 font-serif text-3xl font-bold text-center text-gray-800"
                         >
@@ -433,32 +352,6 @@
                         >
                             A18BSIT067
                         </h1>
-=======
-                            <img
-                                class="w-full text-gray-700 rounded h-3/4 text-1xl"
-                                src="/storage/images/About.jpg"
-                            />
-                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800 ">Saima Palari</h1>
-                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT066</h1>
-                    </div>
-
-                    <div>
-                            <img
-                                class="w-full text-gray-700 rounded h-3/4 text-1xl"
-                                src="/storage/images/Mission.jpg"
-                            />
-                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Mahnoor Tahir</h1>
-                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT052</h1>
-                    </div>
-
-                    <div class="">
-                            <img
-                                class="w-full text-gray-700 rounded h-3/4 "
-                                src="/storage/images/Vision.jpg"
-                            />
-                        <h1 class="mt-4 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1>
-                        <h1 class="mb-5 font-serif text-2xl font-bold text-center text-gray-800 ">A18BSIT067</h1>
->>>>>>> 3ffdca1dd526ed1ff4986bd68050c13c0a19106e
                     </div>
                 </div>
             </div>
@@ -467,15 +360,17 @@
         <!--footer-->
 
         <div class="p-6 text-center text-white bg-gray-700">
-            <span> Copyright: 2021-2022 Final Year Project of 18 Batch BSIT Hiast Students</span>
+            <span>
+                Copyright: 2021-2022 Final Year Project of 18 Batch BSIT Hiast
+                Students</span
+            >
         </div>
     </div>
 </template>
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import axios from "axios";
-
 
 export default {
     components: {
@@ -501,13 +396,16 @@ export default {
                     formData: this.formData,
                 })
                 .then((response) => {
-                    vm.showNotification("Message Submitted Successfully", "success");
+                    vm.showNotification(
+                        "Message Submitted Successfully",
+                        "success"
+                    );
                     window.location.href = "/";
                 });
         },
         showNotification(message, type) {
-        Swal.fire({
-            icon: type,
+            Swal.fire({
+                icon: type,
                 text: message,
                 showConfirmButton: false,
             });

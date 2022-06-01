@@ -8,8 +8,11 @@
             <SideMenu />
             <!--Right Side-->
             <div class="col-span-5 ... m-2">
-                
-                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Students List</h1>
+                <h1
+                    class="mb-5 font-serif text-3xl font-bold text-center text-gray-800"
+                >
+                    Students List
+                </h1>
                 <div
                     class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-60 input-group"
                 >
@@ -46,136 +49,116 @@
 
                 <!-- Table  -->
 
-                <div class="flex flex-col ">
-                                <table class="text-center border ">
-                                    <thead class="bg-white border-b ">
-                                        <tr>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                S.No
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Student Picture
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Student Reg No.
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Student Name
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Email
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Batch
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Program
-                                            </th>
-                                            <th
-                                                scope="col"
-                                                class="px-6 py-4 text-sm font-medium text-gray-900"
-                                            >
-                                                Delete Student
-                                            </th>
-                                        </tr>
-                                    </thead>
+                <div class="flex flex-col">
+                    <table class="text-center border">
+                        <thead class="bg-white border-b">
+                            <tr>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    S.No
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Student Picture
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Student Reg No.
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Student Name
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Email
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Batch
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Program
+                                </th>
+                                <th
+                                    scope="col"
+                                    class="px-6 py-4 text-sm font-medium text-gray-900"
+                                >
+                                    Delete Student
+                                </th>
+                            </tr>
+                        </thead>
 
-                                    <tbody>
-                                        <tr
-                                            v-for="(student, index) in filteredstudents"
-                                            :key="student.id"
-                                            class="px-6 py-4 text-sm font-medium text-center bg-white border-b text-gray-50ay-900 whitespace-nowrap hover:bg-gray-100"
+                        <tbody>
+                            <tr
+                                v-for="(student, index) in filteredstudents"
+                                :key="student.id"
+                                class="px-6 py-4 text-sm font-medium text-center bg-white border-b text-gray-50ay-900 whitespace-nowrap hover:bg-gray-100"
+                            >
+                                <td class="">
+                                    {{ index + 1 }}
+                                </td>
+                                <td class="">
+                                    <div class="ml-32">
+                                        <a
+                                            target="_blank"
+                                            :href="
+                                                '/storage/profile_images/' +
+                                                student.profile_image
+                                            "
                                         >
-                                            <td
-                                                class=""
-                                            >
-                                                {{ index + 1 }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                <div class="ml-32">
-                                                    <a
-                                                    target="_blank"
-                                                    :href="
-                                                        '/storage/profile_images/' +
-                                                        student.profile_image
-                                                    "
-                                                    >
-                                                    <img
-                                                        class="w-16 h-16 border-2 rounded-full shadow-lg "
-                                                        :src="
-                                                            '/storage/profile_images/' +
-                                                            student.profile_image
-                                                        "
-                                                    />
-                                                    </a>
-                                                </div>
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                {{ student.regno }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                {{ student.name }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                {{ student.email }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                {{ student.batch }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                {{ student.program }}
-                                            </td>
-                                            <td
-                                                class=""
-                                            >
-                                                <button
-                                                    type="button"
-                                                    @click="
-                                                        deleteStudent(
-                                                            student.id
-                                                        )
-                                                    "
-                                                    class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
-                                                >
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            <img
+                                                class="w-16 h-16 border-2 rounded-full shadow-lg"
+                                                :src="
+                                                    '/storage/profile_images/' +
+                                                    student.profile_image
+                                                "
+                                            />
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="">
+                                    {{ student.regno }}
+                                </td>
+                                <td class="">
+                                    {{ student.name }}
+                                </td>
+                                <td class="">
+                                    {{ student.email }}
+                                </td>
+                                <td class="">
+                                    {{ student.batch }}
+                                </td>
+                                <td class="">
+                                    {{ student.program }}
+                                </td>
+                                <td class="">
+                                    <button
+                                        type="button"
+                                        @click="deleteStudent(student.id)"
+                                        class="px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-md"
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -187,7 +170,7 @@ import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
 import SideMenu from "../../Components/Admin/SideMenu";
 import axios from "axios";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 export default {
     components: {
@@ -217,7 +200,10 @@ export default {
             axios
                 .post("/admin/students/delete/" + student_id)
                 .then((response) => {
-                    vm.showNotification("Student Deleted Successfully", "success");
+                    vm.showNotification(
+                        "Student Deleted Successfully",
+                        "success"
+                    );
                     this.students = response.data;
                 });
         },
@@ -227,6 +213,9 @@ export default {
                 icon: type,
                 text: message,
                 showConfirmButton: true,
+                willClose: function () {
+                    window.location.reload();
+                },
             });
         },
 
@@ -242,13 +231,10 @@ export default {
                         student.name
                             .toLowerCase()
                             .includes(this.searchTerm.toLowerCase())
-                        
                     );
                 });
             }
         },
-
-        
     },
 };
 </script>
