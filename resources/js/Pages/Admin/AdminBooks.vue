@@ -226,8 +226,26 @@ export default {
 
     methods: {
         deleteBook(book_id) {
-            axios.post("/admin/books/delete/" + book_id).then((response) => {
+            var vm = this;
+            axios
+            .post("/admin/books/delete/" + book_id)
+            .then((response) => {
+                vm.showNotification(
+                        "Book Deleted Successfully",
+                        "success"
+                    );
                 this.books = response.data;
+            });
+        },
+
+        showNotification(message, type) {
+            Swal.fire({
+                icon: type,
+                text: message,
+                showConfirmButton: true,
+                willClose: function () {
+                    window.location.reload();
+                },
             });
         },
 

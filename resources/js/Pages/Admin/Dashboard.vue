@@ -20,15 +20,17 @@
                 >
                     <div class="col-span-1 ... rounded-md p-6 bg-red-600">
                         Check-in Books
-                        <h1 class="my-4 text-3xl">{{ count }}</h1>
+                        <h1 class="my-4 text-3xl">{{ checkin }}</h1>
                     </div>
 
                     <div class="col-span-1 ... rounded-md p-6 bg-blue-600">
                         Check-out Books
+                        <h1 class="my-4 text-3xl">{{ checkout }}</h1>
                     </div>
 
                     <div class="col-span-1 ... rounded-md p-6 bg-green-700">
                         Booking Books
+                        <h1 class="my-4 text-3xl">{{ count }}</h1>
                     </div>
                 </div>
             </div>
@@ -49,6 +51,14 @@ export default {
 
     props: {
         count: {
+            type: Number,
+            default: 0,
+        },
+        checkin:{
+            type: Number,
+            default: 0,
+        },
+        checkout:{
             type: Number,
             default: 0,
         },

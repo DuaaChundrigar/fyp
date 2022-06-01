@@ -50,11 +50,10 @@ class AdminController extends Controller
 
         $book->delete();
 
-
         $books = Books::all();
 
-
-        return response(json_encode($books), 200);
+        // return response(json_encode($books), 200);
+        return Inertia::render('Admin/AdminBooks', ['books' => $books]);
     }
 
     function editBook($book_id)
@@ -182,8 +181,6 @@ class AdminController extends Controller
     {
 
         $bookings = Booking::with('book', 'student')->get();
-
-
 
         return Inertia::render('Admin/BorrowDetails', ['bookings' => $bookings]);
     }
