@@ -82,7 +82,7 @@
                             About Us
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
                             src="/storage/images/About.jpg"
                         />
                         About us HiAST Established in 2001, the Hyderabad
@@ -100,7 +100,7 @@
                             Our Mission
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
                             src="/storage/images/Mission.jpg"
                         />
 
@@ -117,7 +117,7 @@
                             Our Vision
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
                             src="/storage/images/Vision.jpg"
                         />
                         HiAST will maintain its tradition and surface as a still
