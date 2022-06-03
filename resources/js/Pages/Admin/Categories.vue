@@ -74,7 +74,7 @@
                                         <td
                                             class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                         >
-                                            {{ category.subject }}
+                                            {{ category.category }}
                                         </td>
 
                                         <td

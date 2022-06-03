@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('book_no');
             $table->string('isbn');
             $table->string('subject');
+            $table->string('category');
             $table->string('book_name');
             $table->string('author');
             $table->string('publisher');

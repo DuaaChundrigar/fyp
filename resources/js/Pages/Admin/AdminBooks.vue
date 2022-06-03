@@ -72,7 +72,19 @@
                                                 scope="col"
                                                 class="px-6 py-4 text-sm font-medium text-left text-gray-900"
                                             >
+                                                Book ISBN No.
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            >
                                                 Book Name
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                class="px-6 py-4 text-sm font-medium text-left text-gray-900"
+                                            >
+                                                Subject
                                             </th>
                                             <th
                                                 scope="col"
@@ -121,14 +133,19 @@
 
                                     <tbody>
                                         <tr
-                                            v-for="book in filteredBooks"
+                                            v-for="(book , index) in filteredBooks"
                                             :key="book.id"
                                             class="transition duration-300 ease-in-out bg-white border-b hover:bg-gray-100"
                                         >
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
                                             >
-                                                {{ book.book_no }}
+                                                {{ index + 1 }}
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap"
+                                            >
+                                                {{ book.isbn }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
@@ -139,6 +156,11 @@
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
                                             >
                                                 {{ book.subject }}
+                                            </td>
+                                            <td
+                                                class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"
+                                            >
+                                                {{ book.category }}
                                             </td>
                                             <td
                                                 class="px-6 py-4 text-sm font-light text-gray-900 whitespace-nowrap"

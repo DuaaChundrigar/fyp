@@ -10,7 +10,15 @@
 <!--Right Side-->
         <div class="col-span-5 ... m-2">
             <!--Book Insertion Form-->
-
+                        <div class="flex items-left justify-left">
+                            <Link
+                                type="button"
+                                class="px-8 py-2 mt-2 font-semibold text-gray-100 bg-gray-900 rounded text-1xl hover:bg-gray-500 hover:text-white"
+                                href="/admin/books"
+                            >
+                                Back
+                            </Link>
+                        </div>
             <div
                 class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
             >
@@ -24,6 +32,9 @@
                 <form @submit.prevent="submitForm">
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Book No.
+                                </label>
                             <input
                                 id="book_no"
                                 type="text"
@@ -36,6 +47,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Book ISBN No.
+                                </label>
                             <input
                                 id="isbn"
                                 type="text"
@@ -48,6 +62,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Subject
+                                </label>
                             <input
                                 id="subject"
                                 type="subject"
@@ -60,6 +77,24 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Category
+                                </label>
+                            <input
+                                id="category"
+                                type="category"
+                                v-model="formData.category"
+                                name="category"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter category Name"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Book Name
+                                </label>
                             <input
                                 id="book_name"
                                 type="text"
@@ -72,6 +107,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Author Name 
+                                </label>
                             <input
                                 id="author"
                                 type="text"
@@ -84,6 +122,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Publisher
+                                </label>
                             <input
                                 id="publisher"
                                 type="publisher"
@@ -96,6 +137,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Edition
+                                </label>
                             <input
                                 id="edition"
                                 type="edition"
@@ -108,6 +152,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Copies
+                                </label>
                             <input
                                 id="copies"
                                 type="copies"
@@ -164,6 +211,7 @@ export default {
                 book_no: this.book.book_no,
                 isbn: this.book.isbn,
                 subject: this.book.subject,
+                category: this.book.category,
                 book_name: this.book.book_name,
                 author: this.book.author,
                 publisher: this.book.publisher,

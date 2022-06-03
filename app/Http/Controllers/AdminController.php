@@ -71,6 +71,7 @@ class AdminController extends Controller
         $book->book_no  = $request->formData['book_no'];
         $book->isbn = $request->formData['isbn'];
         $book->subject  = $request->formData['subject'];
+        $book->category  = $request->formData['category'];
         $book->book_name  = $request->formData['book_name'];
         $book->author  = $request->formData['author'];
         $book->publisher  = $request->formData['publisher'];
@@ -121,7 +122,7 @@ class AdminController extends Controller
         $categories = Categories::find($category_id);
 
 
-        $categories->subject  = $request->formData['subject'];
+        $categories->category  = $request->formData['category'];
 
 
         $categories->save();
@@ -147,6 +148,7 @@ class AdminController extends Controller
         $book->book_no  = $request->formData['book_no'];
         $book->isbn = $request->formData['isbn'];
         $book->subject  = $request->formData['subject'];
+        $book->category  = $request->formData['category'];
         $book->book_name  = $request->formData['book_name'];
         $book->author  = $request->formData['author'];
         $book->publisher  = $request->formData['publisher'];
@@ -169,7 +171,7 @@ class AdminController extends Controller
     {
         $categories = new Categories();
 
-        $categories->subject  = $request->formData['subject'];
+        $categories->category  = $request->formData['category'];
 
         $categories->save();
 

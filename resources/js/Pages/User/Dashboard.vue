@@ -52,13 +52,12 @@
     </nav>
 
     <div class="flex justify-center mt-5">
-        <div class="mb-3 xl:w-96">
             <div
-                class="relative flex flex-wrap items-stretch w-full mb-4 input-group"
+                class="relative flex flex-wrap items-stretch w-6/12 h-16 mt-8 mb-4 input-group"
             >
                 <input
                     type="search"
-                    class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:bg-white focus:border-blue-600"
+                    class="form-control relative flex-auto  min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:bg-white focus:border-blue-600"
                     placeholder="Search for Book"
                     aria-label="Search"
                     v-model="searchTerm"
@@ -86,7 +85,6 @@
                     </svg>
                 </button> -->
             </div>
-        </div>
     </div>
 
     <!-- Table  -->

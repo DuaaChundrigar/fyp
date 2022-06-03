@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="">
         <div class="flex justify-between m-auto bg-gray-100 shadow-lg">
             <div class="flex ml-10">
                 <img
@@ -76,13 +76,13 @@
                         About Us
                     </h1>
                 </div>
-                <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14">
+                <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14 ">
                     <div>
                         <div class="mb-10 text-4xl font-bold text-gray-800">
                             About Us
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
                             src="/storage/images/About.jpg"
                         />
                         About us HiAST Established in 2001, the Hyderabad
@@ -100,7 +100,7 @@
                             Our Mission
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
                             src="/storage/images/Mission.jpg"
                         />
 
@@ -117,7 +117,7 @@
                             Our Vision
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 ..."
                             src="/storage/images/Vision.jpg"
                         />
                         HiAST will maintain its tradition and surface as a still
@@ -166,10 +166,10 @@
                     </ol>
                 </div>
 
-                <div class="grid justify-center gap-4 mt-10 m-14">
+                <div class="grid justify-center w-6/12 grid-cols-1 gap-4 m-auto mt-10">
                     <div class="">
                         <div
-                            class="mb-10 text-6xl font-bold text-gray-800"
+                            class="mb-10 font-bold text-gray-800"
                             id="contact"
                         >
                             <h1
@@ -177,7 +177,6 @@
                             >
                                 Contact Us
                             </h1>
-                        </div>
                         <form @submit.prevent="submitForm">
                             <div class="flex flex-col mb-2">
                                 <div class="relative">
@@ -224,12 +223,13 @@
                             <div class="flex items-center justify-center">
                                 <button
                                     type="submit"
-                                    class="px-8 py-2 mt-2 font-semibold text-white bg-gray-800 rounded text-1xl hover:bg-gray-600 hover:text-white"
+                                    class="px-4 py-2 mt-2 font-semibold text-white bg-gray-800 rounded text-1xl hover:bg-gray-600 hover:text-white"
                                 >
                                     submit
                                 </button>
                             </div>
                         </form>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -281,7 +281,7 @@
                         <h1
                             class="mt-4 font-serif text-3xl font-bold text-center text-gray-800"
                         >
-                            Prof. Tehseen Hafiz
+                            Prof. Tahseen Hafiz
                         </h1>
                     </div>
 

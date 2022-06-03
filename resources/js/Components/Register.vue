@@ -18,7 +18,7 @@
                     <Link
                         href="/"
                         type="button"
-                        class="px-3 py-2 font-bold text-gray-700 rounded-md text-1xl hover:bg-gray-200"
+                        class="px-3 py-2 font-bold text-gray-100 bg-gray-900 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
                     >
                         Home
                     </Link>

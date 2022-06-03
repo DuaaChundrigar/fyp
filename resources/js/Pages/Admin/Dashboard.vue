@@ -16,19 +16,19 @@
                     Dashboard
                 </h1>
                 <div
-                    class="grid h-24 grid-cols-3 gap-4 text-2xl font-bold text-center text-white"
+                    class="grid h-24 grid-cols-3 gap-4 text-2xl font-bold text-center text-white "
                 >
-                    <div class="col-span-1 ... rounded-md p-6 bg-red-600">
+                    <div class="col-span-1 ... rounded-md p-6 bg-red-600 hover:animate-bounce">
                         Check-in Books
                         <h1 class="my-4 text-3xl">{{ checkin }}</h1>
                     </div>
 
-                    <div class="col-span-1 ... rounded-md p-6 bg-blue-600">
+                    <div class="col-span-1 ... rounded-md p-6 bg-blue-600 hover:animate-bounce">
                         Check-out Books
                         <h1 class="my-4 text-3xl">{{ checkout }}</h1>
                     </div>
 
-                    <div class="col-span-1 ... rounded-md p-6 bg-green-700">
+                    <div class="col-span-1 ... rounded-md p-6 bg-green-700 hover:animate-bounce">
                         Booking Books
                         <h1 class="my-4 text-3xl">{{ count }}</h1>
                     </div>

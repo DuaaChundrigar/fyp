@@ -11,6 +11,15 @@
 
         <!--Right Side-->
         <div class="col-span-5 ... m-2">
+                    <div class="flex items-left justify-left">
+                            <Link
+                                type="button"
+                                class="px-8 py-2 mt-2 font-semibold text-gray-100 bg-gray-900 rounded text-1xl hover:bg-gray-500 hover:text-white"
+                                href="/admin/categories"
+                            >
+                                Back
+                            </Link>
+                        </div>
             <div
                 class="flex flex-col w-5/12 px-4 py-8 bg-gray-800 shadow-md ml-60 rounded-2xl"
             >
@@ -29,8 +38,8 @@
                                 </label>
                                 <input
                                     type="text"
-                                    v-model="formData.subject"
-                                    name="subject"
+                                    v-model="formData.category"
+                                    name="category"
                                     class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter Category"
                                 />
@@ -78,7 +87,7 @@ export default {
     data() {
         return {
             formData: {
-                subject: this.categories.subject,
+                category: this.categories.category,
             },
         };
     },

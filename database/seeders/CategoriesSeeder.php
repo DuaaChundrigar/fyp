@@ -16,11 +16,11 @@ class CategoriesSeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'subject' => 'Computer Science'
+                'category' => 'Computer '
             ],
 
             [
-                'subject' => 'Computer Science 2'
+                'category' => 'Computer Science '
                 
             ],
 
