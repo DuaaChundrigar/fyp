@@ -1,15 +1,15 @@
 <template>
     <div>
-        <Navbar />
+        <Navbar2 />
         <!--Body-->
-        <div class="grid grid-cols-6 gap-4 m-2">
+        <!-- <div class="grid grid-cols-6 gap-4 m-2"> -->
             <!--Side bar-->
 
-            <SideMenu />
+            <!-- <SideMenu /> -->
             <!--Right Side-->
-            <div class="col-span-5 ... m-2">
+            <!-- <div class="col-span-5 ... m-2"> -->
                 <h1
-                    class="mb-5 font-serif text-3xl font-bold text-center text-gray-800"
+                    class="m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800"
                 >
                     Students List
                 </h1>
@@ -49,7 +49,7 @@
 
                 <!-- Table  -->
 
-                <div class="flex flex-col">
+                <div class="flex flex-col m-10">
                     <table class="text-center border">
                         <thead class="bg-white border-b">
                             <tr>
@@ -161,22 +161,22 @@
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu";
+import Navbar2 from "../../Components/Admin/Navbar2";
+// import SideMenu from "../../Components/Admin/SideMenu";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 export default {
     components: {
         Link,
-        Navbar,
-        SideMenu,
+        Navbar2,
+        // SideMenu,
         Swal,
     },
     props: {

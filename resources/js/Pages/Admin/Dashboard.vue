@@ -1,22 +1,22 @@
 <template>
     <div>
-        <Navbar />
+        <Navbar2 />
 
         <!--Body-->
-        <div class="grid grid-cols-6 gap-4 m-2">
+        <!-- <div class="grid grid-cols-6 gap-4 m-2"> -->
             <!--Side bar-->
-
-            <SideMenu />
+<!-- 
+            <SideMenu /> -->
 
             <!--Right Side-->
-            <div class="col-span-5 ... m-2">
+            <!-- <div class="col-span-5 ... m-2"> -->
                 <h1
-                    class="mb-5 font-serif text-3xl font-bold text-center text-gray-800"
+                    class="m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800"
                 >
                     Dashboard
                 </h1>
                 <div
-                    class="grid h-24 grid-cols-3 gap-4 text-2xl font-bold text-center text-white "
+                    class="grid h-24 grid-cols-3 gap-4 m-10 text-2xl font-bold text-center text-white "
                 >
                     <div class="col-span-1 ... rounded-md p-6 bg-red-600 hover:animate-bounce">
                         Check-in Books
@@ -34,19 +34,20 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu";
+import Navbar2 from "../../Components/Admin/Navbar2";
+// import SideMenu from "../../Components/Admin/SideMenu";
 export default {
     components: {
         Link,
-        Navbar,
-        SideMenu,
+        Navbar2,
+        // SideMenu,
     },
 
     props: {

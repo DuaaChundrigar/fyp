@@ -1,16 +1,16 @@
 <template>
     <div>
         
-    <Navbar/>
+    <Navbar2/>
 
     <!--Body-->
-    <div class="grid grid-cols-6 gap-4 m-2">
+    <!-- <div class="grid grid-cols-6 gap-4 m-2"> -->
         <!--Side bar-->
     
-    <SideMenu/>
+    <!-- <SideMenu/> -->
 
         <!--Right Side-->
-        <div class="col-span-5 ... m-2">
+        <!-- <div class="col-span-5 ... m-2"> -->
                     <div class="flex items-left justify-left">
                             <Link
                                 type="button"
@@ -58,22 +58,22 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    <!-- </div>
+    </div> -->
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu.vue";
+import Navbar2 from "../../Components/Admin/Navbar2";
+// import SideMenu from "../../Components/Admin/SideMenu.vue";
 import Swal from 'sweetalert2';
 
 import axios from "axios";
 export default {
     components: {
         Link,
-        Navbar,
-        SideMenu,
+        Navbar2,
+        // SideMenu,
         Swal,
     },
 

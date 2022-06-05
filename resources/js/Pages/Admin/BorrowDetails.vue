@@ -1,15 +1,15 @@
 <template>
     <div>
-        <Navbar />
+        <Navbar2 />
         <!--Body-->
-        <div class="grid grid-cols-6 gap-4 m-2">
+        <!-- <div class="grid grid-cols-6 gap-4 m-2"> -->
             <!--Side bar-->
 
-        <SideMenu/>
+        <!-- <SideMenu/> -->
 
             <!--Right Side-->
-            <div class="col-span-5 ... m-2">
-                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Lending Books</h1>
+            <!-- <div class="col-span-5 ... m-2"> -->
+                <h1 class="m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800">Lending Books</h1>
 
                 <!-- Table  -->
                 <div class="flex flex-col m-10">
@@ -175,21 +175,21 @@
                                 </table>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import Navbar from "../../Components/Admin/Navbar.vue";
-import SideMenu from "../../Components/Admin/SideMenu.vue";
+import Navbar2 from "../../Components/Admin/Navbar2.vue";
+// import SideMenu from "../../Components/Admin/SideMenu.vue";
 
 //import axios from "axios";
 export default {
     components: {
         Link,
-        Navbar,
-        SideMenu,
+        Navbar2,
+        // SideMenu,
     },
     props: {
         user: {

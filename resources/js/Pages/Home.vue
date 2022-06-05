@@ -305,7 +305,7 @@
                 >
                     <div>
                         <img
-                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                            class= "m-auto text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/About.jpg"
                         />
                         <h1
@@ -322,7 +322,7 @@
 
                     <div>
                         <img
-                            class="w-full text-gray-700 rounded h-3/4 text-1xl"
+                            class="m-auto text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/Mission.jpg"
                         />
                         <h1
@@ -339,7 +339,7 @@
 
                     <div class="">
                         <img
-                            class="w-full text-gray-700 rounded h-3/4"
+                            class="m-auto text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/Vision.jpg"
                         />
                         <h1

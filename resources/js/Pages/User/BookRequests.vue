@@ -1,56 +1,38 @@
 <template>
-    <nav class="bg-gray-400">
-        <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div
-                    class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-                >
-                    <div class="flex items-center flex-shrink-0">
-                        <!-- <img
-                            class="hidden w-auto h-8 lg:block"
-                            src="1.png"
-                            alt="Logo"
-                        /> -->
-                    </div>
+   <div class="flex justify-between m-auto bg-gray-100 shadow-lg">
+            <div class="flex ml-24">
+                <img
+                    class="flex-shrink-0 w-auto h-20"
+                    src="/storage/logo/logo.png"
+                    alt="Logo"
+                />
+            </div>
 
-                    <div
-                        class="ml-4 font-serif text-4xl font-bold text-gray-700 underline"
-                    >
-                        <button
-                            type="button"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded"
-                            id="rfb"
-                        >
-                            <Link href="/" class=""> Request for Book </Link>
-                        </button>
-                        <button
-                            type="button"
-                            class="px-3 py-2 ml-2 text-sm font-medium text-white bg-gray-900 rounded"
-                            id="lor"
-                        >
-                            <Link href="/books/requests" class="">
-                                List of Request
-                            </Link>
-                        </button>
-                    </div>
-                </div>
-                <div
-                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            <div class="m-auto space-x-4 font-bold text-gray-900 text-1xl">
+                <a href="/" class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60"
+                    >List of Books</a
                 >
-                    <div>
-                        <button
-                            type="button"
-                            class="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
-                            id="login"
-                        >
-                            <Link href="/logout" class="">Logout</Link>
-                        </button>
-                    </div>
-                </div>
+                <a
+                    href="/books/requests"
+                    class="px-3 py-2 rounded-md hover:bg-gray-200"
+                    >List of Request</a
+                >
+                
+            </div>
+
+            <div class="m-auto ml-60">
+                <Link
+                    href="/logout"
+                    type="button"
+                    class="px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
+                >
+                    Logout
+                </Link>
+                
             </div>
         </div>
-    </nav>
-    <!-- Table  -->
+        
+            <!-- Table  -->
 
     <div class="flex flex-col m-10">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">

@@ -1,14 +1,14 @@
 <template>
     <div>
-        <Navbar />
+        <Navbar2 />
         <!--Body-->
-        <div class="grid grid-cols-6 gap-4 m-2">
+        <!-- <div class="grid grid-cols-6 gap-4 m-2"> -->
             <!--Side bar-->
 
-            <SideMenu />
+            <!-- <SideMenu /> -->
             <!--Right Side-->
-            <div class="col-span-5 ... m-2">
-                <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Books List</h1>
+            <!-- <div class="col-span-5 ... m-2"> -->
+                <h1 class="m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800 ">Books List</h1>
                 <div class="grid grid-cols-4">
                     <div class="col-span-1 m-2">
                         <Link
@@ -24,7 +24,7 @@
                 </div>
 
                 <div
-                    class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-60 input-group"
+                    class="relative flex flex-wrap items-stretch w-6/12 m-10 ml-auto mr-auto input-group"
                 >
                     <input
                         type="search"
@@ -211,21 +211,21 @@
                                 </table>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
-import Navbar from "../../Components/Admin/Navbar";
-import SideMenu from "../../Components/Admin/SideMenu";
+import Navbar2 from "../../Components/Admin/Navbar2";
+// import SideMenu from "../../Components/Admin/SideMenu";
 
 import axios from "axios";
 export default {
     components: {
         Link,
-        Navbar,
-        SideMenu,
+        Navbar2,
+        // SideMenu,
     },
     props: {
         user: {
