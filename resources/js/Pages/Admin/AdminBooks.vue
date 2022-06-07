@@ -28,7 +28,9 @@
                 >
                     <input
                         type="search"
-                        class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:bg-white focus:border-blue-600"
+                        class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal 
+                        text-gray-700 bg-white border border-solid border-gray-300 rounded focus:bg-white 
+                        focus:border-blue-600"
                         placeholder="Search for Book"
                         aria-label="Search"
                         v-model="searchTerm"
