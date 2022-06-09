@@ -12,7 +12,7 @@
 
         <!--Right Side-->
         <!-- <div class="col-span-5 ... m-2"> -->
-            <div class="flex items-left justify-left">
+            <div class="flex items-left justify-left m-2">
                             <Link
                                 type="button"
                                 class="px-8 py-2 mt-2 font-semibold text-gray-100 bg-gray-900 rounded text-1xl hover:bg-gray-500 hover:text-white"
@@ -22,10 +22,10 @@
                             </Link>
                         </div>
             <div
-                class="flex flex-col w-5/12 px-4 py-8 m-32 bg-gray-800 shadow-md ml-60 rounded-2xl"
+                class="lex flex-col w-5/12 px-4 py-8 m-auto mt-10 bg-gray-800 shadow-md rounded-2xl"
             >
                 <div
-                    class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
+                    class="self-center text-xl font-bold text-gray-100 sm:text-3xl text-center"
                 >
                     Insert Category
                 </div>

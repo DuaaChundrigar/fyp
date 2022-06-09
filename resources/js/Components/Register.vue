@@ -42,6 +42,9 @@
                 <form @submit.prevent="submitForm">
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Roll No.
+                                </label>
                             <input
                                 required
                                 id="regno"
@@ -55,6 +58,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Full Name
+                                </label>
                             <input
                                 required
                                 id="name"
@@ -66,8 +72,11 @@
                             />
                         </div>
                     </div>
-                    <div class="flex flex-col mb-2">
+                    <div class="flex flex-col mb-1">
                         <div class="relative">
+                            <label class="text-white">
+                                    Email
+                                </label>
                             <input
                                 required
                                 id="email"
@@ -125,7 +134,7 @@
                         </div> -->
                         <div class="flex flex-col mb-2">
                         <div class="relative">
-                            <select class="w-full rounded-full" v-model="formData.program" required>
+                            <select class="w-full text-gray-500 rounded-full" v-model="formData.program" required>
                                 <option value="">Program</option>
                                 <option >School</option>
                                 <option >College</option>
@@ -138,6 +147,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Enter Password
+                                </label>
                             <input
                                 required
                                 id="password"
@@ -151,6 +163,9 @@
                     </div>
                     <div class="flex flex-col mb-2">
                         <div class="relative">
+                            <label class="text-white">
+                                    Re-Enter Password
+                                </label>
                             <input
                                 required
                                 id="confirm_password"
