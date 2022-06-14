@@ -20719,7 +20719,7 @@ var _hoisted_7 = {
   "class": "flex flex-col items-center justify-center min-h-screen"
 };
 var _hoisted_8 = {
-  "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
+  "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -20883,7 +20883,7 @@ var _hoisted_7 = {
   "class": "flex flex-col items-center justify-center min-h-screen mt-10"
 };
 var _hoisted_8 = {
-  "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
+  "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -21887,7 +21887,7 @@ var _hoisted_2 = {
   "class": "grid h-24 grid-cols-3 gap-4 m-10 text-2xl font-bold text-center text-white"
 };
 var _hoisted_3 = {
-  "class": "col-span-1 ... rounded-md p-6 bg-red-600 hover:animate-bounce"
+  "class": "col-span-1 ... rounded-md p-6 bg-red-600"
 };
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Check-in Books ");
@@ -21896,7 +21896,7 @@ var _hoisted_5 = {
   "class": "my-4 text-3xl"
 };
 var _hoisted_6 = {
-  "class": "col-span-1 ... rounded-md p-6 bg-blue-600 hover:animate-bounce"
+  "class": "col-span-1 ... rounded-md p-6 bg-blue-600"
 };
 
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Check-out Books ");
@@ -21905,7 +21905,7 @@ var _hoisted_8 = {
   "class": "my-4 text-3xl"
 };
 var _hoisted_9 = {
-  "class": "col-span-1 ... rounded-md p-6 bg-green-700 hover:animate-bounce"
+  "class": "col-span-1 ... rounded-md p-6 bg-green-700"
 };
 
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Booking Books ");
