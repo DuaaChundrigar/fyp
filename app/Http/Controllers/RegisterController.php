@@ -19,6 +19,10 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
+        $request->validate([
+            'regno' => 'unique:users',
+        ]);
+
         $profile_image = $request->file('profile_image');
 
         $file_name = uniqid() . '-' . time() . '.' . $profile_image->getClientOriginalExtension();
@@ -34,9 +38,10 @@ class RegisterController extends Controller
         $student->email = $request->formData['email'];
         $student->batch = $request->formData['batch'];
         $student->program = $request->formData['program'];
-        $student->profile_image =$file_name;
+        $student->profile_image = $file_name;
 
         $student->save();
+
 
         $user = new User();
         $user->name = $student->name;
