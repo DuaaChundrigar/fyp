@@ -121,9 +121,7 @@ class AdminController extends Controller
     {
         $categories = Categories::find($category_id);
 
-
         $categories->category  = $request->formData['category'];
-
 
         $categories->save();
 

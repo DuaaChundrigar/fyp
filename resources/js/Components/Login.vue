@@ -1,5 +1,6 @@
 <template>
     <div class="bg-gray-100">
+                    
         <div class="bg-gray-100 shadow-lg">
             <div
                 class="container flex justify-between m-auto mx-auto space-x-8"
@@ -26,7 +27,7 @@
 
         <div class="flex flex-col items-center justify-center min-h-screen">
             <div
-                class="flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
+                class="flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
             >
                 <div
                     class="self-center text-xl font-bold text-gray-100 sm:text-3xl"

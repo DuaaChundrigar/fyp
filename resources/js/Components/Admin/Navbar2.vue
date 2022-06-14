@@ -11,7 +11,7 @@
         <div class="m-auto space-x-4 font-bold text-gray-900 text-1xl">
             
             <a href="/admin/dashboard" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/dashboard')
                     ? 'bg-gray-900 text-white'
@@ -21,7 +21,7 @@
             >
             <a
                 href="/admin/books"
-                class="px-3 py-2 rounded-md hover:bg-gray-200 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/books')
                     ? 'bg-gray-900 text-white'
@@ -31,7 +31,7 @@
             >
             
             <a href="/admin/categories" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/categories')
                     ? 'bg-gray-900 text-white'
@@ -41,7 +41,7 @@
             >
             
             <a href="/admin/borrowDetails" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/borrowDetails')
                     ? 'bg-gray-900 text-white'
@@ -51,7 +51,7 @@
             >
             
             <a href="/admin/students" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/students')
                     ? 'bg-gray-900 text-white'
@@ -61,7 +61,7 @@
             >
             
             <a href="/admin/contact" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/contact')
                     ? 'bg-gray-900 text-white'
@@ -71,7 +71,7 @@
             >
             
             <a href="/admin/report" 
-                class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+                class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/report')
                     ? 'bg-gray-900 text-white'
@@ -81,7 +81,7 @@
             >
             
             <a href="/admin/settings" 
-            class="px-3 py-2 rounded-md hover:bg-gray-200 ml-60 hover:text-gray-700"
+            class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
             :class="
                 checkIfWeAreOnSamePage('/admin/settings')
                     ? 'bg-gray-900 text-white'

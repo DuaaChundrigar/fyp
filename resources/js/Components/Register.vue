@@ -25,7 +25,7 @@
         </div>
 
         <div
-            class="flex flex-col items-center justify-center min-h-screen mt-10"
+            class="flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
         >
             <div
                 class="flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
@@ -36,46 +36,55 @@
                     Register Now
                 </div>
 
-                <div class="mt-5">
-                    <form @submit.prevent="submitForm">
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    required
-                                    id="regno"
-                                    type="text"
-                                    v-model="formData.regno"
-                                    name="regno"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter your register number"
-                                />
-                            </div>
+
+            <div class="mt-5">
+                <form @submit.prevent="submitForm">
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Roll No.
+                                </label>
+                            <input
+                                required
+                                id="regno"
+                                type="text"
+                                v-model="formData.regno"
+                                name="regno"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter your register number"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    required
-                                    id="name"
-                                    type="text"
-                                    v-model="formData.name"
-                                    name="name"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter your name"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Full Name
+                                </label>
+                            <input
+                                required
+                                id="name"
+                                type="text"
+                                v-model="formData.name"
+                                name="name"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter your name"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    required
-                                    id="email"
-                                    type="email"
-                                    v-model="formData.email"
-                                    name="email"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter your email"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-1">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Email
+                                </label>
+                            <input
+                                required
+                                id="email"
+                                type="email"
+                                v-model="formData.email"
+                                name="email"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter your email"
+                            />
                         </div>
                         <!-- <div class="flex flex-col mb-2">
                         <div class="relative">
@@ -127,46 +136,48 @@
                             />
                         </div> -->
                         <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <select
-                                    class="w-full rounded-full"
-                                    v-model="formData.program"
-                                    required
-                                >
-                                    <option value="">Program</option>
-                                    <option>School</option>
-                                    <option>College</option>
-                                    <option>BSIT</option>
-                                    <option>BBA</option>
-                                    <option>BSCS MEUT</option>
-                                    <option>BSCS GCU</option>
-                                </select>
-                            </div>
+
+                        <div class="relative">
+                            <select class="w-full text-gray-500 rounded-full" v-model="formData.program" required>
+                                <option value="">Program</option>
+                                <option >School</option>
+                                <option >College</option>
+                                <option >BSIT</option>
+                                <option >BBA</option>
+                                <option >BSCS MEUT</option>
+                                <option >BSCS GCU</option>
+                            </select>
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    required
-                                    id="password"
-                                    type="password"
-                                    v-model="formData.password"
-                                    name="password"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Enter your password"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Enter Password
+                                </label>
+                            <input
+                                required
+                                id="password"
+                                type="password"
+                                v-model="formData.password"
+                                name="password"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Enter your password"
+                            />
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <input
-                                    required
-                                    id="confirm_password"
-                                    type="password"
-                                    name="confirm_password"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                    placeholder="Re-enter your password"
-                                />
-                            </div>
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <div class="relative">
+                            <label class="text-white">
+                                    Re-Enter Password
+                                </label>
+                            <input
+                                required
+                                id="confirm_password"
+                                type="password"
+                                name="confirm_password"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                placeholder="Re-enter your password"
+                            />
                         </div>
 
                         <div class="flex flex-col mb-2">
