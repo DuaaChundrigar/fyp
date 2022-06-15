@@ -1,7 +1,7 @@
 <template>
     <div class="">
-        <div class="flex justify-between m-auto bg-gray-100 shadow-lg">
-            <div class="flex ml-10">
+        <div class="grid grid-cols-12 bg-gray-100 shadow-lg sticky top-0">
+            <div class="col-span-2 ml-24">
                 <img
                     class="flex-shrink-0 w-auto h-20"
                     src="/storage/logo/logo.png"
@@ -9,7 +9,9 @@
                 />
             </div>
 
-            <div class="m-auto space-x-4 font-bold text-gray-900 text-1xl">
+            <div
+                class="m-auto col-span-8 space-x-4 font-bold text-gray-900 text-1xl"
+            >
                 <a href="#home" class="px-3 py-2 rounded-md hover:bg-gray-200"
                     >Home</a
                 >
@@ -31,21 +33,23 @@
                 >
             </div>
 
-            <div class="m-auto ml-60">
-                <Link
-                    href="/login"
-                    type="button"
-                    class="px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
-                >
-                    Login
-                </Link>
-                <Link
-                    href="/register"
-                    type="button"
-                    class="px-3 py-2 ml-4 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
-                >
-                    Register
-                </Link>
+            <div class="flex items-center w-full justify-start col-span-2">
+                <div class="flex items-center">
+                    <Link
+                        href="/login"
+                        type="button"
+                        class="px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
+                    >
+                        Login
+                    </Link>
+                    <Link
+                        href="/register"
+                        type="button"
+                        class="px-3 py-2 ml-4 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
+                    >
+                        Register
+                    </Link>
+                </div>
             </div>
         </div>
 
@@ -76,13 +80,13 @@
                         About Us
                     </h1>
                 </div>
-                <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14 ">
+                <div class="grid justify-center grid-cols-3 gap-4 mt-10 m-14">
                     <div>
                         <div class="mb-10 text-4xl font-bold text-gray-800">
                             About Us
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ..."
                             src="/storage/images/About.jpg"
                         />
                         About us HiAST Established in 2001, the Hyderabad
@@ -100,7 +104,7 @@
                             Our Mission
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ..."
                             src="/storage/images/Mission.jpg"
                         />
 
@@ -117,7 +121,7 @@
                             Our Vision
                         </div>
                         <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100  hover:-translate-y-2 hover:scale-105  duration-300 ..."
+                            class="w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ..."
                             src="/storage/images/Vision.jpg"
                         />
                         HiAST will maintain its tradition and surface as a still
@@ -166,69 +170,68 @@
                     </ol>
                 </div>
 
-                <div class="grid justify-center w-6/12 grid-cols-1 gap-4 m-auto mt-10">
+                <div
+                    class="grid justify-center w-6/12 grid-cols-1 gap-4 m-auto mt-10"
+                >
                     <div class="">
-                        <div
-                            class="mb-10 font-bold text-gray-800"
-                            id="contact"
-                        >
+                        <div class="mb-10 font-bold text-gray-800" id="contact">
                             <h1
                                 class="font-serif text-6xl font-bold text-center text-gray-800"
                             >
                                 Contact Us
                             </h1>
-                        <form @submit.prevent="submitForm">
-                            <div class="flex flex-col mb-2">
-                                <div class="relative">
-                                    <input
-                                        type="text"
-                                        v-model="formData.regno"
-                                        class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                        placeholder="Enter your register number"
-                                    />
+                            <form @submit.prevent="submitForm">
+                                <div class="flex flex-col mb-2">
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            v-model="formData.regno"
+                                            class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                            placeholder="Enter your register number"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex flex-col mb-2">
-                                <div class="relative">
-                                    <input
-                                        type="text"
-                                        v-model="formData.name"
-                                        class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                        placeholder="Enter your name"
-                                    />
+                                <div class="flex flex-col mb-2">
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            v-model="formData.name"
+                                            class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                            placeholder="Enter your name"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex flex-col mb-2">
-                                <div class="relative">
-                                    <input
-                                        type="email"
-                                        v-model="formData.email"
-                                        class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                        placeholder="Enter your email"
-                                    />
+                                <div class="flex flex-col mb-2">
+                                    <div class="relative">
+                                        <input
+                                            type="email"
+                                            v-model="formData.email"
+                                            class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                            placeholder="Enter your email"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="flex flex-col mb-2">
-                                <div class="relative">
-                                    <input
-                                        type="textbox"
-                                        v-model="formData.msg"
-                                        class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
-                                        placeholder="Enter your message here"
-                                    />
+                                <div class="flex flex-col mb-2">
+                                    <div class="relative">
+                                        <input
+                                            type="textbox"
+                                            v-model="formData.msg"
+                                            class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                            placeholder="Enter your message here"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="flex items-center justify-center">
-                                <button
-                                    type="submit"
-                                    class="px-4 py-2 mt-2 font-semibold text-white bg-gray-800 rounded text-1xl hover:bg-gray-600 hover:text-white"
-                                >
-                                    submit
-                                </button>
-                            </div>
-                        </form>
+                                <div class="flex items-center justify-center">
+                                    <button
+                                        type="submit"
+                                        class="px-4 py-2 mt-2 font-semibold text-white bg-gray-800 rounded text-1xl hover:bg-gray-600 hover:text-white"
+                                    >
+                                        submit
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -305,7 +308,7 @@
                 >
                     <div>
                         <img
-                            class= "m-auto text-gray-700 rounded h-2/4 text-1xl"
+                            class="m-auto text-gray-700 rounded h-2/4 text-1xl"
                             src="/storage/images/About.jpg"
                         />
                         <h1

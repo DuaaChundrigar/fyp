@@ -19500,6 +19500,16 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
   },
+  props: {
+    errors: {
+      type: Array,
+      "default": []
+    },
+    test: {
+      type: String,
+      "default": "Sagheer"
+    }
+  },
   data: function data() {
     return {
       formData: {
@@ -19513,6 +19523,11 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
+  computed: {
+    getTest: function getTest() {
+      return this.test + " => " + this.errors[0];
+    }
+  },
   methods: {
     submitForm: function submitForm() {
       // this.$inertia
@@ -19521,11 +19536,9 @@ __webpack_require__.r(__webpack_exports__);
       //         profile_image: this.formData.profile_image,
       //     });
       //catch errors after request using $inertia.reject()
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post("/register", {
+      this.$inertia.post("/register", {
         formData: this.formData,
         profile_image: this.formData.profile_image
-      }, function (error) {
-        console.log(error);
       }); // axios
       //     .post("/register", {
       //         formData: this.formData,
@@ -20917,10 +20930,10 @@ var _hoisted_5 = {
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Home ");
 
 var _hoisted_7 = {
-  "class": "flex flex-col items-center justify-center min-h-screen mt-10"
+  "class": "flex flex-col w-4/12 mx-auto my-8 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
 };
 var _hoisted_8 = {
-  "class": "flex flex-col w-4/12 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
+  "class": "flex flex-col w-full max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
 };
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -20965,15 +20978,11 @@ var _hoisted_18 = {
   "class": "relative"
 };
 
-<<<<<<< HEAD
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\"> School / College / Batch </option><option>9</option><option>10</option><option>11</option><option>12</option><option>18</option><option>19</option><option>21st</option><option>1st</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option>", 14);
-=======
 var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "text-white"
 }, " Email ", -1
 /* HOISTED */
 );
->>>>>>> 8ab983bcb8bfcfc9c16ebe5fcccaaa9185757033
 
 var _hoisted_20 = {
   "class": "flex flex-col mb-1"
@@ -20982,7 +20991,7 @@ var _hoisted_21 = {
   "class": "relative"
 };
 
-var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\">School / College / Batch</option><option>9</option><option>10</option><option>11</option><option>12</option><option>18</option><option>19</option><option>21st</option><option>1st</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option>", 14);
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"\"> School / College / Batch </option><option>9</option><option>10</option><option>11</option><option>12</option><option>18</option><option>19</option><option>21st</option><option>1st</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option>", 14);
 
 var _hoisted_36 = [_hoisted_22];
 var _hoisted_37 = {
@@ -21104,7 +21113,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <span class=\"text-sm text-red-600\"> {{ getTest }}</span> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[7] || (_cache[7] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submitForm && $options.submitForm.apply($options, arguments);
     }, ["prevent"]))
@@ -21144,11 +21153,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your email"
   }, null, 512
   /* NEED_PATCH */
-<<<<<<< HEAD
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\n                        <div class=\"relative\">\n                            <input\n                                id=\"batch\"\n                                type=\"text\"\n                                v-model=\"formData.batch\"\n                                name=\"batch\"\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\n                                placeholder=\"Enter your Batch\"\n                            />\n                        </div>\n                    </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-=======
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\r\n                        <div class=\"relative\">\r\n                            <input\r\n                                id=\"batch\"\r\n                                type=\"text\"\r\n                                v-model=\"formData.batch\"\r\n                                name=\"batch\"\r\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\r\n                                placeholder=\"Enter your Batch\"\r\n                            />\r\n                        </div>\r\n                    </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
->>>>>>> 8ab983bcb8bfcfc9c16ebe5fcccaaa9185757033
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\n                        <div class=\"relative\">\n                            <input\n                                id=\"batch\"\n                                type=\"text\"\n                                v-model=\"formData.batch\"\n                                name=\"batch\"\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\n                                placeholder=\"Enter your Batch\"\n                            />\n                        </div>\n                    </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "w-full text-gray-500 rounded-full",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.formData.batch = $event;
@@ -21156,13 +21161,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, _hoisted_36, 512
   /* NEED_PATCH */
-<<<<<<< HEAD
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formData.batch]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\n                        <div class=\"relative\">\n                            <input\n                                id=\"program\"\n                                type=\"text\"\n                                v-model=\"formData.program\"\n                                name=\"program\"\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\n                                placeholder=\"Enter your program\"\n                            />\n                        </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "class": "w-full rounded-full",
-=======
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formData.batch]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\r\n                        <div class=\"relative\">\r\n                            <input\r\n                                id=\"program\"\r\n                                type=\"text\"\r\n                                v-model=\"formData.program\"\r\n                                name=\"program\"\r\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\r\n                                placeholder=\"Enter your program\"\r\n                            />\r\n                        </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formData.batch]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex flex-col mb-2\">\n                        <div class=\"relative\">\n                            <input\n                                id=\"program\"\n                                type=\"text\"\n                                v-model=\"formData.program\"\n                                name=\"program\"\n                                class=\"w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400\"\n                                placeholder=\"Enter your program\"\n                            />\n                        </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "w-full text-gray-500 rounded-full",
->>>>>>> 8ab983bcb8bfcfc9c16ebe5fcccaaa9185757033
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.formData.program = $event;
     }),
@@ -21503,7 +21503,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800"
-}, "Lending Books", -1
+}, " Lending Books ", -1
 /* HOISTED */
 );
 
@@ -21574,11 +21574,19 @@ var _hoisted_13 = {
 
 var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Approved ");
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Rejected ");
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Approved ");
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Check-in ");
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Rejected ");
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cehck-out ");
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Rejected ");
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Check-in ");
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Check-in ");
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cehck-out ");
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Cehck-out ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Navbar2 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Navbar2");
@@ -21605,10 +21613,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_booking$status$toUpp = booking.status.toUpperCase()) !== null && _booking$status$toUpp !== void 0 ? _booking$status$toUpp : "Pending"), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [booking.status === 'pending' && booking.checkout_datetime === null && booking.checkin_datetime === null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 0,
       type: "button",
       href: "/admin/borrowDetails/booking/status/" + booking.id + "/approved",
-      "class": "px-2 py-2 text-sm bg-green-600 rounded-md"
+      "class": "px-2 py-2 text-sm bg-green-600 text-center rounded-md"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_14];
@@ -21618,23 +21627,22 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    , ["href"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 1,
       type: "button",
-      href: "/admin/borrowDetails/booking/status/" + booking.id + "/rejected",
-      "class": "px-2 py-2 text-sm bg-red-600 rounded-md"
+      "class": "px-2 py-2 text-sm cursor-not-allowed bg-gray-400 text-center rounded-md"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_15];
       }),
-      _: 2
-      /* DYNAMIC */
+      _: 1
+      /* STABLE */
 
-    }, 1032
-    /* PROPS, DYNAMIC_SLOTS */
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    })), booking.status === 'pending' && booking.checkout_datetime === null && booking.checkin_datetime === null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 2,
       type: "button",
-      href: "/admin/borrowDetails/booking/status/" + booking.id + "/checkin",
-      "class": "px-2 py-2 text-sm bg-green-600 rounded-md"
+      href: "/admin/borrowDetails/booking/status/" + booking.id + "/rejected",
+      "class": "px-2 py-2 text-sm bg-red-600 text-center rounded-md"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_16];
@@ -21644,20 +21652,68 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    , ["href"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 3,
       type: "button",
-      href: '/admin/borrowDetails/booking/status/' + booking.id + '/checkout',
-      "class": "px-2 py-2 text-sm bg-blue-600 rounded-md"
+      "class": "px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_17];
+      }),
+      _: 1
+      /* STABLE */
+
+    })), booking.status.toUpperCase() === 'APPROVED' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 4,
+      type: "button",
+      href: "/admin/borrowDetails/booking/status/" + booking.id + "/checkin",
+      "class": "px-2 py-2 text-sm bg-green-600 text-center rounded-md"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_18];
       }),
       _: 2
       /* DYNAMIC */
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["href"])])])]);
+    , ["href"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 5,
+      type: "button",
+      "class": "px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_19];
+      }),
+      _: 1
+      /* STABLE */
+
+    })), booking.status.toUpperCase() === 'CHECKIN' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 6,
+      type: "button",
+      href: '/admin/borrowDetails/booking/status/' + booking.id + '/checkout',
+      "class": "px-2 py-2 text-sm bg-blue-600 text-center rounded-md"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_20];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href"])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
+      key: 7,
+      type: "button",
+      "class": "px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [_hoisted_21];
+      }),
+      _: 1
+      /* STABLE */
+
+    }))])])]);
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div>\n    </div> ")], 2112
@@ -23123,30 +23179,33 @@ var _hoisted_1 = {
   "class": ""
 };
 var _hoisted_2 = {
-  "class": "flex justify-between m-auto bg-gray-100 shadow-lg"
+  "class": "grid grid-cols-12 bg-gray-100 shadow-lg sticky top-0"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex ml-10\"><img class=\"flex-shrink-0 w-auto h-20\" src=\"/storage/logo/logo.png\" alt=\"Logo\"></div><div class=\"m-auto space-x-4 font-bold text-gray-900 text-1xl\"><a href=\"#home\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Home</a><a href=\"#aboutus\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">About</a><a href=\"#tandc\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Terms and Conditions</a><a href=\"#contact\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Contact Us</a><a href=\"#team\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Our Team</a></div>", 2);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-span-2 ml-24\"><img class=\"flex-shrink-0 w-auto h-20\" src=\"/storage/logo/logo.png\" alt=\"Logo\"></div><div class=\"m-auto col-span-8 space-x-4 font-bold text-gray-900 text-1xl\"><a href=\"#home\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Home</a><a href=\"#aboutus\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">About</a><a href=\"#tandc\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Terms and Conditions</a><a href=\"#contact\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Contact Us</a><a href=\"#team\" class=\"px-3 py-2 rounded-md hover:bg-gray-200\">Our Team</a></div>", 2);
 
 var _hoisted_5 = {
-  "class": "m-auto ml-60"
+  "class": "flex items-center w-full justify-start col-span-2"
+};
+var _hoisted_6 = {
+  "class": "flex items-center"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login ");
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Login ");
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Register ");
 
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "m-10"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "font-serif text-6xl font-bold text-center text-gray-800"
 }, " Hiast Library Management System ", -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("video", {
   "class": "flex w-full h-[60vh] items-center m-auto mt-10 mb-24",
   autoplay: "",
   muted: "",
@@ -23158,51 +23217,51 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mt-10 ml-12 text-6xl font-bold text-gray-800\" id=\"aboutus\"><h1 class=\"mt-10 font-serif text-6xl font-bold text-center text-gray-800\"> About Us </h1></div><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 m-14\"><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> About Us </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/About.jpg\"> About us HiAST Established in 2001, the Hyderabad Institute of Arts, Science and Technology (HiAST) is a chartered institute that offers a variety of undergraduate and graduate programs in affiliation with the University of Sindh and Mehran University of Engineering and Technology. Additionally, the HiAST education system comprises of the Royal Cedar Montessori and HiAST School and College. </div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Mission </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/Mission.jpg\"> To equip students with the state-of-the-art knowledge, skills and exposure required to succeed in todays’ global marketplace. As a private non-denominational Institution, HiAST will equip fully and prepare students for holding the reign of the future of the region and the country. </div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Vision </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/Vision.jpg\"> HiAST will maintain its tradition and surface as a still higher symbol of quality education with relevance to national needs to be provided to young men and women in the areas it will serve, imbibing in its ambit all the ingredients, tangibles and intangibles, which are pre-requisites for it in order to promote social growth and knowledge-based economic prosperity with special emphasis on proper harnessing and management of available resources. </div></div><div class=\"grid grid-cols-1 gap-4 text-gray-800 text-1xl m-14\"><div class=\"text-6xl font-bold text-gray-800\" id=\"tandc\"><h1 class=\"font-serif text-6xl font-bold text-center text-gray-800\"> Terms And Conditions </h1></div><ol><li> 1. Login I.D.’s, Passwords of various e-resources or online resources will be communicated to the students and faculty members from time to time. </li><li> 2. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 3. After reading, leave books on the table or on the book trolley. Please do not shelve the books. </li><li> 4. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 5. Members must not to be sharing their net access ID and Password with other students. . </li></ol></div>", 3);
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mt-10 ml-12 text-6xl font-bold text-gray-800\" id=\"aboutus\"><h1 class=\"mt-10 font-serif text-6xl font-bold text-center text-gray-800\"> About Us </h1></div><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 m-14\"><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> About Us </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/About.jpg\"> About us HiAST Established in 2001, the Hyderabad Institute of Arts, Science and Technology (HiAST) is a chartered institute that offers a variety of undergraduate and graduate programs in affiliation with the University of Sindh and Mehran University of Engineering and Technology. Additionally, the HiAST education system comprises of the Royal Cedar Montessori and HiAST School and College. </div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Mission </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/Mission.jpg\"> To equip students with the state-of-the-art knowledge, skills and exposure required to succeed in todays’ global marketplace. As a private non-denominational Institution, HiAST will equip fully and prepare students for holding the reign of the future of the region and the country. </div><div><div class=\"mb-10 text-4xl font-bold text-gray-800\"> Our Vision </div><img class=\"w-full text-gray-700 rounded h-2/4 text-1xl transition ease-in-out delay-100 hover:-translate-y-2 hover:scale-105 duration-300 ...\" src=\"/storage/images/Vision.jpg\"> HiAST will maintain its tradition and surface as a still higher symbol of quality education with relevance to national needs to be provided to young men and women in the areas it will serve, imbibing in its ambit all the ingredients, tangibles and intangibles, which are pre-requisites for it in order to promote social growth and knowledge-based economic prosperity with special emphasis on proper harnessing and management of available resources. </div></div><div class=\"grid grid-cols-1 gap-4 text-gray-800 text-1xl m-14\"><div class=\"text-6xl font-bold text-gray-800\" id=\"tandc\"><h1 class=\"font-serif text-6xl font-bold text-center text-gray-800\"> Terms And Conditions </h1></div><ol><li> 1. Login I.D.’s, Passwords of various e-resources or online resources will be communicated to the students and faculty members from time to time. </li><li> 2. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 3. After reading, leave books on the table or on the book trolley. Please do not shelve the books. </li><li> 4. Do not write, underline or mark any book. Mutilation of library material can lead to heavy fine and a disciplinary action against the patron. </li><li> 5. Members must not to be sharing their net access ID and Password with other students. . </li></ol></div>", 3);
 
-var _hoisted_14 = {
+var _hoisted_15 = {
   "class": "grid justify-center w-6/12 grid-cols-1 gap-4 m-auto mt-10"
 };
-var _hoisted_15 = {
+var _hoisted_16 = {
   "class": ""
 };
-var _hoisted_16 = {
+var _hoisted_17 = {
   "class": "mb-10 font-bold text-gray-800",
   id: "contact"
 };
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "font-serif text-6xl font-bold text-center text-gray-800"
 }, " Contact Us ", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = {
-  "class": "flex flex-col mb-2"
-};
 var _hoisted_19 = {
-  "class": "relative"
+  "class": "flex flex-col mb-2"
 };
 var _hoisted_20 = {
-  "class": "flex flex-col mb-2"
+  "class": "relative"
 };
 var _hoisted_21 = {
-  "class": "relative"
+  "class": "flex flex-col mb-2"
 };
 var _hoisted_22 = {
-  "class": "flex flex-col mb-2"
-};
-var _hoisted_23 = {
   "class": "relative"
 };
-var _hoisted_24 = {
+var _hoisted_23 = {
   "class": "flex flex-col mb-2"
 };
+var _hoisted_24 = {
+  "class": "relative"
+};
 var _hoisted_25 = {
+  "class": "flex flex-col mb-2"
+};
+var _hoisted_26 = {
   "class": "relative"
 };
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex items-center justify-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
@@ -23211,7 +23270,7 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "mb-10 text-6xl font-bold text-gray-800"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "font-serif text-6xl font-bold text-center text-gray-800",
@@ -23230,9 +23289,9 @@ var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1 class=\"mt-10 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\"> Our Supervisor </h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><!-- &lt;img\n                            class=&quot;w-full text-gray-700 rounded h-2/4 text-1xl&quot;\n                            src=&quot;/storage/images/About.jpg&quot;\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Saima Palari&lt;/h1&gt; --></div><div><img class=\"w-full text-gray-700 rounded h-4/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Prof. Tahseen Hafiz </h1></div><div class=\"\"><!-- &lt;img\n                            class=&quot;w-full text-gray-700 rounded h-2/4 &quot;\n                            src=&quot;/storage/images/Vision.jpg&quot;\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Duaa Chundrigar&lt;/h1&gt; --></div></div><h1 class=\"mb-5 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\"> Our Team </h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/About.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Saima Palari </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT066 </h1></div><div><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Mahnoor Tahir </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT052 </h1></div><div class=\"\"><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/Vision.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Duaa Chundrigar </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT067 </h1></div></div>", 4);
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<h1 class=\"mt-10 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\"> Our Supervisor </h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><!-- &lt;img\n                            class=&quot;w-full text-gray-700 rounded h-2/4 text-1xl&quot;\n                            src=&quot;/storage/images/About.jpg&quot;\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Saima Palari&lt;/h1&gt; --></div><div><img class=\"w-full text-gray-700 rounded h-4/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Prof. Tahseen Hafiz </h1></div><div class=\"\"><!-- &lt;img\n                            class=&quot;w-full text-gray-700 rounded h-2/4 &quot;\n                            src=&quot;/storage/images/Vision.jpg&quot;\n                        /&gt; --><!-- &lt;h1 class=&quot;mb-5 font-serif text-3xl font-bold text-center text-gray-800&quot;&gt;Duaa Chundrigar&lt;/h1&gt; --></div></div><h1 class=\"mb-5 font-serif text-6xl font-bold text-center text-gray-800\" id=\"team\"> Our Team </h1><div class=\"grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14\"><div><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/About.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Saima Palari </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT066 </h1></div><div><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/Mission.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Mahnoor Tahir </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT052 </h1></div><div class=\"\"><img class=\"m-auto text-gray-700 rounded h-2/4 text-1xl\" src=\"/storage/images/Vision.jpg\"><h1 class=\"mt-4 font-serif text-3xl font-bold text-center text-gray-800\"> Duaa Chundrigar </h1><h1 class=\"mb-5 font-serif text-2xl font-bold text-center text-gray-800\"> A18BSIT067 </h1></div></div>", 4);
 
-var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "p-6 text-center text-white bg-gray-700"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " Copyright: 2021-2022 Final Year Project of 18 Batch BSIT Hiast Students")], -1
 /* HOISTED */
@@ -23241,13 +23300,13 @@ var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/login",
     type: "button",
     "class": "px-3 py-2 ml-10 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_6];
+      return [_hoisted_7];
     }),
     _: 1
     /* STABLE */
@@ -23258,16 +23317,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "px-3 py-2 ml-4 font-bold text-gray-100 bg-gray-700 rounded-md text-1xl hover:bg-gray-200 hover:text-gray-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_7];
+      return [_hoisted_8];
     }),
     _: 1
     /* STABLE */
 
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submitForm && $options.submitForm.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $data.formData.regno = $event;
@@ -23276,7 +23335,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your register number"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.regno]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.regno]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.formData.name = $event;
@@ -23285,7 +23344,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your name"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.name]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "email",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.formData.email = $event;
@@ -23294,7 +23353,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your email"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.email]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "textbox",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.formData.msg = $event;
@@ -23303,9 +23362,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your message here"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.msg]])])]), _hoisted_26], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.formData.msg]])])]), _hoisted_27], 32
   /* HYDRATE_EVENTS */
-  )])])]), _hoisted_27, _hoisted_28])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("footer"), _hoisted_32]);
+  )])])]), _hoisted_28, _hoisted_29])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("footer"), _hoisted_33]);
 }
 
 /***/ }),

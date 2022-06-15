@@ -19,9 +19,11 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
-        $request->validate([
-            'regno' => 'unique:users',
-        ]);
+        $student_regno_already_exists = Student::where('regno', $request->formData['regno'])->exists();
+
+        if ($student_regno_already_exists) {
+            return redirect()->back()->withErrors('Student with this Regno already exists!');
+        }
 
         $profile_image = $request->file('profile_image');
 
