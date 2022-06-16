@@ -31,7 +31,7 @@ class AdminController extends Controller
         $checkin = DB::table('bookings')->count('checkin_datetime');
         $checkout = DB::table('bookings')->count('checkout_datetime');
 
-        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user , 'bookings' => $bookings, 'count' => $count, 'checkin' => $checkin, 'checkout' => $checkout]);
+        return Inertia::render('Admin/Dashboard', ['books' => $books, 'user' => $user, 'bookings' => $bookings, 'count' => $count, 'checkin' => $checkin, 'checkout' => $checkout]);
     }
 
     function books(Request $request)
@@ -114,7 +114,8 @@ class AdminController extends Controller
     {
         $categories = Categories::find($category_id);
 
-        return Inertia::render('Admin/Categories', ['categories' => $categories]);
+
+        return Inertia::render('Admin/EditCategory', ['categories' => $categories]);
     }
 
     function updateCategory(Request $request, $category_id)
