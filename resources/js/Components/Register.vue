@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100">
+    <div class="">
         <div class="bg-gray-100 shadow-lg">
             <div
                 class="container flex justify-between m-auto mx-auto space-x-8"
@@ -24,14 +24,14 @@
             </div>
         </div>
 
-        <div
-            class="flex flex-col w-4/12 mx-auto my-8 max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded"
-        >
+        <!-- <div
+            class="flex  mx-auto my-8 max-w-md px-4 py-8 bg-gray-100  sm:px-6 md:px-8 lg:px-10 "
+        > -->
             <div
-                class="flex flex-col w-full max-w-md px-4 py-8 bg-gray-800 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-3xl"
+                class=" m-auto mt-10 w-3/12 px-4 py-8 bg-gray-700 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-2xl"
             >
                 <div
-                    class="self-center text-xl font-bold text-gray-100 sm:text-3xl"
+                    class="text-center text-xl font-bold text-gray-100 sm:text-3xl"
                 >
                     Register Now
                 </div>
@@ -39,44 +39,48 @@
                 <div class="mt-5">
                     <!-- <span class="text-sm text-red-600"> {{ getTest }}</span> -->
                     <form @submit.prevent="submitForm">
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <label class="text-white"> Roll No. </label>
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto mr-4"> Roll No. </label>
+                            </div>
+                            <div class="col-span-1">
                                 <input
                                     required
                                     id="regno"
                                     type="text"
                                     v-model="formData.regno"
                                     name="regno"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    class=" py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter your register number"
                                 />
                             </div>
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <label class="text-white"> Full Name </label>
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto mr-4"> Full Name </label></div>
+                            <div class="col-span-1">
                                 <input
                                     required
                                     id="name"
                                     type="text"
                                     v-model="formData.name"
                                     name="name"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    class=" py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter your name"
                                 />
                             </div>
                         </div>
-                        <div class="flex flex-col mb-1">
-                            <div class="relative">
-                                <label class="text-white"> Email </label>
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto mr-4"> Email </label></div>
+                            <div class="col-span-1">
                                 <input
                                     required
                                     id="email"
                                     type="email"
                                     v-model="formData.email"
                                     name="email"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    class=" py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter your email"
                                 />
                             </div>
@@ -94,15 +98,17 @@
                             />
                         </div>
                     </div> -->
-                        <div class="flex flex-col mb-1">
-                            <div class="relative">
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto mr-4"> School / College / Batch </label></div>
+                            <div class="col-span-1">
                                 <select
-                                    class="w-full text-gray-500 rounded-full"
+                                    class=" text-gray-500 rounded-full w-full"
                                     v-model="formData.batch"
                                     required
                                 >
                                     <option value="">
-                                        School / College / Batch
+                                        Select an option
                                     </option>
                                     <option>9</option>
                                     <option>10</option>
@@ -131,14 +137,16 @@
                                 placeholder="Enter your program"
                             />
                         </div> -->
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto mr-4"> Program </label></div>
+                            <div class="col-span-1">
                                 <select
-                                    class="w-full text-gray-500 rounded-full"
+                                    class=" text-gray-500 rounded-full w-full"
                                     v-model="formData.program"
                                     required
                                 >
-                                    <option value="">Program</option>
+                                    <option value="">Select an option</option>
                                     <option>School</option>
                                     <option>College</option>
                                     <option>BSIT</option>
@@ -148,43 +156,49 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <label class="text-white">
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1 ">
+                                <label class="text-white ml-auto mr-4">
                                     Enter Password
                                 </label>
+                                </div>
+                            <div class="col-span-1 ">
                                 <input
                                     required
                                     id="password"
                                     type="password"
                                     v-model="formData.password"
                                     name="password"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    class=" py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Enter your password"
+                                    
                                 />
                             </div>
                         </div>
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <label class="text-white">
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label class="text-white ml-auto  mr-4">
                                     Re-Enter Password
                                 </label>
+                                </div>
+                            <div class="col-span-1">
                                 <input
                                     required
                                     id="confirm_password"
                                     type="password"
                                     name="confirm_password"
-                                    class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                    class=" py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                     placeholder="Re-enter your password"
                                 />
                             </div>
                         </div>
 
-                        <div class="flex flex-col mb-2">
-                            <div class="relative">
-                                <label for="" class="pl-1 text-sm text-white"
+                        <div class="grid grid-cols-2 mb-2 ">
+                            <div class="relative inline-flex col-span-1">
+                                <label for="" class="pl-1 text-sm text-white ml-auto mr-4"
                                     >Select Your Profile Picture</label
-                                >
+                                ></div>
+                            <div class="col-span-1">
                                 <input
                                     id="profile_image"
                                     type="file"
@@ -199,30 +213,28 @@
                         <div class="flex items-center justify-center">
                             <button
                                 type="submit"
-                                class="px-8 py-2 mt-2 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
+                                class="px-8 py-2 mt-4 font-semibold text-gray-800 bg-white rounded text-1xl hover:bg-gray-600 hover:text-white"
                             >
                                 Sign up
                             </button>
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="flex items-center justify-center mt-6">
-                <div
-                    class="inline-flex items-center text-xs font-medium text-center text-gray-700"
+                    <div
+                    class="inline-flex  items-center text-xs font-medium text-center text-gray-100 mt-2"
                 >
-                    <span class="ml-2"
+                    <span class="ml-32 "
                         >You have an account?
                         <Link
                             href="/login"
-                            class="ml-2 text-xs font-semibold text-blue-900"
+                            class="ml-2 text-xs font-semibold text-blue-400"
                         >
                             Login here
                         </Link>
                     </span>
                 </div>
+                </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 

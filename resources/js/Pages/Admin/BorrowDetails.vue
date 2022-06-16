@@ -127,14 +127,16 @@
                                         booking.checkout_datetime === null &&
                                         booking.checkin_datetime === null
                                     "
-                                    class="px-2 py-2 text-sm bg-green-600 text-center rounded-md"
+                                    class="px-2 py-2 text-sm bg-green-600 text-center
+                                            rounded-md"
                                 >
                                     Approved
                                 </Link>
                                 <Link
                                     type="button"
                                     v-else
-                                    class="px-2 py-2 text-sm cursor-not-allowed bg-gray-400 text-center rounded-md"
+                                    class="px-2 py-2 text-sm cursor-not-allowed bg-gray-400
+                                    text-center rounded-md"
                                 >
                                     Approved
                                 </Link>
@@ -157,7 +159,7 @@
                                 <Link
                                     type="button"
                                     v-else
-                                    class="px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
+                                    class="px-2 py-2 text-sm bg-gray-400 cursor-not-allowed text-center rounded-md"
                                 >
                                     Rejected
                                 </Link>
@@ -179,7 +181,7 @@
                                 <Link
                                     type="button"
                                     v-else
-                                    class="px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
+                                    class="px-2 py-2 text-sm bg-gray-400 cursor-not-allowed text-center rounded-md"
                                 >
                                     Check-in
                                 </Link>
@@ -196,14 +198,14 @@
                                     "
                                     class="px-2 py-2 text-sm bg-blue-600 text-center rounded-md"
                                 >
-                                    Cehck-out
+                                    Check-out
                                 </Link>
                                 <Link
                                     type="button"
                                     v-else
-                                    class="px-2 py-2 text-sm bg-gray-400 text-center rounded-md"
+                                    class="px-2 py-2 text-sm bg-gray-400 cursor-not-allowed text-center rounded-md"
                                 >
-                                    Cehck-out
+                                    Check-out
                                 </Link>
                             </div>
                         </td>

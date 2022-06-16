@@ -53,7 +53,9 @@
             </div>
         </div>
 
-        <div class="m-10">
+        <div class="m-10"
+            id="home"
+        >
             <div
                 class="font-serif text-6xl font-bold text-center text-gray-800"
             >

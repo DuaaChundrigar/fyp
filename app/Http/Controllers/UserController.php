@@ -21,12 +21,10 @@ class UserController extends Controller
 
     function bookRequest(Request $request)
     {
-
         $user = session('user');
 
-
-
-        $booking = Booking::where('student_id', $user->user_id)->where('book_id', $request->book_id)->where('status', 'pending')->first();
+        $booking = Booking::where('student_id', $user->user_id)->where('book_id', $request->book_id)
+                            ->where('status', 'pending')->first();
 
         $booking2 = Booking::where('student_id', $user->user_id)->where('status', 'pending');
 
@@ -35,7 +33,6 @@ class UserController extends Controller
         } else if ($booking2->count() > 2) {
             return response("You have already requested maximun number of books", 400);
         } else {
-
 
             Booking::create([
                 'student_id' => $user->user_id,
