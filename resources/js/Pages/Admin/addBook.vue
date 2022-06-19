@@ -145,7 +145,7 @@
                                 </label>
                                 <input
                                     id="edition"
-                                    type="text"
+                                    type="number"
                                     v-model="formData.edition"
                                     name="edition"
                                     class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"

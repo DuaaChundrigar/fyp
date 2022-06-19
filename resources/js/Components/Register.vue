@@ -25,13 +25,13 @@
         </div>
 
         <!-- <div
-            class="flex  mx-auto my-8 max-w-md px-4 py-8 bg-gray-100  sm:px-6 md:px-8 lg:px-10 "
+            class="flex max-w-md px-4 py-8 mx-auto my-8 bg-gray-100 sm:px-6 md:px-8 lg:px-10 "
         > -->
         <div
-            class="m-auto mt-10 w-3/12 px-4 py-8 bg-gray-700 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-2xl"
+            class="w-3/12 px-4 py-8 m-auto mt-8 bg-gray-700 shadow-md sm:px-6 md:px-8 lg:px-10 rounded-2xl"
         >
             <div
-                class="text-center text-xl font-bold text-gray-100 sm:text-3xl"
+                class="text-xl font-bold text-center text-gray-100 sm:text-3xl"
             >
                 Register Now
             </div>
@@ -41,7 +41,7 @@
                 <form @submit.prevent="submitForm">
                     <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white mr-4"> Roll No. </label>
+                            <label class="mr-4 text-sm text-white"> Roll No. </label>
                         </div>
                         <div class="col-span-1">
                             <input
@@ -50,14 +50,14 @@
                                 type="text"
                                 v-model="formData.regno"
                                 name="regno"
-                                class="py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Enter your register number"
                             />
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 Full Name
                             </label>
                         </div>
@@ -68,14 +68,14 @@
                                 type="text"
                                 v-model="formData.name"
                                 name="name"
-                                class="py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Enter your name"
                             />
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 Email
                             </label>
                         </div>
@@ -86,7 +86,7 @@
                                 type="email"
                                 v-model="formData.email"
                                 name="email"
-                                class="py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Enter your email"
                             />
                         </div>
@@ -104,15 +104,15 @@
                             />
                         </div>
                     </div> -->
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 School / College / Batch
                             </label>
                         </div>
                         <div class="col-span-1">
                             <select
-                                class="text-gray-500 rounded-full w-full"
+                                class="w-full text-gray-500 rounded-full"
                                 v-model="formData.batch"
                                 required
                             >
@@ -144,15 +144,15 @@
                                 placeholder="Enter your program"
                             />
                         </div> -->
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 Program
                             </label>
                         </div>
                         <div class="col-span-1">
                             <select
-                                class="text-gray-500 rounded-full w-full"
+                                class="w-full text-gray-500 rounded-full"
                                 v-model="formData.program"
                                 required
                             >
@@ -166,9 +166,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 Enter Password
                             </label>
                         </div>
@@ -179,14 +179,14 @@
                                 type="password"
                                 v-model="formData.password"
                                 name="password"
-                                class="py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Enter your password"
                             />
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
-                            <label class="text-white ml-auto mr-4">
+                            <label class="mr-4 text-sm text-white">
                                 Re-Enter Password
                             </label>
                         </div>
@@ -196,17 +196,17 @@
                                 id="confirm_password"
                                 type="password"
                                 name="confirm_password"
-                                class="py-2 pl-5 pr-4 text-sm w-full placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm placeholder-gray-500 border border-gray-400 rounded-2xl focus:outline-none focus:border-blue-400"
                                 placeholder="Re-enter your password"
                             />
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 mb-2">
+                    <div class="grid grid-cols-1 mb-2">
                         <div class="relative inline-flex col-span-1">
                             <label
                                 for=""
-                                class="pl-1 text-sm text-white ml-auto mr-4"
+                                class="pl-1 mr-4 text-sm text-white"
                                 >Select Your Profile Picture</label
                             >
                         </div>
@@ -217,7 +217,7 @@
                                 required
                                 @change="onFileChange($event)"
                                 name="profile_image"
-                                class="py-2 pl-5 pr-4 text-sm focus:outline-none focus:border-blue-400"
+                                class="w-full py-2 pl-5 pr-4 text-sm"
                             />
                         </div>
                     </div>
@@ -232,9 +232,9 @@
                     </div>
                 </form>
                 <div
-                    class="inline-flex items-center text-xs font-medium text-center text-gray-100 mt-2"
+                    class="inline-flex items-center text-xs font-medium text-center text-gray-100"
                 >
-                    <span class="ml-32"
+                    <span class="ml-24"
                         >You have an account?
                         <Link
                             href="/login"

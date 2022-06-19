@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div class="grid grid-cols-12 bg-gray-100 shadow-lg sticky top-0">
+        <div class="sticky top-0 grid grid-cols-12 bg-gray-100 shadow-lg">
             <div class="col-span-2 ml-24">
                 <img
                     class="flex-shrink-0 w-auto h-20"
@@ -10,7 +10,7 @@
             </div>
 
             <div
-                class="m-auto col-span-8 space-x-4 font-bold text-gray-900 text-1xl"
+                class="col-span-8 m-auto space-x-4 font-bold text-gray-900 text-1xl"
             >
                 <a href="#home" class="px-3 py-2 rounded-md hover:bg-gray-200"
                     >Home</a
@@ -28,12 +28,12 @@
                     class="px-3 py-2 rounded-md hover:bg-gray-200"
                     >Contact Us</a
                 >
-                <a href="#team" class="px-3 py-2 rounded-md hover:bg-gray-200"
+                <!-- <a href="#team" class="px-3 py-2 rounded-md hover:bg-gray-200"
                     >Our Team</a
-                >
+                > -->
             </div>
 
-            <div class="flex items-center w-full justify-start col-span-2">
+            <div class="flex items-center justify-start w-full col-span-2">
                 <div class="flex items-center">
                     <Link
                         href="/login"
@@ -261,24 +261,18 @@
                     </div>
                 </div>
 
-                <h1
+                <!-- <h1
                     class="mt-10 font-serif text-6xl font-bold text-center text-gray-800"
                     id="team"
                 >
                     Our Supervisor
-                </h1>
+                </h1> -->
                 <div
                     class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14"
                 >
-                    <div>
-                        <!-- <img
-                            class="w-full text-gray-700 rounded h-2/4 text-1xl"
-                            src="/storage/images/About.jpg"
-                        /> -->
-                        <!-- <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Saima Palari</h1> -->
-                    </div>
+                    
 
-                    <div>
+                    <!-- <div>
                         <img
                             class="w-full text-gray-700 rounded h-4/4 text-1xl"
                             src="/storage/images/Mission.jpg"
@@ -288,24 +282,18 @@
                         >
                             Prof. Tahseen Hafiz
                         </h1>
-                    </div>
+                    </div> -->
 
-                    <div class="">
-                        <!-- <img
-                            class="w-full text-gray-700 rounded h-2/4 "
-                            src="/storage/images/Vision.jpg"
-                        /> -->
-                        <!-- <h1 class="mb-5 font-serif text-3xl font-bold text-center text-gray-800">Duaa Chundrigar</h1> -->
-                    </div>
+                    
                 </div>
 
-                <h1
+                <!-- <h1
                     class="mb-5 font-serif text-6xl font-bold text-center text-gray-800"
                     id="team"
                 >
                     Our Team
-                </h1>
-                <div
+                </h1> -->
+                <!-- <div
                     class="grid justify-center grid-cols-3 gap-4 mt-10 text-4xl m-14"
                 >
                     <div>
@@ -358,7 +346,7 @@
                             A18BSIT067
                         </h1>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
