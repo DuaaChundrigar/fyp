@@ -10,16 +10,16 @@
 
         <div class="m-auto space-x-4 font-bold text-gray-900 text-1xl">
             
-            <a href="/admin/dashboard" 
+            <Link href="/admin/dashboard" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/dashboard')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                > Dashboard </a
+                > Dashboard </Link
             >
-            <a
+            <Link
                 href="/admin/books"
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
@@ -27,67 +27,67 @@
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                >Books</a
+                >Books</Link
             >
             
-            <a href="/admin/categories" 
+            <Link href="/admin/categories" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/categories')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                >Categories</a
+                >Categories</Link
             >
             
-            <a href="/admin/borrowDetails" 
+            <Link href="/admin/borrowDetails" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/borrowDetails')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                > Borrow Details </a
+                > Borrow Details </Link
             >
             
-            <a href="/admin/students" 
+            <Link href="/admin/students" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/students')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                >Students</a
+                >Students</Link
             >
             
-            <a href="/admin/contact" 
+            <Link href="/admin/contact" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/contact')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                >Contacts</a
+                >Contacts</Link
             >
             
-            <a href="/admin/report" 
+            <Link href="/admin/report" 
                 class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
                 :class="
                 checkIfWeAreOnSamePage('/admin/report')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                > Report</a
+                > Report</Link
             >
             
-            <a href="/admin/settings" 
+            <Link href="/admin/settings" 
             class="px-3 py-2 rounded-md hover:bg-gray-900 ml-60 hover:text-white"
             :class="
                 checkIfWeAreOnSamePage('/admin/settings')
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-500 text-white'
             "
-                >Settings</a
+                >Settings</Link
             >
             
         </div>
