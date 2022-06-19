@@ -6,7 +6,7 @@
             <!--Side bar-->
 
             <!-- <SideMenu /> -->
-            <!--Right Side-->
+            <!--Right est comment Side-->
             <!-- <div class="col-span-5 ... m-2"> -->
                 <h1
                     class="m-10 mb-5 font-serif text-3xl font-bold text-center text-gray-800"
